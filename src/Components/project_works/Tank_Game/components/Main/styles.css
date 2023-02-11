@@ -1,0 +1,235 @@
+/*-------------------- MAIN MENU -----------------------------*/
+/*-------------------- MAIN MENU -----------------------------*/
+/*-------------------- MAIN MENU -----------------------------*/
+#main {
+    overflow: visible;
+}
+.mein_menu_with_tank {
+    height: calc(100% - 50px);
+    padding:  0 30px 0 30px;
+    
+    display: flex;
+    /* gap: 15px; */
+}
+
+
+
+.main_section_in_mein_menu {
+    width: 75%;
+    height: 100%;
+    overflow-y: scroll;
+}
+.main_section_in_mein_menu::-webkit-scrollbar-track {
+    display: none;
+}
+.main_section_in_mein_menu::-webkit-scrollbar-thumb {
+    display: none;
+}
+.main_section_in_mein_menu::-webkit-scrollbar-thumb:hover {
+    display: none;
+}
+
+
+
+.section_in_main_menu {
+    width: 100%;
+    padding: 0 0 30px 0;
+}
+
+.tank_image,
+.machine_gun_image {
+    width: 80%;
+    min-height: 217px;
+    margin: 0 auto 30px auto;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.tank_image > img,
+.machine_gun_image > img {
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+
+.block_with_name_and_button {
+    height: 30px;
+    margin: 30px 0 0 10px;
+    
+    display: flex;
+    align-items: center;
+}
+
+.wepon_name,
+.machine_gun_name {
+    margin: 0 0 0 10px;
+    
+    font-weight: 300;
+    font-size: 21px;
+}
+.confirm_selection {
+    width: 70px;
+    height: 30px;
+    margin: 0 0 0 auto;
+    background: linear-gradient(180deg, #A1BEEA 0%, #457FD6 100%);
+    border-radius: 17px;
+}
+.confirm_selection > span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    margin: auto;
+    background: linear-gradient(180deg, #457FD6 0%, #A1BEEA 100%);
+    border-radius: 17px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #FFF;
+    font-weight: 500;
+    font-size: 13px;
+}
+.change_wepon {
+    height: 40px;
+    margin: 0 auto 30px auto;
+    padding: 0;
+    list-style-type: none;
+    overflow-x: scroll;
+    overflow-y: visible;
+
+    display: flex;
+    justify-content: flex-start;
+    /* align-items: center; */
+    gap: 10px;
+    /* background-color: lime; */
+}
+.change_wepon::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+	display: none;
+}
+/* .change_wepon::-webkit-scrollbar-track {display: none;}
+.change_wepon::-webkit-scrollbar-thumb {display: none;} */
+
+.change_wepon > li {
+    display: block;
+    min-width: 70px;
+    height: 35px;
+    margin: 0;
+    padding: 0;
+}
+.select_wepon {
+    width: 100%;
+    height: 100%;
+    background-color: #D9D9D9;
+    border-radius: 7px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+}
+
+#select_machine_gun_browning {
+    background-image: url('../../Images/browning.png');
+}
+#select_machine_gun_mg-42 {
+    background-image: url('../../Images/MG-42(1).png');
+}
+
+.table_whith_characteristics {
+    width: 70%;
+    margin: 0 0 0 10px;
+    border-collapse: collapse;
+}
+.table_name {
+    margin: 0 0 17px 0;
+    text-align: start;
+}
+.characteristic_name,
+.characteristic {
+    height: 37px;
+    border: 1px solid #C9B897;
+}
+.characteristic_name {
+    width: 65%;
+    padding: 0 0 0 10px;
+    font-size: 15px;
+}
+.characteristic {
+    width: 35%;
+    text-align: center;
+}
+
+
+
+.sidebar_with_buttons {
+    width: 25%;
+    margin: 0;
+    padding: 30px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    /* align-content: space-between; */
+}
+.navigation_on_mein_menu {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.navigation_on_mein_menu > li {
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+}
+.button_in_nav_on_main_menu {
+    width: 100%;
+    height: 100%;
+    /* background-color: #E3D1AD; */
+    background-color: #C9B897;
+    border-radius: 10px;
+    transition: 0.05s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: #FFF;
+    font-weight: 100;
+    font-size: 90%;
+}
+.button_in_nav_on_main_menu:hover {
+    box-shadow: 3px 3px 10px #051937;
+}
+.button_in_nav_on_main_menu_activ {
+    transform: scale(1.05);
+    box-shadow: 3px 3px 10px #051937;
+}
+
+.start_game {
+    width: 120px;
+    height: 45px;
+    transition: 0.1s;
+
+    background-image: url('../../Images/start_game.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120% auto;
+    /* border: 1px solid lime; */
+}
+.start_game:hover {
+    opacity: 0.8;
+}

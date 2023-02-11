@@ -1,0 +1,109 @@
+/* @font-face {
+	font-family: "e-Ukraine-Light";
+	src: url('../e-Ukraine_font/e-Ukraine/e-Ukraine-Light.otf');
+} */
+
+.footer {
+	grid-area: footer;
+	width: 100%;
+	min-height: 170px;
+	padding: 10px 0 0 0;
+	margin: 0;
+	background-color: #A1BEEA;
+}
+
+.footer > a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  
+	width: 170px;
+	height: 35px;
+	margin: 0 auto 20px auto;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	
+	color: #F5F5F5;
+	font-family: "e-Ukraine-Light", sans-serif;
+	font-weight: 400;
+	font-size: 23px;
+	line-height: 100%;
+}
+
+.footer > a:hover {
+	color: #457FD6;
+}
+
+.contacts_C {
+	width: 100%;
+	min-height: 60px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin: 20px auto 0px;
+}
+
+.string_footer {
+	width: 50%;
+	min-height: 60px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin: 0px auto;
+}
+
+.phone_email {
+	width: 200px;
+	height: 80px;
+	text-align: center;
+	margin: 0px;
+}
+
+.contacts_C a {
+	color: #F5F5F5;
+	opacity: 0.5;
+	text-decoration: none;
+}
+
+.contacts_C a:hover {
+	opacity: 1;
+}
+
+.phone_email img {
+	margin-bottom: 12px;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.phone_email_text > p {
+	opacity: 0.5;
+	margin: 0px;
+	transition: all 0.1s ease 0s;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	
+	color: #F5F5F5;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.string_foot {
+	width: 50%;
+	min-height: 60px;
+	margin: 0 auto;
+  
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+
+.img_contacts {
+	display: inline-flex;
+	justify-content: center;
+	align-items: flex-start;
+	border-radius: 50%;
+}
+
+.img_contacts > img {
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+  

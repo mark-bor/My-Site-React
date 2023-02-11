@@ -1,0 +1,99 @@
+.confirm_card_container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(217, 217, 217, 0.7);
+    backdrop-filter: blur(3px);
+
+    display: flex;
+    justify-content: center;
+}
+
+.confirm_card {
+    width: 350px;
+    margin: auto;
+    padding: 13px 0 10px 0;
+    background-color: #FFF;
+    border-radius: 10px;
+}
+
+.confirm_card > h2 {
+    margin: 0 0 25px 0;
+    
+    text-align: center;
+    color: #242F3E;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 40px;
+}
+
+.data_list_for_confirm {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.data_list_for_confirm > li {
+    margin: 0 0 19px 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+
+.data_name_in_confirm {
+    height: 30px;
+    margin: 0 10px 0 0;
+    
+    display: inline-flex;
+    align-items: center;
+}
+
+.data_for_confirm {
+    min-height: 30px;
+    
+    display: inline-flex;
+    align-items: center;
+
+    color: #78A2E1;
+    font-weight: 700;
+    font-size: 16px;
+    /* border: 1px solid lime; */
+}
+.data_for_confirm.message_for_confirm {
+    min-width: 100%;
+}
+
+.buttons_in_confirm_card {
+    max-width: 100%;
+    margin: 46px auto 0 auto;
+    padding: 0 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clear_in_confirm_card,
+.start_in_confirm_card {
+    width: 100px;
+    height: 30px;
+    border-radius: 11px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+.clear_in_confirm_card {
+    background: #78A2E1;
+}
+.start_in_confirm_card {
+    background: #8FD855;
+}

@@ -1,0 +1,10 @@
+{
+    "browning": {
+        "url": "./Images/browning.png",
+        "name": "M2 Browning"
+    },
+    "mg_42": {
+        "url": "./Images/MG-42(1).png",
+        "name": "MG-42"
+    }
+}

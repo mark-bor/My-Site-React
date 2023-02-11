@@ -1,0 +1,102 @@
+[
+    {
+        "subjectEN": "logo",
+        "subjectUA": "лого",
+        "image": "/Images/logo.png"
+    },
+    {
+        "subjectEN": "paw",
+        "subjectUA": "лапка",
+        "image": "/Images/cats_paw.png"
+    },
+    {
+        "subjectEN": "cv",
+        "subjectUA": "резюме",
+        "image": "/Images/cv.png"
+    },
+    {
+        "subjectEN": "linkedin",
+        "subjectUA": "лінкед ін",
+        "image": "/Images/linkedin.png"
+    },
+    {
+        "subjectEN": "facebook",
+        "subjectUA": "фейсбук",
+        "image": "/Images/fb_icon.png"
+    },
+    {
+        "subjectEN": "telegram",
+        "subjectUA": "телеграм",
+        "image": "/Images/telegram_logo.png"
+    },
+    {
+        "subjectEN": "cv",
+        "subjectUA": "резюме",
+        "image": "/Images/cv.png"
+    },
+    {
+        "subjectEN": "logo",
+        "subjectUA": "лого",
+        "image": "/Images/logo.png"
+    },
+    {
+        "subjectEN": "github",
+        "subjectUA": "гітхаб",
+        "image": "/Images/GitHub.png"
+    },
+    {
+        "subjectEN": "telegram",
+        "subjectUA": "телеграм",
+        "image": "/Images/telegram_logo.png"
+    },
+    {
+        "subjectEN": "instagram",
+        "subjectUA": "інстаграм",
+        "image": "/Images/instagram.png"
+    },
+    {
+        "subjectEN": "phone",
+        "subjectUA": "телефон",
+        "image": "/Images/mobile_icon.png"
+    },
+    {
+        "subjectEN": "phone",
+        "subjectUA": "телефон",
+        "image": "/Images/mobile_icon.png"
+    },
+    {
+        "subjectEN": "linkedin",
+        "subjectUA": "лінкед ін",
+        "image": "/Images/linkedin.png"
+    },
+    {
+        "subjectEN": "cat",
+        "subjectUA": "кіт",
+        "image": "/Images/cat.png"
+    },
+    {
+        "subjectEN": "cat",
+        "subjectUA": "кіт",
+        "image": "/Images/cat.png"
+    },
+    {
+        "subjectEN": "github",
+        "subjectUA": "гітхаб",
+        "image": "/Images/GitHub.png"
+    },
+    {
+        "subjectEN": "instagram",
+        "subjectUA": "інстаграм",
+        "image": "/Images/instagram.png"
+    },
+    {
+        "subjectEN": "paw",
+        "subjectUA": "лапка",
+        "image": "/Images/cats_paw.png"
+    },
+    {
+        "subjectEN": "facebook",
+        "subjectUA": "фейсбук",
+        "image": "/Images/fb_icon.png"
+    }
+]

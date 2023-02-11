@@ -1,0 +1,131 @@
+/*-------------------- MENU WINDOW --------------------------*/
+.transMenu,
+.transMenu_S {
+	position: absolute;
+	width: 100%;
+	min-height: 73px;
+	top: 70px;
+	z-index: 2;
+	
+	box-shadow: 5px 7px 13px rgba(0, 0, 0, 0.19);
+	transition: 0.7s;
+}
+.trans__menu { background: #E3D1AD; }
+.trans__menu__dark { background: #595959; }
+
+.transMenu_S {
+	transform: translateY(-115%);
+}
+
+.transMenu {
+	transform: translateX(0%);
+}
+
+#menu_window > ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: center;
+	gap: max(10px);
+	z-index: inherit;
+}
+
+.men_win {
+	display: block;
+	width: 190px;
+	z-index: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+.men_win > .but {
+	width: 100%;
+	height: 65px;
+	padding: 0;
+	border-radius: 23px;
+  
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  
+	text-decoration: none;
+	text-align: center;
+	color: #F5F5F5;
+	font-weight: 100;
+	font-size: 23px;
+	line-height: 33px;
+}
+
+.men_win:hover > .but {
+	color: #457FD6;
+	background-color: #C9B897;
+}
+.trans__menu__dark .men_win:hover > .but { color: #457FD6; background-color: #8F949C; }
+
+.men_win.act > .but {
+	color: #457FD6;
+	background-color: #C9B897;
+}
+.trans__menu__dark .men_win.act > .but { color: #457FD6; background-color: #8F949C; }
+
+#paw {
+	width: 160px;
+	height: 71px;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: inherit;
+}
+
+#top:hover {
+	border-top-right-radius: 20px;
+}
+
+
+
+@media screen and (max-width: 481px) {
+	/*-------------------- MENU WINDOW --------------------------*/
+	.transMenu,
+	.transMenu_S {
+	  height: 365px;
+	}
+	#menu_window > ul {
+	  display: block;
+	  gap: 0;
+	}
+	.men_win {
+	  display: block;
+	  width: 100%;
+	  height: 73px;
+	  padding: 0 0 0 10px;
+	}
+	.men_win:hover {
+	  border-top: none;
+	  border-left: 3px solid #C9B897;
+	}
+	.trans__menu__dark .men_win:hover { border-left: 3px solid #8F949C; }
+	.men_win > .but {
+	  padding: 0 0 0 28px;
+	  justify-content: start;
+	}
+	.men_win.act {
+	  border-left: 3px solid #C9B897;
+	}
+	.trans__menu__dark .men_win.act { border-left: 3px solid #8F949C; }
+	.men_win.act {
+	  border-left: 3px solid #C9B897;
+	}
+	.trans__menu__dark .men_win.act { border-left: 3px solid #8F949C; }
+	#paw {
+	  width: 100%;
+	  height: 71px;
+	  padding: 0 37px 0 0;
+	  display: flex;
+	  justify-content: flex-end;
+	  align-items: center;
+	}
+}

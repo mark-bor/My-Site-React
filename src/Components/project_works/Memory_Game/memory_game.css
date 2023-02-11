@@ -1,0 +1,171 @@
+/*-------------------- TITLE -----------------------------------------*/
+/* .mem-gam > h1 {
+  Styles is in "global.css"
+} */
+
+/*-------------------- BODY -----------------------------------------*/
+.menu_game {
+    max-width: 700px;
+    height: 500px;
+    margin: 0 auto 55px auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-auto-rows: 100px;
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+}
+
+.block_game {
+    box-sizing: border-box;
+    position: relative;
+    perspective: 1000px;
+}
+
+.front, .back {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+    position: absolute;
+    transition: 0.5s;
+    backface-visibility: hidden;
+}
+
+.front {
+    background-color: #FF9900;
+}
+
+.front > button {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-color: none;
+    border-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.question {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    color: #FFF;
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.back {
+    background-color: #78A2E1;
+    transform: rotateX(180deg);
+}
+
+.block_game_2 {
+    position: relative;
+    perspective: 1000px;
+}
+
+.block_game_2 > .front {
+    transform: rotateX(360deg);
+}
+
+.block_game_2 > .back {
+    transform: rotateX(180deg);
+}
+
+svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.game__front-card .img_in_mem_gam {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+}
+
+.game {
+    min-width: 575px;
+    height: 100vh;
+    background: #2F4274;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.game__cards {
+    max-width: 720px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 100px;
+    grid-gap: 20px;
+    padding: 0 20px;
+    margin-bottom: 55px;
+}
+.game__cards.no-event {
+    pointer-events: none;
+}
+.game__card {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    perspective: 700px;
+}
+.game__card.flipped, 
+.game__card.has-match {
+    pointer-events: none;
+}
+.game__card.flipped .game__back-card, 
+.game__card.has-match .game__back-card {
+    transform: rotateY(180deg);
+}
+.game__card.flipped .game__front-card, 
+.game__card.has-match .game__front-card {
+    transform: rotateY(360deg);
+}
+.game__back-card, 
+.game__front-card {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    border-radius: 10px;
+    backface-visibility: hidden;
+    transition: transform 400ms;
+}
+.game__back-card {
+    background: #FF9900;
+    z-index: 1;
+}
+.game__front-card {
+    background: #d9d9d9;
+    transform: rotateY(180deg);
+}
+  
+  
+  
+@media screen and (max-width:  480px){
+    .game__cards {
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 100px;
+        grid-gap: 20px;
+        padding: 0 20px;
+        margin-bottom: 55px;
+    }
+}
+  

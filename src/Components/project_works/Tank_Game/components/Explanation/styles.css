@@ -1,0 +1,172 @@
+/*-------------------- EXPLANATION -----------------------------*/
+/*-------------------- EXPLANATION -----------------------------*/
+/*-------------------- EXPLANATION -----------------------------*/
+.navigation_on_explanation {
+    height: 45px;
+    margin: 15px 0 0 0;
+    background-color: rgba(5, 25, 55, 0.80);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navigation_on_explanation > li {
+    height: 35px;
+}
+.navigation_on_explanation > li > a {
+    height: 100%;
+    padding: 0 7px;
+    background-color: #232E3E;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #F5F5F5;
+    font-size: 15px;
+}
+
+.block_with_sections {
+    display: flex;
+    transition: 0.5s;
+}
+
+.part_of_explanation_card {
+    min-width: 100%;
+    padding: 30px 30px 45px 30px;
+
+    font-weight: lighter;
+}
+
+.part_of_explanation_card > h3 {
+    margin-top: 0;
+
+    color: #FFF85C;
+    font-weight: 100;
+    font-size: 21px;
+}
+
+.part_of_explanation_card > img {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 50%;
+    max-width: 200px;
+}
+
+.explanation_list {
+    margin: 0;
+    padding: 0 0 0 20px;
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lists_element {
+    min-height: 40px;
+    display: inline-flex;
+    color: #F5F5F5;
+}
+
+.element_for_explanation_navigation,
+.element_for_explanation_fire {
+    min-width: 30px;
+    max-width: 30px;
+    height: 30px;
+    margin: 0;
+    background-color: #8FD855;
+    border-radius: 10px;
+    
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 18px;
+    line-height: 100%;
+
+    background-repeat: no-repeat;
+    background-size: 50%;
+}
+.element_for_explanation_navigation {
+    background-color: #8FD855;
+    border-radius: 10px;
+    
+    background-position: center;
+}
+.element_for_explanation_fire {
+    background: none;
+    border-radius: 50%;
+    border: 3px solid #8FD855;
+}
+.driving_up {
+    background-image: url('../../Images/arrow_up.png');
+}
+.driving_down {
+    background-image: url('../../Images/arrow_down.png');
+}
+.driving_left {
+    background-image: url('../../Images/arrow_left.png');
+}
+.driving_right {
+    background-image: url('../../Images/arrow_right.png');
+}
+
+.rotate_left {
+    background-image: url('../../Images/rotate_left.png');
+    background-position: center 60%;
+}
+.rotate_right {
+    background-image: url('../../Images/rotate_right.png');
+    background-position: center 60%;
+}
+.blocking_tower {
+    background-color: #D9D9D9;
+    background-image: url('../../Images/bloked_rotate.png');
+    background-position: center;
+    background-size: 70%;
+}
+#explanation_fire_from_MG {
+    background-image: url('../../Images/machine-gun.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 70%;
+}
+
+.defis {
+    min-width: 20px;
+    max-width: 20px;
+    height: 30px;
+    margin: 0;
+    
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.lists_element > p {
+    margin: 3px 0 0 0;
+    padding: 0;
+    
+    font-weight: 100;
+    font-size: 15px;
+    line-height: 23px;
+}
+
+
+
+@media screen and (max-width: 481px) {
+    /*-------------------- EXPLANATION CARD --------------------------*/
+    /*-------------------- EXPLANATION CARD --------------------------*/
+    /*-------------------- EXPLANATION CARD --------------------------*/
+    .explanation_card_title {
+        font-size: 25px;
+    }
+    .part_of_explanation_card > h3 {
+        font-size: 18px;
+    }
+    .lists_element > p {
+        font-size: 13px;
+        line-height: 17px;
+    }
+}

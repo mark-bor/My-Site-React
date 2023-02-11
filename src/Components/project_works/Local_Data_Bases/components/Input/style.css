@@ -1,0 +1,76 @@
+.input_card_container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input_card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: #FFF;
+    border-radius: 15px;
+}
+
+.input_for_change {
+    max-width: 75%;
+    min-width: 75%;
+    max-height: 75px;
+    min-height: 35px;
+    margin: 60px auto 0 auto;
+    padding: 5px 10px;
+    outline: none;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: #1E2939;
+    font-size: 17px;
+    border: 1px solid #8FD855;
+}
+
+.input_for_change:focus {
+    box-shadow: 0px 0px 10px #8FD855;
+}
+
+.cancel_and_save {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    padding: 0 30px;
+    bottom: 0;    
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.btn_cancel, .btn_save {
+    width: 90px;
+    height: 30px;
+    border-radius: 10px;
+    
+    color: #FFF;
+    font-size: 15px;
+}
+
+.btn_cancel:hover, .btn_save:hover {
+    opacity: 0.8;
+}
+
+.btn_cancel {
+    background-color: #78A2E1;
+}
+
+.btn_save {
+    background-color: #8FD855;
+}

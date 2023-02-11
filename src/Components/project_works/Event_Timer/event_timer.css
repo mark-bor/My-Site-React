@@ -1,0 +1,225 @@
+.tim {
+	font-family: Montserrat, sans-serif;
+}
+
+/*-------------------- BODY ----------------------------------------------------*/
+
+.tim > #img, 
+.tim > #img-2 {
+	position: fixed;
+	bottom: 0;
+}
+.tim > #img {
+	max-height: 300px;
+	z-index: -1;
+	opacity: 0.5;
+}
+.tim > #img-2 {
+	right: 0;
+	max-height: 150px;
+	z-index: -2;
+	opacity: 0.3;
+}
+/* .tim > h1 {
+	Styles is in "global.css"
+} */
+
+.date {
+	max-width: 270px;
+	margin: 0 auto 30px auto;
+	text-align: center;
+}
+.date_time {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+
+	color: #FF9900;
+	font-weight: 400;
+	font-size: 19.5px;
+	line-height: 30px;
+}
+.date_time > input {
+	width: 220px;
+	height: 30px;
+	margin: 5px auto 0 auto;
+	outline: none;
+
+	border: 1px solid #8F949C;
+	background-color: #D9D9D9;
+	border-radius: 5px;
+	
+	color: #FF9900;
+	font-weight: 400;
+	font-size: 19.5px;
+	line-height: 30px;
+}
+.buttons {
+	max-width: 270px;
+	margin: 0 auto 30px auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.reload {
+	width: 100px;
+	height: 25px;
+	margin: 0 auto;
+	background-color: #D9D9D9;
+	border-radius: 15px;
+	transition: 0.2s;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	font-family: Roboto, sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 18px;
+	color: #4BAB00;
+}
+.getDateButton {
+	width: 100px;
+	height: 30px;
+	margin: 0 auto;
+	background-color: #D9D9D9;
+	border-radius: 15px;
+	transition: 0.2s;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	font-family: Chakra Petch, sans-serif;
+	font-weight: 400;
+	font-size: 28px;
+	line-height: 28px;
+	color: #4BAB00;
+}
+.reload:hover {
+	box-shadow: 0 3px 15px #8F949C;
+	opacity: 0.8;
+}
+.getDateButton:hover {
+	box-shadow: 0 3px 15px #8F949C;
+	opacity: 0.8;
+}
+
+.error {
+	font-weight: 400;
+	font-size: 21px;
+	line-height: 25px;
+	color: #FF5555;
+	text-align: center;
+	margin: 0 auto 30px auto;
+}
+
+.tim > h2 {
+	font-family: Chakra Petch, sans-serif;
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 50px;
+	text-align: center;
+	color: #FF9900;
+	margin: 0 0 30px 0;
+}
+.tim > .timer {
+	max-width: 870px;
+	min-height: 150px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.tim .string {
+	max-width: 840px;
+	height: 100%;
+	box-sizing: border-box;
+	margin: 0 30px 200px 30px;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.tim .par {
+	min-width: 290px;
+	max-height: 130px;
+	margin: auto;
+	margin-bottom: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+.one-bir {
+	min-width: 145px;
+	max-height: 130px;
+	margin: auto;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.tim .circle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	width: 130px;
+	height: 130px;
+	fill: none;
+	stroke: none;
+}
+.tim svg {
+	position: relative;
+	width: 130px;
+	height: 130px;
+	padding: 0;
+	border-radius: 50%;
+	box-shadow: inset 0 0 0px 4px #D9D9D9;
+}
+.tim .meter {
+	display: block;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	stroke-width: 5px;
+	stroke-linecap: round;
+	transform: rotate(-90deg);
+	transform-origin: 50% 50%;
+	transition: 1s;
+	stroke: #4BAB00;
+	stroke-dasharray: 394;
+}
+.tim #five_5 {
+	transition: 0s;
+}
+.tim .text-in-circle {
+	width: 60px;
+	position: absolute;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+	align-content: space-around;
+}
+.tim h6, 
+.tim h5 {
+	font-family: Chakra Petch, sans-serif;
+	font-weight: 400;
+	margin: auto;
+	text-align: center;
+}
+.tim h6 {
+	/* color: #D9D9D9; */
+	color: #1E2939;
+	font-size: 20px;
+	line-height: 25px;
+}
+.tim h5 {
+	font-size: 30px;
+	line-height: 35px;
+	color: #FF9900;
+}

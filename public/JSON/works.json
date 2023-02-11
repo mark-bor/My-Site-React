@@ -1,0 +1,92 @@
+[
+    {
+        "className": "q_e_c",
+        "status": "close",
+        "link": "calculator",
+        "image": "/Images/school-bord.jpg",
+        "alt": "school board",
+        "nameEN": "Quadratic equation calculator",
+        "nameUA": "Калькулятор квадратних рівнянь",
+        "type": "calculator"
+    },
+    {
+        "className": "b_t",
+        "status": "close",
+        "link": "birthday-timer",
+        "image": "/Images/tort.jpg",
+        "alt": "pie",
+        "nameEN": "Birthday timer",
+        "nameUA": "Таймер до Дня Народження",
+        "type": "timer"
+    },
+    {
+        "className": "p_g",
+        "status": "close",
+        "link": "password-generator",
+        "image": "/Images/passwords.png",
+        "alt": "password generate",
+        "nameEN": "Password generator",
+        "nameUA": "Генератор паролей",
+        "type": "generator"
+    },
+    {
+        "className": "m_g",
+        "status": "close",
+        "link": "memory-game",
+        "image": "/Images/memory-game.png",
+        "alt": "abstract image",
+        "nameEN": "Memory game",
+        "nameUA": "Гра для пам'яті",
+        "type": "game"
+    },
+    {
+        "className": "e_r",
+        "status": "close",
+        "link": "exchange-rate",
+        "image": "/Images/exchange-rate.jpg",
+        "alt": "coins",
+        "nameEN": "Exchange rate",
+        "nameUA": "Курс валют",
+        "type": "other"
+    },
+    {
+        "className": "t",
+        "status": "close",
+        "link": "event-timer",
+        "image": "/Images/event-timer.jpg",
+        "alt": "stopwatch in hand",
+        "nameEN": "Event timer",
+        "nameUA": "Таймер до події",
+        "type": "timer"
+    },
+    {
+        "className": "t_g",
+        "status": "close",
+        "link": "tank-game/menu",
+        "image": "/Images/tank_game.png",
+        "alt": "tank game",
+        "nameEN": "Tank game",
+        "nameUA": "Танкова гра",
+        "type": "game"
+    },
+    {
+        "className": "l_d_b",
+        "status": "close",
+        "link": "local-data-bases",
+        "image": "/Images/local_database.jpg",
+        "alt": "database",
+        "nameEN": "Local databases",
+        "nameUA": "Локальні бази даних",
+        "type": "other"
+    },
+    {
+        "className": "s_o",
+        "status": "open",
+        "link": "send-out",
+        "image": "/Images/letters.png",
+        "alt": "letters",
+        "nameEN": "Send out",
+        "nameUA": "Розсилка",
+        "type": "other"
+    }
+]

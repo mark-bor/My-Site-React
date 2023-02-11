@@ -1,0 +1,150 @@
+/*-------------------- BODY ------------------------------------------------------*/
+@font-face {
+	font-family: "e-Ukraine-Light";
+	src: url('./e-Ukraine_font/e-Ukraine/e-Ukraine-Light.otf');
+}
+
+html {
+	min-height: 100%;
+}
+
+body {
+	min-height: 100vh;
+	margin: 0;
+	background: #F5F5F5;
+
+	font-family: "e-Ukraine-Light", normal;
+}
+
+.div {
+	margin: 0;
+	padding: 0 0 100px 0;
+}
+
+button, input {
+	outline: none;
+	border: none;
+	background: none;
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/*-------------------- LANGUAGE ------------------------------------------------------*/
+
+.ukraine {
+	display: none;
+}
+.english {
+	display: block;
+}
+.polish {
+	display: none;
+}
+
+/*-------------------- SCROLLBAR ------------------------------------------------------*/
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+::-webkit-scrollbar-track {
+	background-color:  #D9D9D9;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #595959;
+}
+
+/*-------------------- POSITION --------------------------------------*/
+.root {
+	min-height: 100vh;
+	display: grid;
+	grid-template-columns: 25% 75%;
+	grid-template-rows: 70px auto min(170px);
+	grid-template-areas: 
+		"header header" 
+		"sidebar main"
+		"footer footer"
+	;
+
+	transition: 0.3s;
+}
+.root_without_sidebar {
+	grid-template-columns: 0 100%;
+}
+
+main {
+	grid-area: main;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+	.root {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+}
+
+/*-------------------- TITLE --------------------------------------*/
+.title {
+	max-width: 766px;
+	height: 100px;
+	margin: 53px auto;
+	padding: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  
+	text-align: center;
+	font-family: Russo One, sans-serif;/*Secular One*/
+	color: #1E2939;
+	font-weight: 400;
+	font-size: 64px;
+	line-height: 77px;
+}
+
+@media screen and (max-width: 481px) {
+	.title {
+	  margin: 23px auto;
+	  font-weight: 400;
+	  font-size: 54px;
+	  line-height: 57px;
+	}
+}
+
+/*-------------------- WORKS TITLE --------------------------*/
+@font-face {
+	font-family: "e-Ukraine-Light";
+	src: url('./e-Ukraine_font/e-Ukraine/e-Ukraine-Light.otf');
+}
+main > section > h1 {
+	margin: 55px auto;
+	/* color: #D9D9D9; */
+	color: #1E2939;
+	font-family: "e-Ukraine-Light", sans-serif;
+	font-weight: 700;
+	font-size: 54px;
+	line-height: 77px;
+	text-align: center;
+}
+
+@media screen and (max-width: 480px){
+	main > section > h1  {
+		font-size: 50px;
+		line-height: 60px;
+	}
+}

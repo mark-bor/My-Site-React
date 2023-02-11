@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1,
+        "styles": {"background": "#8FD855"},
+        "courseUA": "Англійська рівень (A1-A2)",
+        "courseEN": "English Elementary level (A1-A2)",
+        "coursePL": "Angielski poziom (A1-A2)",
+        "company": "EnglishDOM",
+        "file": "/Certificates/English-A1-A2.pdf"
+    }
+]

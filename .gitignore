@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+/taconfig.json
 
 # testing
 /coverage

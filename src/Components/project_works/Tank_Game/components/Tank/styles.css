@@ -1,0 +1,437 @@
+/*-------------------- TANK --------------------------*/
+/*-------------------- TANK --------------------------*/
+/*-------------------- TANK --------------------------*/
+.tank {
+    position: absolute;
+    margin: 0 0 0 0;
+    /* top: 170px;
+    left: 30px; */
+    z-index: 0;
+
+    box-shadow: -1px 3px 6px -1px rgba(97, 105, 116, 0.3);
+    border-radius: 7px;
+    transition: 0.3s;
+    transition-timing-function: linear;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rotate_tower {
+    position: relative;
+    display: block;
+    /* width: 59px; */
+    /* height: 99%; */
+    /* margin: 0 0 0 10px; */
+    z-index: 1;
+    
+    border-radius: 50%;
+    /* box-shadow: 0px 0px 10px rgba(97, 105, 116, 0.7); */
+    transition: 0.3s;
+    transition-timing-function: linear;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.tower {
+    position: absolute;
+    display: block;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.weapon {
+    position: relative;
+    width: 57px;
+    height: 6px;
+    margin: 0 0 0 85%; top: 50%;
+    padding: auto 0;
+    border-right: none;
+    transition: 0.3s;
+
+    transform: translateY(-3px);
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+}
+.bullet {
+    position: absolute;
+    display: block;
+    min-width: 15px;
+    max-width: 15px;
+    height: 4px;
+    margin: auto 0;
+    left: 3000px;
+    background-color: #616974;
+    border-radius: 7% 50% 50% 7%;
+    /* transform: translateX(3000px); */
+}
+.fire_smoke,
+.fire_smoke_active {
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 35px;
+    /* margin: 0 0 0 100%; */
+    left: 107%;
+    transform: rotate(90deg);
+    
+    background-image: url('../../Images/fire.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% auto;
+}
+.fire_smoke {
+    transition: 0.01s;
+    opacity: 0;
+}
+.fire_smoke_active {
+    opacity: 1;
+}
+.laser {
+    min-width: 5px;
+    height: 50%;
+    margin: 0 0 0 90%;
+    background-color: #8F949C;
+
+    display: flex;
+    align-items: center;
+}
+.beam {
+    display: block;
+    min-height: 1px;
+    min-width: 0;
+    margin: 0 0 0 100%;
+    background-color: #FF5555;
+    transition: 0.5s;
+}
+.beam_active {
+    min-width: 3000px;
+}
+
+.trapdoor {
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 16px;
+    top: 55%;
+    left: 45%;
+    border-radius: 50%;
+}
+
+.machine_gun {
+    position: absolute;
+    height: 10px;
+    left: 67%;
+    z-index: 2;
+    
+    display: flex;
+    align-items: center;
+    
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% auto;
+}
+
+.armors_from_MG {
+    position: relative;
+    display: block;
+    min-width: 5px;
+    max-width: 5px;
+    height: 2px;
+    margin: 2.1px 0 0 0;
+}
+.armors_for_MG {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background-color: #F57D2B;
+    border-radius: 5% 50% 50% 5%;
+}
+.cartridge_case_from_MG {
+    position: relative;
+    display: block;
+    min-width: 3px;
+    max-width: 3px;
+    height: 1px;
+    margin: 2.1px 0 0 12px;
+}
+.cartridge_case {
+    position: absolute;
+    display: block;
+    width: 3px;
+    height: 1px;
+    margin: 0;
+    background-color: #FFC434;
+    /* transition: 0.3s; */
+    /* opacity: 0; */
+}
+.fire_smoke_frome_MG,
+.fire_smoke_frome_MG_active {
+    position: absolute;
+    display: block;
+    width: 8px;
+    height: 10px;
+    margin: 2.1px 0 0 103%;
+    transform: rotate(90deg);
+    
+    background-image: url('../../Images/fire.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+}
+.fire_smoke_frome_MG {
+    transition: 0.01s;
+    opacity: 0;
+}
+.fire_smoke_frome_MG_active {
+    opacity: 1;
+}
+
+
+
+/*-------------------- ABRAMS --------------------------*/
+/*-------------------- ABRAMS --------------------------*/
+/*-------------------- ABRAMS --------------------------*/
+.tank_abrams {
+    width: 100px;
+    height: 60px;
+    margin: 0 0 0 0;
+    background: linear-gradient(to right, #E3D1AD, #C9B897 25%);
+}
+
+.rotate_tower_abrams {
+    width: 45px;
+    height: 45px;
+    margin: 0 0 0 10px;
+    /* border: 1px solid lime; */
+}
+
+.tower_abrams {
+    width: 70px;
+    height: 53px;
+    margin: 0 -10px 0 0;
+    background-image: url('../../Images/abrams_tower.png');
+}
+
+.weapon_abrams {
+    background-color: #E3D1AD;
+    border: 1px solid #E3D1AD;
+}
+
+.trapdoor_abrams {
+    background-color: #C9B897;
+}
+
+.machine_gun_abrams {
+    width: 35px;
+    top: 59%;
+    background-image: url('../../Images/browning_remove_background.png');
+}
+
+
+/*-------------------- LEOPARD --------------------------*/
+/*-------------------- LEOPARD --------------------------*/
+/*-------------------- LEOPARD --------------------------*/
+.tank_leopard {
+    width: 90px;
+    height: 55px;
+    margin: 0 0 0 0;
+    background: linear-gradient(to right, #96A889, #76886A 25%);
+}
+
+.rotate_tower_leopard {
+    width: 53px;
+    height: 53px;
+    margin: 0 0 0 15px;
+}
+
+.tower_leopard {
+    width: 75px;
+    height: 53px;
+    margin: 0 -5px 0 0;
+    background-image: url('../../Images/leopard_tower.png');
+}
+
+.weapon_leopard {
+    background-color: #96A889;
+    border: 1px solid #96A889;
+}
+
+.trapdoor_leopard {
+    background-color: #76886A;
+}
+
+.machine_gun_leopard {
+    width: 23px;
+    top: 61%;
+    background-image: url('../../Images/MG-42_from_up_without_background.png');
+}
+
+
+
+/*-------------------- CHALLENGER --------------------------*/
+/*-------------------- CHALLENGER --------------------------*/
+/*-------------------- CHALLENGER --------------------------*/
+.tank_challenger {
+    width: 100px;
+    height: 60px;
+    margin: 0 0 0 0;
+    background: linear-gradient(to right, #E3D1AD, #C9B897 25%);
+}
+
+.rotate_tower_challenger {
+    width: 45px;
+    height: 45px;
+    margin: 0 0 0 10px;
+    /* border: 1px solid lime; */
+}
+
+.tower_challenger {
+    width: 70px;
+    height: 53px;
+    margin: 0 -10px 0 0;
+    background-image: url('../../Images/challenger_tower.png');
+}
+
+.weapon_challenger {
+    background-color: #E3D1AD;
+    border: 1px solid #E3D1AD;
+}
+
+.trapdoor_challenger {
+    background-color: #C9B897;
+}
+
+.machine_gun_challenger {
+    width: 35px;
+    top: 59%;
+    background-image: url('../../Images/browning_remove_background.png');
+}
+
+
+/*-------------------- LECLERC --------------------------*/
+/*-------------------- LECLERC --------------------------*/
+/*-------------------- LECLERC --------------------------*/
+.tank_leclerc {
+    width: 90px;
+    height: 55px;
+    margin: 0 0 0 0;
+    background: linear-gradient(to right, #567742, #415734 25%);
+}
+
+.rotate_tower_leclerc {
+    width: 53px;
+    height: 53px;
+    margin: 0 0 0 15px;
+}
+
+.tower_leclerc {
+    width: 75px;
+    height: 53px;
+    margin: 0 -5px 0 0;
+    background-image: url('../../Images/leclerc_tower.png');
+}
+
+.weapon_leclerc {
+    background-color: #567742;
+    border: 1px solid #567742;
+}
+
+.trapdoor_leclerc {
+    background-color: #415734;
+}
+
+.machine_gun_leclerc {
+    width: 23px;
+    top: 61%;
+    background-image: url('../../Images/MG-42_from_up_without_background.png');
+}
+
+
+
+/*-------------------- OPLOT --------------------------*/
+/*-------------------- OPLOT --------------------------*/
+/*-------------------- OPLOT --------------------------*/
+.tank_oplot {
+    width: 90px;
+    height: 55px;
+    margin: 0 0 0 0;
+    background: linear-gradient(to right, #435E4B, #2A4532 25%);
+}
+
+.rotate_tower_oplot {
+    width: 45px;
+    height: 45px;
+    margin: 0 0 0 3px;
+    /* border: 1px solid lime; */
+}
+
+.tower_oplot {
+    width: 75px;
+    height: 53px;
+    margin: 0 -10px 0 0;
+    background-image: url('../../Images/oplot_tower.png');
+}
+
+.weapon_oplot {
+    background-color: #435E4B;
+    border: 1px solid #435E4B;
+}
+
+.trapdoor_oplot {
+    background-color: #2A4532;
+}
+
+.machine_gun_oplot {
+    width: 35px;
+    top: 59%;
+    background-image: url('../../Images/browning_remove_background.png');
+}
+
+
+/*-------------------- TWARDY --------------------------*/
+/*-------------------- TWARDY --------------------------*/
+/*-------------------- TWARDY --------------------------*/
+.tank_twardy {
+    width: 90px;
+    height: 55px;
+    margin: 0 0 0 0;
+    background: linear-gradient(to right, #566D51, #324833 25%);
+}
+
+.rotate_tower_twardy {
+    width: 45px;
+    height: 45px;
+    margin: 0 0 0 0px;
+}
+
+.tower_twardy {
+    width: 75px;
+    height: 53px;
+    margin: 0 -12px 0 0;
+    background-image: url('../../Images/twardy_tower.png');
+}
+
+.weapon_twardy {
+    background-color: #566D51;
+    border: 1px solid #566D51;
+}
+
+.trapdoor_twardy {
+    background-color: #324833;
+}
+
+.machine_gun_twardy {
+    width: 23px;
+    top: 61%;
+    background-image: url('../../Images/browning_remove_background.png');
+}

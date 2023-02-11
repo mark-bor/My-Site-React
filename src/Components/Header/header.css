@@ -1,0 +1,350 @@
+@font-face {
+	font-family: "e-Ukraine-Regular";
+	src: url('../../e-Ukraine_font/e-Ukraine/e-Ukraine-Regular.otf');
+}
+
+.head {
+	grid-area: header;
+	position: relative;
+	height: 70px;
+	width: 100%;
+	background-color: #A1BEEA;
+	z-index: 3;
+  
+	display: inline-flex;
+	justify-content: space-between;
+	align-content: center;
+}
+
+.form_in_head,
+.menu_burger {
+	width: 150px;
+	height: 100%;
+	margin: 0;
+	z-index: inherit;
+}
+
+/*-------------------- HEAD --------------------------*/
+.form_in_head {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.select_language {
+	position: relative;
+	width: 55px;
+	height: 42px;
+}
+.language {
+	position: absolute;
+	width: 100%;
+	height: 42px;
+	z-index: 1;
+	background: linear-gradient(45deg, rgba(80, 44, 132, 1), rgba(69, 127, 214, 1));
+	border-radius: 12px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  
+	text-align: center;
+	color: #FFFFFF;
+	font-weight: 400;
+	font-size: 21px;
+	line-height: 29px;
+}
+.ukrainian {
+	background: linear-gradient(45deg, #FFF85C, #457FD6);
+}
+.english {
+	background: linear-gradient(45deg, #502C84, #457FD6);
+}
+.select_lang,
+.select_lang_active {
+	width: 100%;
+	padding: 42px 0 0 0;
+	border-radius: 12px;
+	background-color: #595959;
+	overflow: hidden;
+	transition: 0.2s;
+}
+.select_lang {
+	height: 100%;
+}
+.select_lang_active {
+	height: 122px;
+}
+.puncts {
+	display: block;
+	width: 100%;
+	height: 25px;
+	margin: 10px 0;
+}
+.puncts > a,
+.puncts > button {
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	color: #F5F5F5;
+	font-weight: 400;
+	font-size: 19px;
+	line-height: 29px;
+}
+.puncts > a:hover,
+.puncts > button:hover {
+	color: #457FD6;
+}
+
+.sites_color {
+	display: block;
+	width: 50px;
+	height: 25px;
+	background: #F5F5F5;
+	border-radius: 17.5px;
+	overflow: hidden;
+}
+.input_in_sites_color {
+	display: none;
+}
+.sun_moon {
+	display: block;
+	width: 25px;
+	height: 100%;
+	border-radius: 50%;
+  
+	animation-name: sun;
+	animation-duration: 0.7s;
+	animation-fill-mode: forwards;
+}
+@keyframes sun {
+	0% {
+	margin: 0 0 0 50%;
+	background: linear-gradient(316.41deg, #A1BEEA 0%, #457FD6 100%);
+	} 
+	50% {
+	  margin: 0 50% 0 0;
+	  background: linear-gradient(45deg, #FF9900 0%, #FFF85C 100%);
+	}
+	100% {
+	  margin: 0 50% 0 0;
+	  background: linear-gradient(45deg, #FF9900 0%, #FFF85C 100%);
+	}
+}
+.input_in_sites_color:checked + .sun_moon {
+	animation-name: moon;
+}
+@keyframes moon {
+	0% {
+	  margin: 0 50% 0 0;
+	  background: linear-gradient(45deg, #FF9900 0%, #FFF85C 100%);
+	} 
+	50% {
+	  margin: 0 0 0 50%;
+	  background: linear-gradient(316.41deg, #A1BEEA 0%, #457FD6 100%);
+	}
+	100% {
+	  margin: 0 0 0 50%;
+	  background: linear-gradient(316.41deg, #A1BEEA 0%, #457FD6 100%);
+	}
+}
+.sun_moon > span {
+	display: block;
+	opacity: 0;
+	filter: none;
+	border-radius: 50%;
+	transition-delay: 0.1s;
+	transition-duration: 0.1s;
+	transform: translateX(-33%) translateY(-15%);
+}
+.input_in_sites_color:checked + .sun_moon > span {
+	opacity: 1;
+	width: 100%;
+	height: 100%;
+	background: #595959;
+}
+
+.head > .but {
+	display: inline-block;
+	width: auto;
+	height: 80%;
+	margin: auto;
+	z-index: inherit;
+}
+.head > .but > .logo {
+	position: relative;
+	display: block;
+	width: auto;
+	height: 100%;
+	transition: 0.2s;
+	opacity: 1;
+	z-index: 0;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.head > .but > .logo:hover {
+	opacity: 0.9;
+}
+
+.menu_burger {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.menu_burger > .link {
+	position: relative;
+	display: none;
+	width: 50px;
+	height: 50px;
+	margin: auto;
+	background: none;
+	border: none;
+	border-radius: 20%;
+	transition: 0.1s;
+}
+.link > .burger,
+.link > .burger:before,
+.link > .burger:after {
+	position: absolute;
+	display: block;
+	top: 50%;
+	margin-top: -2px;
+	height: 4px;
+	
+	background-color: #595959;
+	border-radius: 20px;
+	text-align: center;
+}
+.link > .burger {
+	width: 25px;
+	left: calc(25px / 2);
+	transition: 0.1s;
+}
+.link > .burger:before,
+.link > .burger:after {
+	content: "";
+	display: block;
+	width: 35px;
+	margin-left: -5px;
+	transition: 0.5s;
+}
+.link > .burger:before {
+	transform: translateY(-12px);
+}
+.link > .burger:after {
+	transform: translateY(12px);
+}
+.link_active {
+	display: block;
+	width: 50px;
+	height: 50px;
+	background: none;
+	border: none;
+	border-radius: 20%;
+	position: relative;
+}
+.link_active > .burger,
+.link_active > .burger:before,
+.link_active > .burger:after {
+	position: absolute;
+	display: block;
+	top: 50%;
+	margin-top: -2px;
+	height: 4px;
+	
+	background-color: #595959;
+	border-radius: 20px;
+}
+.link_active > .burger {
+	width: 25px;
+	left: calc(25px / 2);
+	visibility: hidden;
+}
+.link_active > .burger:before,
+.link_active > .burger:after {
+	content: "";
+	display: block;
+	transition: 0.5s;
+	width: 35px;
+	margin-left: -5px;
+}
+.link_active > .burger:before {
+	visibility: visible;
+	transform: rotate(-45deg);
+}
+.link_active > .burger:after {
+	visibility: visible;
+	transform: rotate(45deg);
+}
+.link:hover,
+.link_active:hover {
+	background-color: #457FD6;
+	opacity: 0.6;
+}
+
+.menu_burger a {
+	align-self: flex-end;
+	display: block;
+	width: auto;
+	height: 80%;
+}
+.menu_burger img {
+	margin: 0 0 0 15px;
+	height: 100%;
+}
+
+
+
+@media screen and (max-width: 768px) {
+	.menu_burger > .link {
+		display: block;
+	}
+}
+
+
+
+@media screen and (max-width: 481px) {
+	/*-------------------- HEAD --------------------------*/
+	.form_in_head,
+	.menu_burger {
+		width: 110px;
+		height: 100%;
+		margin: 0;
+	}
+   
+	.select_language {
+		width: 47px;
+		height: 37px;
+	}
+	.select_lang {
+		padding: 37px 0 0 0;
+	}
+	.select_lang_active {
+		height: 117px;
+	}
+	
+	.language {
+		height: 37px;
+		border-radius: 12px;
+
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 19px;
+	}
+  
+	.sites_color {
+		width: 40px;
+		height: 20px;
+	}
+	.sun_moon {
+	  	width: 20px;
+	}
+	  
+	.head .link:hover,
+	.head .link_active:hover {
+	  background: none;
+	}
+}
+  

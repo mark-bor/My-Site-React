@@ -1,0 +1,83 @@
+[
+    {
+        "name":"M1 Abrams",
+        "info": {
+            "url": "/Images/abrams_x4.png",
+            "countryFlag": "/Images/United_States.jpg",
+            "name": "M1 Abrams",
+            "shirtName": "abrams",
+            "numberOfBullets": "20",
+            "rateOfFire": "20",
+            "rechargeSpeed": "20",
+            "color": "#C9B897"
+        },
+        "tankBTN": {
+            
+        }
+    },
+    {
+        "name":"Leopard 2",
+        "info": {
+            "url": "/Images/leopard_x4.png",
+            "countryFlag": "/Images/Germany.jpg",
+            "name": "Leopard 2",
+            "shirtName": "leopard",
+            "numberOfBullets": "20",
+            "rateOfFire": "20",
+            "rechargeSpeed": "20",
+            "color": "#849878"
+        }
+    },
+    {
+        "name":"Challenger 2",
+        "info": {
+            "url": "/Images/challenger_x4.png",
+            "countryFlag": "/Images/United_Kingdom.jpg",
+            "name": "Challenger 2",
+            "shirtName": "challenger",
+            "numberOfBullets": "20",
+            "rateOfFire": "20",
+            "rechargeSpeed": "20",
+            "color": "#849878"
+        }
+    },
+    {
+        "name":"Leclerc",
+        "info": {
+            "url": "/Images/leclerc_x4.png",
+            "countryFlag": "/Images/France.jpg",
+            "name": "Leclerc",
+            "shirtName": "leclerc",
+            "numberOfBullets": "20",
+            "rateOfFire": "20",
+            "rechargeSpeed": "20",
+            "color": "#849878"
+        }
+    },
+    {
+        "name":"BM Oplot",
+        "info": {
+            "url": "/Images/oplot_x4.png",
+            "countryFlag": "/Images/Ukraine.jpg",
+            "name": "BM Oplot",
+            "shirtName": "oplot",
+            "numberOfBullets": "20",
+            "rateOfFire": "20",
+            "rechargeSpeed": "20",
+            "color": "#849878"
+        }
+    },
+    {
+        "name":"PT-91 Twardy",
+        "info": {
+            "url": "/Images/twardy_x4.png",
+            "countryFlag": "/Images/Poland.jpg",
+            "name": "PT-91 Twardy",
+            "shirtName": "twardy",
+            "numberOfBullets": "20",
+            "rateOfFire": "20",
+            "rechargeSpeed": "20",
+            "color": "#849878"
+        }
+    }
+]

@@ -1,0 +1,328 @@
+/*-------------------- BUTTON FOR CONTROL --------------------------*/
+/*-------------------- BUTTON FOR CONTROL --------------------------*/
+/*-------------------- BUTTON FOR CONTROL --------------------------*/
+.open_menu,
+.increase {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+    opacity: 0.5;
+    
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+}
+.open_menu {
+    display: block;
+    width: 40px;
+    height: 40px;
+    /* top: 3px;
+    left: 3px; */
+    background-image: url('../../Images/menu_in_game.png');
+}
+.open_menu:hover {
+    opacity: 0.6;
+}
+
+.increase {
+    right: 0;
+    background-image: url('../../Images/icon-sizes.jpg');
+}
+.games_body.increase_game_body .increase {
+    background-image: url('../../Images/reduce-icons.jpg');
+}
+.increase:hover {
+    opacity: 0.6;
+}
+
+
+#blocking_rotation_of_tower {
+    display: none;
+}
+.blocking_rotation_of_tower {
+    opacity: 0.5;
+    cursor: help;
+}
+.blocking_rotation_of_tower::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    right: 40px;
+
+    background-image: url('../../Images/bloked_rotate.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#blocking_rotation_of_tower:checked + .blocking_rotation_of_tower {
+    opacity: 1;
+}
+#blocking_rotation_of_tower:checked + .blocking_rotation_of_tower::before {
+    background-image: url('../../Images/bloked_rotate_active.png');
+}
+
+#laser {
+    display: none;
+}
+.on_off_laser {
+    opacity: 0.5;
+    cursor: help;
+}
+.on_off_laser::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    right: 80px;
+
+    background-image: url('../../Images/laser.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#laser:checked + .on_off_laser::before {
+    background-image: url('../../Images/laser_active.png');
+}
+
+.blocking_rotation_of_tower:hover,
+.on_off_laser:hover {
+    opacity: 0.7;
+}
+#blocking_rotation_of_tower:checked + .blocking_rotation_of_tower,
+#laser:checked + .on_off_laser {
+    opacity: 1;
+}
+
+.information_about_tank {
+    position: absolute;
+    display: block;
+    max-width: 500px;
+    width: 40%;
+    height: 70px;
+    left: 30%;
+    right: 30%;
+    bottom: 0;
+    /* background-color: #8FD855; */
+    border-radius: 50% 50% 0 0;
+    opacity: 0.5;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.information_about_mg,
+.information_about_gun {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #616974;
+    border-radius: 7px;
+    
+    display: flex;
+    align-items: center;
+}
+.information_about_mg {
+    width: 40%;
+    height: 25px;
+    margin: 0 0 5px 10%;
+}
+.information_about_gun {
+    width: 50%;
+    height: 30px;
+}
+.mg_information {
+    position: relative;
+    display: block;
+    width: 25px;
+    height: 25px;
+    
+    background-image: url('../../Images/machine-gun.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+}
+.fire_information {
+    position: relative;
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+    font-size: 25px;
+    line-height: 95%;
+}
+.information_mg,
+.information_gun {
+    display: block;
+    width: 100%;
+    margin: 0 0 0 10px;
+    padding: auto;
+    
+    text-align: center;
+    line-height: 100%;
+}
+.information_mg {
+    height: 70%;
+    
+    color: #1C8CCC;
+    font-size: 15px;
+}
+.information_gun {
+    height: 100%;
+    
+    color: #FF6A00;
+    font-size: 25px;
+}
+.remainder {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #8FD855;
+    border-radius: 7px;
+    transition: 0.3s;
+    transition-timing-function: linear;
+    z-index: -1;
+}
+
+.block_with_btns {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    bottom: 0;
+    z-index: 1;
+    transition: 0.3s;
+    overflow: hidden;
+    opacity: 0.7;
+    
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(3, 50px);
+    grid-template-areas: 
+        "1 two three"
+        "four five six"
+        "seven eight nine"
+    ;
+}
+.position_left { left: 0; }
+.position_right { right: 0; }
+.position_left_hidden { height: 0px; }
+.position_right_hidden { height: 100px; }
+
+.btn_control {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+    color: #FFF;
+    font-size: 30px;
+    line-height: 100%;
+}
+.btn_control_nav {
+    background-color: #8FD855;
+    border-radius: 17px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%
+}
+.btn_control_fire {border-radius: 50%;}
+.btn_control_active {opacity: 1;}
+.btn_control:hover {
+    opacity: 1;
+    cursor: help;
+}
+
+#move_up {
+    grid-area: two;
+    background-image: url('../../Images/arrow_up.png');
+}
+#move_left {
+    grid-area: four;
+    background-image: url('../../Images/arrow_left.png');
+}
+#move_right {
+    grid-area: six;
+    background-image: url('../../Images/arrow_right.png');
+}
+#move_down {
+    grid-area: eight;
+    background-image: url('../../Images/arrow_down.png');
+}
+
+#fire_frome_MG {
+    grid-area: three;
+
+    background-image: url('../../Images/machine-gun.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 45%;
+}
+#fire {
+    grid-area: five;
+}
+#rotate_left {
+    grid-area: seven;
+    background-image: url('../../Images/rotate_left.png');
+    background-position: center 60%;
+}
+#rotate_right {
+    grid-area: nine;
+    background-image: url('../../Images/rotate_right.png');
+    background-position: center 60%;
+}
+
+#fire > svg,
+#fire_frome_MG > svg {
+    position: absolute;
+    padding: 0;
+    border-radius: 50%;
+    fill: none;
+    z-index: 1;
+}
+#fire > svg {
+    width: 100%;
+    height: 100%;
+}
+#fire_frome_MG > svg {
+    width: 40px;
+    height: 40px;
+}
+.fire_timer,
+.fire_MG_timer {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    z-index: 1;
+    transition-timing-function: linear;
+    
+    /* stroke: #FF5555; */
+    /* stroke: #FFF85C; */
+    stroke: #8FD855;
+    stroke-width: 5px;
+    stroke-linecap: butt;
+    /* stroke-dasharray: 50%; */
+    /* stroke-dashoffset: 50%; */
+}
+#fire > span {
+    z-index: 1;
+}

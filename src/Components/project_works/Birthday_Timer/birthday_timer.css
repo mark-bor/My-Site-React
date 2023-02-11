@@ -1,0 +1,148 @@
+.bir-tim {
+	font-family: Montserrat, sans-serif;
+}
+
+/*-------------------- BODY ----------------------------------------------------*/
+
+.bir-tim > #img, 
+.bir-tim > #img-2 {
+	display: none;
+	position: fixed;
+	bottom: 0;
+}
+.bir-tim > #img {
+	max-height: 300px;
+	opacity: 0.5;
+}
+.bir-tim > #img-2 {
+	right: 0;
+	max-height: 150px;
+	opacity: 0.3;
+}
+/* 
+.bir-tim > h1 {
+	Styles is in "body-scrollbar.css"
+} 
+*/
+.bir-tim > h2 {
+	font-family: Chakra Petch, sans-serif;
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 50px;
+	text-align: center;
+	color: #FF9900;
+	margin: 0 0 55px 0;
+}
+.bir-tim > .timer {
+	max-width: 870px;
+	min-height: 150px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.bir-tim .string {
+	max-width: 840px;
+	height: 100%;
+	box-sizing: border-box;
+	margin: 0 30px;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	float: left;
+}
+.bir-tim .par {
+	min-width: 290px;
+	max-height: 130px;
+	margin: auto;
+	margin-bottom: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+.one-bir {
+	min-width: 145px;
+	max-height: 130px;
+	margin: auto;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.bir-tim .circle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	width: 130px;
+	height: 130px;
+	fill: none;
+	stroke: none;
+}
+.bir-tim svg {
+	position: relative;
+	width: 130px;
+	height: 130px;
+	padding: 0;
+	border-radius: 50%;
+	box-shadow: inset 0 0 0px 4px #D9D9D9;
+}
+.bir-tim .meter {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	
+	transform: rotate(-90deg);
+	transform-origin: 50% 50%;
+	transition: 1s;
+	transition-timing-function: linear;
+
+	stroke: #4BAB00;
+	stroke-width: 5px;
+	stroke-linecap: round;
+	stroke-dasharray: 394;
+}
+.bir-tim #five_5 {
+	transition: 0s;
+	transition-timing-function: linear;
+}
+.bir-tim .text-in-circle {
+	width: 60px;
+	position: absolute;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+	align-content: space-around;
+}
+.bir-tim h6, 
+.bir-tim h5 {
+	font-family: Chakra Petch, sans-serif;
+	font-weight: 400;
+	margin: auto;
+	text-align: center;
+}
+.bir-tim h6 {
+	/* color: #D9D9D9; */
+	color: #1E2939;
+	font-size: 20px;
+	line-height: 25px;
+}
+.bir-tim h5 {
+	font-size: 30px;
+	line-height: 35px;
+	color: #FF9900;
+}
+
+
+
+@media screen and (max-width: 481px) {
+	.bir-tim > #img,
+	.bir-tim > #img-2 {
+		display: none;
+	}
+}

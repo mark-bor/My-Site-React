@@ -1,0 +1,115 @@
+/*-------------------- MENU ----------------------*/
+.h  {
+	margin: 0;
+	padding: 0 30px 100px 30px;
+}
+.head_block_menu {
+	max-width: 500px;
+	height: 300px;
+	margin: 0 auto;
+	padding: 0;
+  
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 80px 150px;
+	grid-auto-columns: auto;
+	grid-auto-rows: 80px 150px;
+	grid-gap: 20px;
+	grid-template-areas: "one one" "two three";
+}
+.head_block_menu > li {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+.h .block_text {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	perspective: 1000px;
+}
+.h .block, 
+.h .text {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	background: linear-gradient(45deg, #C9B897 30%, #E3D1AD);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s;
+	backface-visibility: hidden;
+}
+.h .dark { background: linear-gradient(45deg, #1E2939 30%, #595959); }
+.h .block {
+	position: absolute;
+	border-radius: 33px 33px 33px 9px;
+}
+.h .block img {
+	max-height: 60px;
+}
+.h .block #certificate {
+	margin-top: 17px;
+}
+.h .text {
+	border-radius: 9px 33px 33px 33px;
+	transform: rotateX(180deg);
+
+	color: #8F949C;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 48px;
+}
+.h .block_text:hover .block {
+	transform: rotateX(180deg);
+}
+.h .block_text:hover .text {
+	transform: rotateX(360deg);
+}
+.h .one {
+	grid-area: one;
+	width: 100%;
+	height: 100%;
+}
+.h .two {
+	grid-area: two;
+}
+.h .three {
+	grid-area: three;
+}
+
+@media screen and (max-width: 481px) {
+	.head_block_menu {
+		height: 175px;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 80px);
+		grid-auto-rows: 80px 80px;
+		grid-auto-columns: auto;
+		grid-gap: 15px;
+	}
+	.h .block, 
+	.h .text {
+	  	border-radius: 23px 23px 23px 7px;
+	}
+	.h .block {
+	  	position: relative;
+	}
+	.h .block img {
+	  	max-height: 55px;
+	}
+	.h .text {
+		display: none;
+		position: absolute;
+	}
+	.h .block_text:hover .block {
+	  	transform: rotateX(0deg);
+	}
+	.h .block_text:hover .text {
+	  	display: none;
+	}
+}

@@ -1,0 +1,104 @@
+.sidebar_with_navigation {
+    grid-area: sidebar;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+    background-color: #E3D1AD;
+}
+.sidebar_with_navigation_dark { background-color: #595959; }
+
+.sidebar_btn {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin: 0 0 0 100%;
+    transform: rotate(90deg);
+    z-index: 2;
+    
+    background-color: #E3D1AD;
+    background-image: url('./Images/arrow_down.png');
+    background-repeat: no-repeat;
+    background-size: 70% auto;
+    background-position: center center;
+}
+.sidebar_with_navigation_dark .sidebar_btn { background-color: #595959; }
+
+.links_list_in_sidebar {
+    overflow-x: hidden;
+}
+
+.links_list_in_sidebar > li {
+    margin: 0 0 10px 0;
+    padding: 0 24px 0 18px;
+    background-color: #C9B89770;
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.sidebar_with_navigation_dark .links_list_in_sidebar > li { background-color: #8F949C70; }
+
+.head_links {
+    min-width: 130px;
+    height: 33px;
+    margin: 0;
+    
+    display: inline-flex;
+    align-items: center;
+    
+    border-bottom: 1px solid #E3D1AD;
+    color: #F5F5F5;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+}
+.sidebar_with_navigation_dark .head_links { border-bottom: 1px solid #595959; }
+.head_links:hover {
+    color: #457FD6;
+}
+
+.btn_show_more {
+    width: 18px;
+    height: 18px;
+    margin: 0 0 0 auto;
+    transition: 0.1s;
+    transform: rotate(-90deg);
+
+    background-image: url('./Images/arrow_down.png');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center center;
+}
+
+.two_links_list_in_sidebar {
+    width: 100%;
+    height: 0;
+    margin: 0 0 0 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.open_list {
+    height: auto;
+}
+
+/* .two_links_list_in_sidebar > li {
+    
+} */
+
+.two_level_links {
+    min-height: 20px;
+    margin:5px 0;
+    opacity: 0.75;
+    
+    display: flex;
+    align-items: center;
+    
+    color: #F5F5F5;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 19px;
+}
+.two_level_links:hover {
+    color: #457FD6;
+}
