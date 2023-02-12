@@ -1,21 +1,12 @@
 import { widthCert } from "./Section.js";
-// export let widthCert = 0;
-// window.innerWidth <= 481 ? widthCert = 370 : widthCert = 850;
 
 export let certArr;
 
 export function getCertificates({object}) {	
 	fetch(object.url)
 	.then((res) => res.json())
-	.then((res) => {
-		certArr = res;
-		// object.len = res.length;
-		// return res.forEach((cert) => <Certificate certificate={cert}/>);
-		// return res;
-	})
-	.catch((err) => {
-		console.log("ERROR in getCertificates() ==>", err);
-	});
+	.then((res) => certArr = res)
+	.catch((err) => console.log("ERROR in getCertificates() ==>", err));
 }
 
 /*------------------------------- BOTTOM BUTTONS STYLE -----------------------------------*/

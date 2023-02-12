@@ -33,8 +33,16 @@ export default function Sidebar({lang}) {
                             onClick={(btn) => showMore(btn, 'cv_list')}
                         ></button>
                         <ul id="cv_list" className="two_links_list_in_sidebar">
-                            <li><a className="two_level_links" target={'_blank'} href="./CVs/Mark%20Bordakov%20-%20Front-end.pdf">CV 1</a></li>
-                            <li><a className="two_level_links" target={'_blank'} href="./CVs/M%20Bordakov%20-%20Front-end.pdf">CV 2</a></li>
+                            <li><a 
+                                className="two_level_links" 
+                                target={'_blank'} rel="noreferrer"
+                                href="https://takct-server.netlify.app/CV/Mark%20Bordakov%20-%20Front-end.pdf"
+                            >CV 1</a></li>
+                            <li><a 
+                                className="two_level_links" 
+                                target={'_blank'} rel="noreferrer"
+                                href=".https://takct-server.netlify.app/CV/M%20Bordakov%20-%20Front-end.pdf"
+                            >CV 2</a></li>
                         </ul>
                     </li>
                     <li>
@@ -74,8 +82,16 @@ export default function Sidebar({lang}) {
                             onClick={(btn) => showMore(btn, 'cv_list')}
                         ></button>
                         <ul id="cv_list" className="two_links_list_in_sidebar">
-                            <li><a className="two_level_links" target={'_blank'} href="./CVs/Mark_Bordakov_Front-end.pdf">Резюме 1</a></li>
-                            <li><a className="two_level_links" target={'_blank'} href="./CVs/M_Bordakov_Front-end.pdf">Резюме 2</a></li>
+                            <li><a 
+                                className="two_level_links" 
+                                target={'_blank'} rel="noreferrer"
+                                href="https://takct-server.netlify.app/CV/Mark_Bordakov_Front-end.pdf"
+                            >Резюме 1</a></li>
+                            <li><a 
+                                className="two_level_links" 
+                                target={'_blank'} rel="noreferrer"
+                                href="https://takct-server.netlify.app/CV/M_Bordakov_Front-end.pdf"
+                            >Резюме 2</a></li>
                         </ul>
                     </li>
                     <li>

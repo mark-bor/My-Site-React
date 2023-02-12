@@ -6,6 +6,6 @@
         "courseEN": "English Elementary level (A1-A2)",
         "coursePL": "Angielski poziom (A1-A2)",
         "company": "EnglishDOM",
-        "file": "/Certificates/English-A1-A2.pdf"
+        "file": "https://takct-server.netlify.app/Certificates/English-A1-A2.pdf"
     }
 ]

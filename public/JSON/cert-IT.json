@@ -6,7 +6,7 @@
         "courseEN": "UX/UI design",
         "coursePL": "UX/UI projekt",
         "company": "ITVDN",
-        "file": "/Certificates/UXUI-design.pdf"
+        "file": "https://takct-server.netlify.app/Certificates/UXUI-design.pdf"
     }, {
         "id": 2,
         "styles": {"background": "#FF9900"},
@@ -14,7 +14,7 @@
         "courseEN": "QA",
         "coursePL": "QA",
         "company": "DataArt",
-        "file": "/Certificates/QA.pdf"
+        "file": "https://takct-server.netlify.app/Certificates/QA.pdf"
     }, {
         "id": 3,
         "styles": {"backgroundImage": "url('../Images/html-css-js.png')"},
@@ -22,7 +22,7 @@
         "courseEN": "WEB UI development",
         "coursePL": "WEB UI rozwój",
         "company": "Lviv IT school",
-        "file": "/Certificates/Основи-WEB-UI-розробки-2022.pdf"
+        "file": "https://takct-server.netlify.app/Certificates/Основи-WEB-UI-розробки-2022.pdf"
     }, {
         "id": 4,
         "styles": {"background": "#000000"},
@@ -30,7 +30,7 @@
         "courseEN": "Web-programming with Python and JavaScript",
         "coursePL": "Programowanie sieciowe z Python i JavaScript",
         "company": "Harvard University",
-        "file": "/Certificates/Web-programming-with-Pithon-and-JavaScript.pdf"
+        "file": "https://takct-server.netlify.app/Certificates/Web-programming-with-Pithon-and-JavaScript.pdf"
     },{
         "id": 5,
         "styles": {"background": "#502C84"},
@@ -38,7 +38,7 @@
         "courseEN": "Front-end development",
         "coursePL": "Front-end rozwój",
         "company": "Svitlana Sikora, Prometheus",
-        "file": "/Certificates/Front-end.pdf"
+        "file": "https://takct-server.netlify.app/Certificates/Front-end.pdf"
     },{
         "id": 6,
         "styles": {"background": "#457FD6"},
@@ -46,6 +46,6 @@
         "courseEN": "TypeScript",
         "coursePL": "TypeScript",
         "company": "ITVDN",
-        "file": "/Certificates/TypeScript.pdf"
+        "file": "https://takct-server.netlify.app/Certificates/TypeScript.pdf"
     }
 ]

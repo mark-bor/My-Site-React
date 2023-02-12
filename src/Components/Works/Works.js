@@ -73,11 +73,11 @@ export default function Works({lang}) {
 				<ul className="legend">
 					<li className="leg_el" onClick={() => sortByColor('open', setWorks)}>
 						<button id="blue" className="color"></button>
-						<p> - in developing proces.</p>
+						<p> - в процесі розробкиі.</p>
 					</li>
 					<li className="leg_el" onClick={() => sortByColor('close', setWorks)}>
 						<button id="green" className="color"></button>
-						<p> - to complete.</p>
+						<p> - завершено.</p>
 					</li>
 				</ul>
 
@@ -115,20 +115,23 @@ function Work({work, title, lang}) {
 
 
 
+function doRequest() {
+	return fetch(`${window.location.origin}/JSON/works.json`)
+			.then((res) => res.json())
+			.then((res) => {
+				return res;
+			})
+			.catch((err) => console.log(err));
+}
+
+
+
 function getWorks(sortBy, set) {
 	document.querySelectorAll('.leg_el').forEach(elem => elem.classList.remove('leg_el_active'));
-
-	fetch(`${window.location.origin}/JSON/works.json`)
-	.then((res) => res.json())
-	.then((res) => sortBy==='all' ? set(res) : set(res.filter((element) => element.type===sortBy)))
-	.catch((err) => console.log(err));
+	doRequest().then((res) => sortBy==='all' ? set(res) : set(res.filter((element) => element.type===sortBy)));
 }
 
 function sortByColor(status, set) {
 	document.querySelectorAll('.sorting_by').forEach(elem => elem.classList.remove('sorting_by_active'));
-
-	fetch(`${window.location.origin}/JSON/works.json`)
-	.then((res) => res.json())
-	.then((res) => set(res.filter(element => element.status===status)))
-	.catch((err) => console.log(err));
+	doRequest().then((res) => set(res.filter(element => element.status===status)));
 }

@@ -1,8 +1,9 @@
 {
   "name": "ma_site_react",
+  "author": "Mark Bordakov",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://takct-r.netlify.app/",
+  "homepage": ".",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",

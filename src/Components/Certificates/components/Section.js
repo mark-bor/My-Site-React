@@ -54,9 +54,9 @@ export default class Section extends Component {
     componentDidMount() {
         widthCert=document.querySelector('.buttonCert').clientWidth;
 
-        fetch(window.location.origin + this.state.object.url)
+        fetch(this.state.object.url)
         .then(res => res.json())
-        .then(res => this.setState( () => ({certificates: [...res]}) ) )
+        .then(res => this.setState(() => ({certificates: [...res]})))
         .catch(err => console.log(err));
     }
 
@@ -67,31 +67,23 @@ export default class Section extends Component {
 
                 <div id="button_certificate" className="block_menu">
                     <button 
-                        id={"left_"+this.state.object.type} 
-                        className="button btn_left" 
+                        id={"left_"+this.state.object.type} className="button btn_left" 
                         onMouseDown={this.mouseDown} 
                         onMouseUp={(btn) => this.btnLeft(btn, this.state)} 
                         name="left">
                         <img 
-                            id={"to_L-"+this.state.object.type} 
-                            className="to_L" 
-                            src={left} 
-                            alt="arrow left" 
-                            style={{width: "0"}} />
+                            id={"to_L-"+this.state.object.type} className="to_L" 
+                            src={left} alt="arrow left" style={{width: "0"}} />
                     </button>
 
                     <button 
-                        id={"right_"+this.state.object.type} 
-                        className="button btn_right" 
+                        id={"right_"+this.state.object.type} className="button btn_right" 
                         onMouseDown={this.mouseDown} 
                         onMouseUp={(btn) => this.btnRight(btn, this.state)} 
                         name="right">
                         <img 
-                            id={"to_R-"+this.state.object.type} 
-                            className="to_R" 
-                            src={right} 
-                            alt="arrow right" 
-                            style={{width: "100%"}} />
+                            id={"to_R-"+this.state.object.type} className="to_R" 
+                            src={right} alt="arrow right" style={{width: "100%"}} />
                     </button>
 
                     <ul id={"menu_block_text_"+this.state.object.type} className="menu_block_text" style={{transform: "translateX(0px)"}}>

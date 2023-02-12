@@ -40,7 +40,7 @@ class Certificate extends React.Component {
 						<hr className="data_from_certificate line" />
 						<h4 className="data_from_certificate company">{this.state.company}</h4>
 					</div>
-					<object className="text0" type="application/pdf" aria-label={this.language()} data={window.location.origin+this.state.file} />
+					<object className="text0" type="application/pdf" aria-label={this.language()} data={this.state.file} />
 				</button>
 			</li>
 		);
