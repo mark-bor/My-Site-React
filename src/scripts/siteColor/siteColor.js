@@ -1,3 +1,37 @@
+export function setColor(colorType) {
+    localStorage.setItem('color', colorType);
+}
+
+export function changeColor(color) {
+	color.target.checked===false ? setColor('sun') : setColor('moon');
+	siteColor();
+}
+
+export function colorInputDefCheck() {    
+    if (!localStorage.getItem('color')) {
+        const time = new Date();
+        const hourNow =  time.getHours();
+        return hourNow>19 | 7>hourNow ? true : false;
+        
+    } else {
+        const colorType = localStorage.getItem('color');
+        return colorType==='moon' ? true : false;
+    }
+}
+
+export function getAndSetColor() {
+    if (!localStorage.getItem('color')) {
+        const time = new Date();
+        const hourNow =  time.getHours();
+        if (hourNow>19 | 7>hourNow) {
+            setColor('moon');
+        } else {
+            setColor('sun');
+        }
+    }
+    siteColor();
+}
+
 export function siteColor() {
     const inp = document.getElementById('input_in_sites_color');
 
@@ -37,47 +71,4 @@ export function siteColor() {
         dataBasesSection.forEach((elem) => elem?.classList.add('data_bases_section_dark'));
         footer.style.background = '#1E2939';
     }
-}
-
-export function getOrSetColor() {
-    const inputInSitesColor = document.getElementById('input_in_sites_color');
-
-    if (!localStorage.getItem('color')) {
-        const time = new Date();
-        console.log(time);
-        const hourNow =  time.getHours();
-        if (hourNow>19 | 7>hourNow) {
-            inputInSitesColor.checked=true;
-            setColor('moon');
-        } else {
-            inputInSitesColor.checked=false;
-            setColor('sun');
-        }
-        
-    } else {
-        const colorType = localStorage.getItem('color');
-        if (colorType==='moon') {
-            setColor('moon');
-            inputInSitesColor.checked=true;
-        } else {
-            setColor('sun');
-            inputInSitesColor.checked=false;
-        }
-    }
-    siteColor();
-}
-
-export function setColor(colorType) {
-    const sitesColor = document.getElementById('sites_color');
-    // const titles = document.querySelectorAll('.light_dark');
-    // titles.forEach((el) => el.style.transition = '0.7s');
-    
-    if (colorType==='moon') {
-        sitesColor.style.background = '#595959';
-        // titles.forEach((el) => el.style.color = '#D9D9D9')
-    } else if (colorType==='sun') {
-        sitesColor.style.background = '#F5F5F5';
-        // titles.forEach((el) => el.style.color = '#1E2939')
-    } 
-    localStorage.setItem('color', colorType);
 }

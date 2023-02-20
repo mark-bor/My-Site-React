@@ -154,29 +154,29 @@
   transition: all 0.2s ease 0s;
   overflow: hidden;
 }
-.but > img {
+.project_background {
   position: absolute;
   width: 110%;
   z-index: -1;
   opacity: 0.3;
 }
 /* .q_e_c {} */
-.q_e_c > img {
+.q_e_c > .project_background {
   width: 150%;
 }
 /* .b_t {} */
 /* .p_g {} */
 /* .m_g {} */
 /* .e_r {} */
-.e_t > img {
+.e_t > .project_background {
   width: 120%;
 }
-.t_g > img {
+.t_g > .project_background {
   width: auto;
   height: 110%;
   bottom: 0;
 }
-.l_d_b > img {
+.l_d_b > .project_background {
   width: auto;
   height: 100%;
 }

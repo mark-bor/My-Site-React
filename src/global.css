@@ -81,7 +81,7 @@ a {
 	transition: 0.3s;
 }
 .root_without_sidebar {
-	grid-template-columns: 0 100%;
+	grid-template-columns: 45px calc(100% - 45px);
 }
 
 main {

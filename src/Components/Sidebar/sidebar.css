@@ -3,16 +3,19 @@
     position: relative;
     width: 100%;
     height: 100%;
-    padding: 10px 0;
+    padding: 0;
     background-color: #E3D1AD;
 }
 .sidebar_with_navigation_dark { background-color: #595959; }
+.sidebar_with_navigation_dark .sidebar_btn { background-color: #595959; }
+
+
 
 .sidebar_btn {
     position: absolute;
     width: 30px;
     height: 30px;
-    margin: 0 0 0 100%;
+    margin: 10px 0 0 100%;
     transform: rotate(90deg);
     z-index: 2;
     
@@ -22,22 +25,34 @@
     background-size: 70% auto;
     background-position: center center;
 }
-.sidebar_with_navigation_dark .sidebar_btn { background-color: #595959; }
 
-.links_list_in_sidebar {
+
+
+.list_in_sidebar {
     overflow-x: hidden;
 }
 
-.links_list_in_sidebar > li {
-    margin: 0 0 10px 0;
-    padding: 0 24px 0 18px;
-    background-color: #C9B89770;
+.list_in_sidebar > li {
+    min-width: calc(100vw / 4);
+    margin: 10px 0;
+    padding: 0 24px 0 10px;
     
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
-.sidebar_with_navigation_dark .links_list_in_sidebar > li { background-color: #8F949C70; }
+
+.list_in_sidebar > li:hover { 
+    background-color: #C9B89770;
+}
+.sidebar_with_navigation_dark .list_in_sidebar > li:hover { 
+    background-color: #8F949C70;
+}
+
+.sidebar_icon {
+    width: 25px;
+    margin: 0 10px 0 0;
+}
 
 .head_links {
     min-width: 130px;
@@ -71,7 +86,9 @@
     background-position: center center;
 }
 
-.two_links_list_in_sidebar {
+
+
+.second_level_list_in_sidebar {
     width: 100%;
     height: 0;
     margin: 0 0 0 15px;
@@ -82,11 +99,11 @@
     height: auto;
 }
 
-/* .two_links_list_in_sidebar > li {
+/* .second_level_list_in_sidebar > li {
     
 } */
 
-.two_level_links {
+.second_level_links {
     min-height: 20px;
     margin:5px 0;
     opacity: 0.75;
@@ -99,6 +116,45 @@
     font-size: 15px;
     line-height: 19px;
 }
-.two_level_links:hover {
+.second_level_links:hover {
     color: #457FD6;
+}
+
+
+
+.line_in_sidebar {
+    display: block;
+    width: 80%;
+    height: 1px;
+    margin:  10px auto;
+    background-color: #C9B89770;
+    border: none;
+}
+
+
+
+.settings_in_sidebar {
+    overflow-x: hidden;
+}
+
+.settings_in_sidebar > li {
+    min-width: calc(100vw / 4);
+    margin: 17px 0;
+    padding: 0 24px 0 5px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.setting_name {
+    margin: 0 0 0 10px;
+    
+    display: inline-flex;
+    align-items: center;
+    
+    color: #F5F5F5;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
 }
