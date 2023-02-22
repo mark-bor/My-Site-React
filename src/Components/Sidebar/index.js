@@ -1,11 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { setSidebarColor } from "../../scripts/Sidebar/color"
-import { 
-    hiddenLanguage,
-    languageMouseDown,
-    languageMouseUp
-} from "../../scripts/siteLanguage/language"
+import { hiddenLanguage } from "../../scripts/siteLanguage/language"
 import {
     changeColor,
     colorInputDefCheck,
@@ -37,7 +33,7 @@ export default function Sidebar({lang}) {
         setSidebarSize();
     }, []);
 
-
+    
 
     if (lang==='EN') {
         return (
@@ -52,11 +48,11 @@ export default function Sidebar({lang}) {
                         </Link>
                     </li>
                     <li>
-                        <Link className="head_links" onClick={showSelectedList} to={'/cv'}>
+                        <Link className="head_links" onClick={() => showSelectedList('cv')} to={'/cv'}>
                             <img className="sidebar_icon" src={cv} alt="cv" width={20} />
                             <p>CV</p>
                         </Link>
-                        <button className="btn_show_more" onClick={(btn) => showMore(btn, 'cv_list')}></button>
+                        <button id='cv_list_btn' className="btn_show_more" onClick={(btn) => showMore(btn, 'cv_list')}></button>
 
                         <ul id="cv_list" className="second_level_list_in_sidebar">
                             <li><a 
@@ -70,11 +66,11 @@ export default function Sidebar({lang}) {
                         </ul>
                     </li>
                     <li>
-                        <Link className="head_links" onClick={showSelectedList} to={'/works'}>
+                        <Link className="head_links" onClick={() => showSelectedList('works')} to={'/works'}>
                             <img className="sidebar_icon" src={project} alt="project" width={20} />
                             <p>Works</p>
                         </Link>
-                        <button className="btn_show_more" onClick={(btn) => showMore(btn, 'works_list')}></button>
+                        <button id='works_list_btn' className="btn_show_more" onClick={(btn) => showMore(btn, 'works_list')}></button>
 
                         <ul id="works_list" className="second_level_list_in_sidebar">
                             <li><Link className="second_level_links" to={'/works/calculator'}>Quadratic equation calculator</Link></li>
@@ -106,13 +102,14 @@ export default function Sidebar({lang}) {
 
                 <ul className="settings_in_sidebar">
                     <li>
-                        <div className="select_language">
-                            <button className="language english" onMouseDown={languageMouseDown} onMouseUp={languageMouseUp}>EN</button>
+                        <input id="select_language_input" className="select_language_input" type="checkbox"/>
+                        <label className="select_language" htmlFor='select_language_input'>
+                            <span className="language english">EN</span>
                             <ul id='select_lang' className='select_lang'>
                                 <li className="puncts"><Link onClick={hiddenLanguage} to={`/`}>EN</Link></li>
                                 <li className="puncts"><Link onClick={hiddenLanguage} to={`/ua`}>UA</Link></li>
                             </ul>
-                        </div>
+                        </label>
                         <p className="setting_name">Language</p>
                     </li>
                     <li>
@@ -143,11 +140,11 @@ export default function Sidebar({lang}) {
                         </Link>
                     </li>
                     <li>
-                        <Link className="head_links" onClick={showSelectedList} to={'/ua/cv'}>
+                        <Link className="head_links" onClick={() => showSelectedList('cv')} to={'/ua/cv'}>
                             <img className="sidebar_icon" src={cv} alt="резюме" width={20} />
                             <p>Резюме</p>
                         </Link>
-                        <button className="btn_show_more" onClick={(btn) => showMore(btn, 'cv_list')}></button>
+                        <button id='cv_list_btn' className="btn_show_more" onClick={(btn) => showMore(btn, 'cv_list')}></button>
 
                         <ul id="cv_list" className="second_level_list_in_sidebar">
                             <li><a 
@@ -161,11 +158,11 @@ export default function Sidebar({lang}) {
                         </ul>
                     </li>
                     <li>
-                        <Link className="head_links" onClick={showSelectedList} to={'/ua/works'}>
+                        <Link className="head_links" onClick={() => showSelectedList('works')} to={'/ua/works'}>
                             <img className="sidebar_icon" src={project} alt="проект" width={20} />
                             <p>Роботи</p>
                         </Link>
-                        <button className="btn_show_more" onClick={(btn) => showMore(btn, 'works_list')}></button>
+                        <button id='works_list_btn' className="btn_show_more" onClick={(btn) => showMore(btn, 'works_list')}></button>
 
                         <ul id="works_list" className="second_level_list_in_sidebar">
                             <li><Link className="second_level_links" to={'/ua/works/calculator'}>Калькулятор квадратних рівнянь</Link></li>
@@ -197,13 +194,14 @@ export default function Sidebar({lang}) {
 
                 <ul className="settings_in_sidebar">
                     <li>
-                        <div className="select_language">
-                            <button className="language english" onMouseDown={languageMouseDown} onMouseUp={languageMouseUp}>UA</button>
+                        <input id="select_language_input" className="select_language_input" type="checkbox" />
+                        <label className="select_language" htmlFor='select_language_input'>
+                            <span className="language ukrainian">UA</span>
                             <ul id='select_lang' className='select_lang'>
                                 <li className="puncts"><Link onClick={hiddenLanguage} to={`/`}>EN</Link></li>
                                 <li className="puncts"><Link onClick={hiddenLanguage} to={`/ua`}>UA</Link></li>
                             </ul>
-                        </div>
+                        </label>
                         <p className="setting_name">Мова</p>
                     </li>
                     <li>

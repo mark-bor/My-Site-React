@@ -2,11 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { setMenuWindowColor } from "../../scripts/MenuWindow/color";
 import { hiddenMenuWindow } from "../../scripts/MenuWindow/hidden";
-import { 
-    hiddenLanguage,
-    languageMouseDown,
-    languageMouseUp
-} from "../../scripts/siteLanguage/language"
+import { hiddenLanguage } from "../../scripts/siteLanguage/language"
 import {
     changeColor,
     colorInputDefCheck,
@@ -69,13 +65,14 @@ export default function MenuWindow({lang}) {
 
 				<ul className="settings_in_menu_window">
                     <li>
-                        <div className="select_language">
-                            <button className="language english" onMouseDown={languageMouseDown} onMouseUp={languageMouseUp}>EN</button>
+                        <input id="select_language_input" className="select_language_input" type="checkbox"/>
+                        <label className="select_language" htmlFor='select_language_input'>
+                            <span className="language english">EN</span>
                             <ul id='select_lang' className='select_lang'>
                                 <li className="puncts"><Link onClick={hiddenLanguage} to={`/`}>EN</Link></li>
                                 <li className="puncts"><Link onClick={hiddenLanguage} to={`/ua`}>UA</Link></li>
                             </ul>
-                        </div>
+                        </label>
                         <p className="setting_name">Language</p>
                     </li>
                     <li>
@@ -133,13 +130,14 @@ export default function MenuWindow({lang}) {
 
 				<ul className="settings_in_menu_window">
                     <li>
-                        <div className="select_language">
-                            <button className="language english" onMouseDown={languageMouseDown} onMouseUp={languageMouseUp}>UA</button>
+                        <input id="select_language_input" className="select_language_input" type="checkbox" />
+                        <label className="select_language" htmlFor='select_language_input'>
+                            <span className="language ukrainian">UA</span>
                             <ul id='select_lang' className='select_lang'>
                                 <li className="puncts"><Link onClick={hiddenLanguage} to={`/`}>EN</Link></li>
                                 <li className="puncts"><Link onClick={hiddenLanguage} to={`/ua`}>UA</Link></li>
                             </ul>
-                        </div>
+                        </label>
                         <p className="setting_name">Мова</p>
                     </li>
                     <li>
