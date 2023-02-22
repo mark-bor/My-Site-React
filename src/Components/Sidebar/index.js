@@ -42,13 +42,13 @@ export default function Sidebar({lang}) {
 
                 <ul className="list_in_sidebar">
                     <li onClick={hiddenAll}>
-                        <Link className="head_links" to={'/'}>
+                        <Link className="head_links" to={'/'} title="Head page">
                             <img className="sidebar_icon" src={home} alt="home" width={20} />
                             <p>Home</p>
                         </Link>
                     </li>
                     <li>
-                        <Link className="head_links" onClick={() => showSelectedList('cv')} to={'/cv'}>
+                        <Link className="head_links" onClick={() => showSelectedList('cv')} to={'/cv'} title="CV">
                             <img className="sidebar_icon" src={cv} alt="cv" width={20} />
                             <p>CV</p>
                         </Link>
@@ -66,7 +66,7 @@ export default function Sidebar({lang}) {
                         </ul>
                     </li>
                     <li>
-                        <Link className="head_links" onClick={() => showSelectedList('works')} to={'/works'}>
+                        <Link className="head_links" onClick={() => showSelectedList('works')} to={'/works'} title="My works">
                             <img className="sidebar_icon" src={project} alt="project" width={20} />
                             <p>Works</p>
                         </Link>
@@ -85,13 +85,13 @@ export default function Sidebar({lang}) {
                         </ul>
                     </li>
                     <li onClick={hiddenAll}>
-                        <Link className="head_links" to={'/certificates'}>
+                        <Link className="head_links" to={'/certificates'} title="Certificates">
                             <img className="sidebar_icon" src={certificate} alt="certificate" width={20} />
                             <p>Certificates</p>
                         </Link>
                     </li>
                     <li onClick={hiddenAll}>
-                        <Link className="head_links" to={'/contacts'}>
+                        <Link className="head_links" to={'/contacts'} title="Contacts">
                             <img className="sidebar_icon" src={contact} alt="contacts" width={20} />
                             <p>Contacts</p>
                         </Link>
@@ -134,13 +134,13 @@ export default function Sidebar({lang}) {
                 
                 <ul className="list_in_sidebar">
                     <li onClick={hiddenAll}>
-                        <Link className="head_links" to={'/ua/'}>
+                        <Link className="head_links" to={'/ua/'} title="Головна сторінка">
                             <img className="sidebar_icon" src={home} alt="дім" width={20} />
                             <p>Головна</p>
                         </Link>
                     </li>
                     <li>
-                        <Link className="head_links" onClick={() => showSelectedList('cv')} to={'/ua/cv'}>
+                        <Link className="head_links" onClick={() => showSelectedList('cv')} to={'/ua/cv'} title="Резюме">
                             <img className="sidebar_icon" src={cv} alt="резюме" width={20} />
                             <p>Резюме</p>
                         </Link>
@@ -158,7 +158,7 @@ export default function Sidebar({lang}) {
                         </ul>
                     </li>
                     <li>
-                        <Link className="head_links" onClick={() => showSelectedList('works')} to={'/ua/works'}>
+                        <Link className="head_links" onClick={() => showSelectedList('works')} to={'/ua/works'} title="Мої роботи">
                             <img className="sidebar_icon" src={project} alt="проект" width={20} />
                             <p>Роботи</p>
                         </Link>
@@ -177,13 +177,13 @@ export default function Sidebar({lang}) {
                         </ul>
                     </li>
                     <li onClick={hiddenAll}>
-                        <Link className="head_links" to={'/ua/certificates'}>
+                        <Link className="head_links" to={'/ua/certificates'} title="Сертифікати">
                             <img className="sidebar_icon" src={certificate} alt="сертифікат" width={20} />
                             <p>Сертифікати</p>
                         </Link>
                     </li>
                     <li onClick={hiddenAll}>
-                        <Link className="head_links" to={'/ua/contacts'}>
+                        <Link className="head_links" to={'/ua/contacts'} title="Контакти">
                             <img className="sidebar_icon" src={contact} alt="контакти" width={20} />
                             <p>Контакти</p>
                         </Link>
