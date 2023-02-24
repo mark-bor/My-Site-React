@@ -8,8 +8,9 @@
 	position: relative;
 	height: 70px;
 	width: 100%;
-	background-color: #A1BEEA;
 	z-index: 3;
+	background-color: #A1BEEA;
+	box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.19);
   
 	display: inline-flex;
 	justify-content: space-between;

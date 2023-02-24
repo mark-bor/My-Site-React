@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { addEvent } from "./Class/MemoryGame";
+import { addEvent } from "../../../scripts/progectWorks/MemoryGame/MemoryGameClass";
 
 import "./memory_game.css";
+
 
 
 export default function MemoryGame({lang}) {
@@ -15,6 +16,8 @@ export default function MemoryGame({lang}) {
     }, [setCards]);
 
     useEffect(() => addEvent(), [cards, setCards]);
+
+
 
     if (lang==='EN') {
         return (

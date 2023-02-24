@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -26,7 +25,7 @@ import MemoryGame from "./Components/project_works/Memory_Game/index.js";
 import ExchangeRate from "./Components/project_works/Exchange_Rate/index.js";
 import EventTimer from "./Components/project_works/Event_Timer/index.js";
 import LocalDataBases from "./Components/project_works/Local_Data_Bases/index.js";
-import SendOut from "./Components/project_works/Send_Out/index.js";
+// import SendOut from "./Components/project_works/Send_Out/index.js";
 
 import TankGame from "./Components/project_works/Tank_Game/index.js";
 import Menu from "./Components/project_works/Tank_Game/components/Menu/index.js";
@@ -57,7 +56,7 @@ const router = createBrowserRouter(
           <Route path="/works/exchange-rate" element={<ExchangeRate lang={'EN'}/>} />
           <Route path="/works/event-timer" element={<EventTimer lang={'EN'}/>} />
           <Route path="/works/local-data-bases" element={<LocalDataBases lang={'EN'}/>} />
-          <Route path="/works/send-out" element={<SendOut lang={'EN'}/>} />
+          {/* <Route path="/works/send-out" element={<SendOut lang={'EN'}/>} /> */}
 
           <Route path="/works/tank-game" element={<TankGame lang={'EN'}/>}>
             <Route path="/works/tank-game/menu" element={<Menu lang={'EN'}/>}>
@@ -89,7 +88,7 @@ const router = createBrowserRouter(
           <Route path="/ua/works/exchange-rate" element={<ExchangeRate lang={'UA'}/>} />
           <Route path="/ua/works/event-timer" element={<EventTimer lang={'UA'}/>} />
           <Route path="/ua/works/local-data-bases" element={<LocalDataBases lang={'UA'}/>} />
-          <Route path="/ua/works/send-out" element={<SendOut lang={'UA'}/>} />
+          {/* <Route path="/ua/works/send-out" element={<SendOut lang={'UA'}/>} /> */}
         </Route>
       </Route>
     </>

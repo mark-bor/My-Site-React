@@ -1,4 +1,8 @@
+import { onMouseDown, onMouseUp } from "../../../scripts/progectWorks/PasswordGenerator/click"
+
 import "./password_generator.css";
+
+
 
 export default function PasswordGenerator({lang}) {
     if (lang==='EN') {
@@ -174,60 +178,4 @@ export default function PasswordGenerator({lang}) {
             </section>
         );
     }
-}
-
-function onMouseDown(btn) {
-    btn.target.style.opacity = 0.7;
-    document.querySelectorAll('.pswd').forEach(pswd => pswd.innerHTML = '');
-}
-function onMouseUp(btn) {
-    btn.target.style.opacity = 1;
-    
-    // Генерація, виводить результат в інтерфейс
-    for (let j=1; j<=document.querySelector('.kil').value; j++) {
-        for (let i=1; i<=document.querySelector('.dov').value; i++){
-            const numPass = document.getElementById(`${j}_pass`);
-            numPass.insertAdjacentHTML( "afterBegin", CheckedRemuv(numPass, arrays));
-        }
-    }
-}
-
-// перевірка повторювання символів та додавання символу у список паролів
-function CheckedRemuv(place, arr) {
-    if (document.getElementById('remuv').checked){
-        let item = Colaps(arr);
-        if (place.innerHTML.split('').includes(item)){
-            return CheckedRemuv(place, arr);
-        }
-        return item;
-    } else { return Colaps(arr); }
-}
-
-// SYMBOLS ARRAYS 
-const arrays = {
-    numers: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
-    small_Letters: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'],
-    big_Letters: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
-    symbols: ['/', '*', '-', '_', ')', '.', '$'],
-};
-
-// Функція генерує масив символів по чекбоксам та повертає рандомний символ
-function Colaps (arr) {
-    let result = [];
-
-    if (document.getElementById('number').checked === true)  
-    {result.push(arr.numers[Math.floor(Math.random() * arr.numers.length)])};
-
-    if (document.getElementById('small').checked === true)  
-    {result.push(arr.small_Letters[Math.floor(Math.random() * arr.small_Letters.length)])};
-    
-    if (document.getElementById('big').checked === true)  
-    {result.push(arr.big_Letters[Math.floor(Math.random() * arr.big_Letters.length)])};
-    
-    if (document.getElementById('sumbol').checked === true)  
-    {result.push(arr.symbols[Math.floor(Math.random() * arr.symbols.length)])};
-
-    const res_len = result.length
-    if (res_len === 0) {return res_len;} 
-    else {return result[Math.floor(Math.random() * res_len)];}
 }

@@ -78,15 +78,5 @@
         "nameEN": "Local databases",
         "nameUA": "Локальні бази даних",
         "type": "other"
-    },
-    {
-        "className": "s_o",
-        "status": "open",
-        "link": "send-out",
-        "image": "/Images/letters.png",
-        "alt": "letters",
-        "nameEN": "Send out",
-        "nameUA": "Розсилка",
-        "type": "other"
     }
 ]

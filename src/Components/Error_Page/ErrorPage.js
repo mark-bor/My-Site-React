@@ -1,15 +1,19 @@
 import { useRouteError } from "react-router-dom";
+import { setErrorPageColor } from "../../scripts/ErrorPage/setErrorPageColor";
 
 import "./ErrorPage.css";
+
+
 
 export default function ErrorPage({lang, position}) {
 	const error = useRouteError();
   	console.error(error);
-	  const setColor = () => window.localStorage.getItem('color')==='moon'? 'window_error_dark': null;
+
+
 
 	if (lang==='EN') {
 		return (
-			<article id="window_error" className={`error_background ${setColor()}`} style={{"position": position}}>
+			<article id="window_error" className={`error_background ${setErrorPageColor()}`} style={{"position": position}}>
 				<section className="window_error">
 					{/* <button id="close_error" className="close_error">
 						<span></span>
@@ -31,7 +35,7 @@ export default function ErrorPage({lang, position}) {
 	if (lang==='UA') {
 		return (
 			<article id="error_background" className="error_background" style={{"position": position}}>
-				<section id="window_error" className={`window_error ${setColor()}`}>
+				<section id="window_error" className={`window_error ${setErrorPageColor()}`}>
 					<h2 className="message_error">Сталась помилка</h2>
 					<p className="error_status">
 						<span className="error_code">{error.status}</span>

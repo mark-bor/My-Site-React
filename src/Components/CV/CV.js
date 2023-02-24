@@ -1,9 +1,13 @@
+import { 
+    setCVGradientOne,
+    setVCGradientTwo
+} from "../../scripts/CV/setCVGradient";
+
 import './cv.css';
 
-export default function CV({lang}) {
-    const setGradientOne = () => window.localStorage.getItem('color')==='moon'? 'button_in_cvs_one_dark': null;
-    const setGradientTwo = () => window.localStorage.getItem('color')==='moon'? 'button_in_cvs_two_dark': null;
 
+
+export default function CV({lang}) {
     if (lang==='EN') {
         return (
             <section className="div h" id="resume" >
@@ -14,16 +18,20 @@ export default function CV({lang}) {
                     <ul className="div_in_cvs">
                         <li className="li_one">
                             <a 
-                                id="button_in_cvs_one" className={`but button_in_cvs button_in_cvs_one ${setGradientOne()}`} 
-                                target={'_blank'} rel="noreferrer"
+                                id="button_in_cvs_one" 
+                                className={`but button_in_cvs button_in_cvs_one ${setCVGradientOne()}`} 
+                                target={'_blank'} 
+                                rel="noreferrer"
                                 href="https://takct-server.netlify.app/CV/Mark%20Bordakov%20-%20Front-end.pdf" 
                                 name="CV 1"
-                                >CV 1</a>
+                            >CV 1</a>
                         </li>
                         <li>
                             <a 
-                                id="button_in_cvs_two" className={`but button_in_cvs button_in_cvs_two ${setGradientTwo()}`} 
-                                target={'_blank'} rel="noreferrer"
+                                id="button_in_cvs_two" 
+                                className={`but button_in_cvs button_in_cvs_two ${setVCGradientTwo()}`} 
+                                target={'_blank'} 
+                                rel="noreferrer"
                                 href="https://takct-server.netlify.app/CV/M%20Bordakov%20-%20Front-end.pdf" 
                                 name="CV 2"
                             >CV 2</a>
@@ -44,16 +52,20 @@ export default function CV({lang}) {
                     <ul className="div_in_cvs">
                         <li className="li_one">
                             <a 
-                                id="button_in_cvs_one" className={`but button_in_cvs button_in_cvs_one ${setGradientOne()}`} 
-                                target={'_blank'} rel="noreferrer"
+                                id="button_in_cvs_one" 
+                                className={`but button_in_cvs button_in_cvs_one ${setCVGradientOne()}`} 
+                                target={'_blank'} 
+                                rel="noreferrer"
                                 href="https://takct-server.netlify.app/CV/Mark%20Bordakov%20-%20Front-end.pdf" 
                                 name="Резюме 1"
-                                >Резюме 1</a>
+                            >Резюме 1</a>
                         </li>
                         <li>
                             <a 
-                                id="button_in_cvs_two" className={`but button_in_cvs button_in_cvs_two ${setGradientTwo()}`} 
-                                target={'_blank'} rel="noreferrer"
+                                id="button_in_cvs_two" 
+                                className={`but button_in_cvs button_in_cvs_two ${setVCGradientTwo()}`} 
+                                target={'_blank'} 
+                                rel="noreferrer"
                                 href="https://takct-server.netlify.app/CV/M%20Bordakov%20-%20Front-end.pdf"
                                 name="Резюме 2"
                             >Резюме 2</a>

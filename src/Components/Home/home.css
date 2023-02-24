@@ -39,11 +39,13 @@
 	height: 100%;
 	margin: 0;
 	background: linear-gradient(45deg, #C9B897 30%, #E3D1AD);
+	transition: 0.5s;
+	backface-visibility: hidden;
+	box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.19);
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transition: 0.5s;
-	backface-visibility: hidden;
 }
 .h .dark { background: linear-gradient(45deg, #1E2939 30%, #595959); }
 .h .block {

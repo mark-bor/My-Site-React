@@ -10,6 +10,7 @@
 	padding: 10px 0 0 0;
 	margin: 0;
 	background-color: #A1BEEA;
+	z-index: 3;
 }
 
 .footer > a {
