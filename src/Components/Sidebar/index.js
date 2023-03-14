@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { Link } from "react-router-dom";
-import { setSidebarColor } from "../../scripts/Sidebar/color"
 import { hiddenLanguage } from "../../scripts/siteLanguage/language"
 import {
     changeColor,
@@ -37,7 +36,7 @@ export default function Sidebar({lang}) {
 
     if (lang==='EN') {
         return (
-            <aside id="sidebar_with_navigation" className={`sidebar_with_navigation${setSidebarColor()}`}>
+            <aside id="sidebar_with_navigation" className={`sidebar_with_navigation`}>
                 <button id='sidebar_btn' className="sidebar_btn" onMouseDown={mouseDown} onMouseUp={mouseUp}></button>
 
                 <ul className="list_in_sidebar">
@@ -129,7 +128,7 @@ export default function Sidebar({lang}) {
 
     if (lang==='UA') {
         return (
-            <aside id="sidebar_with_navigation" className={`sidebar_with_navigation${setSidebarColor()}`}>
+            <aside id="sidebar_with_navigation" className={`sidebar_with_navigation`}>
                 <button className="sidebar_btn" onMouseDown={mouseDown} onMouseUp={mouseUp}></button>
                 
                 <ul className="list_in_sidebar">

@@ -59,7 +59,7 @@
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   
-  color: #1E2939;
+  color: #16181D;
   font-family: "e-Ukraine-UltraLight", sans-serif;
   font-size: 17.5px;
 }
@@ -102,21 +102,21 @@
   justify-content: center;
   align-items: center;
 
-  color: #1E2939;
+  color: #16181D;
 }
 
 .sorting_by:hover {
-  border-bottom: 2px solid #E3D1AD;
+  border-bottom: 2px solid #6D6D6D;
 }
 .sorting_by:hover > button {
-  background-color: #E3D1AD;
+  background-color: #6D6D6D;
 }
 
 .sorting_by_active {
-  border-bottom: 2px solid #E3D1AD;
+  border-bottom: 2px solid #6D6D6D;
 }
 .sorting_by_active > button {
-  background-color: #E3D1AD;
+  background-color: #6D6D6D;
 }
 
 /*-------------------- MENU --------------------*/

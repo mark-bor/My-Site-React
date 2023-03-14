@@ -4,11 +4,11 @@ import Sidebar from "./Sidebar/index.js";
 import Footer from "./Footer/index.js";
 import ErrorPage from "./Error_Page/ErrorPage.js";
 
-import Home from "./Home/Home.js";
-import CV from "./CV/CV.js";
+import Home from "./Home/index.js";
+import CV from "./CV/index.js";
 import Works from "./Works/Works.js";
-import Contacts from "./Contacts/Contacts.js";
-import Certificates from "./Certificates/Certificates.js";
+import Contacts from "./Contacts/index.js";
+import Certificates from "./Certificates/index.js";
 
 import Calculator from "./project_works/Calculator/index.js";
 import BirthdayTimer from "./project_works/Birthday_Timer/index.js";

@@ -1,8 +1,3 @@
-import { 
-    setCVGradientOne,
-    setVCGradientTwo
-} from "../../scripts/CV/setCVGradient";
-
 import './cv.css';
 
 
@@ -19,7 +14,7 @@ export default function CV({lang}) {
                         <li className="li_one">
                             <a 
                                 id="button_in_cvs_one" 
-                                className={`but button_in_cvs button_in_cvs_one ${setCVGradientOne()}`} 
+                                className={`but button_in_cvs button_in_cvs_one`} 
                                 target={'_blank'} 
                                 rel="noreferrer"
                                 href="https://takct-server.netlify.app/CV/Mark%20Bordakov%20-%20Front-end.pdf" 
@@ -29,7 +24,7 @@ export default function CV({lang}) {
                         <li>
                             <a 
                                 id="button_in_cvs_two" 
-                                className={`but button_in_cvs button_in_cvs_two ${setVCGradientTwo()}`} 
+                                className={`but button_in_cvs button_in_cvs_two`} 
                                 target={'_blank'} 
                                 rel="noreferrer"
                                 href="https://takct-server.netlify.app/CV/M%20Bordakov%20-%20Front-end.pdf" 
@@ -53,7 +48,7 @@ export default function CV({lang}) {
                         <li className="li_one">
                             <a 
                                 id="button_in_cvs_one" 
-                                className={`but button_in_cvs button_in_cvs_one ${setCVGradientOne()}`} 
+                                className={`but button_in_cvs button_in_cvs_one`} 
                                 target={'_blank'} 
                                 rel="noreferrer"
                                 href="https://takct-server.netlify.app/CV/Mark%20Bordakov%20-%20Front-end.pdf" 
@@ -63,7 +58,7 @@ export default function CV({lang}) {
                         <li>
                             <a 
                                 id="button_in_cvs_two" 
-                                className={`but button_in_cvs button_in_cvs_two ${setVCGradientTwo()}`} 
+                                className={`but button_in_cvs button_in_cvs_two`} 
                                 target={'_blank'} 
                                 rel="noreferrer"
                                 href="https://takct-server.netlify.app/CV/M%20Bordakov%20-%20Front-end.pdf"

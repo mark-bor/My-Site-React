@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
-import { setMenuWindowColor } from "../../scripts/MenuWindow/color";
 import { hiddenMenuWindow } from "../../scripts/MenuWindow/hidden";
 import { hiddenLanguage } from "../../scripts/siteLanguage/language"
 import {
@@ -27,7 +26,7 @@ export default function MenuWindow({lang}) {
 
 	if (lang==='EN') {
 		return (
-			<nav id="menu_window" className={`trans__menu transMenu_S${setMenuWindowColor()}`}>
+			<nav id="menu_window" className={`trans__menu transMenu_S`}>
 				<ul className='link_list_in_menu_window'>
                     <li className="men_win">
                         <Link className="but" to={'/'} onMouseUp={hiddenMenuWindow}>
@@ -92,7 +91,7 @@ export default function MenuWindow({lang}) {
 
 	if (lang==='UA') {
 		return (
-			<nav id="menu_window" className={`trans__menu transMenu_S${setMenuWindowColor()}`}>
+			<nav id="menu_window" className={`trans__menu transMenu_S`}>
 				<ul className='link_list_in_menu_window'>
                     <li className="men_win">
                         <Link className="but" to={'/'} onMouseUp={hiddenMenuWindow}>

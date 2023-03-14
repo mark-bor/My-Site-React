@@ -37,7 +37,7 @@ const router = createBrowserRouter(
           <Route path="/" element={<Home lang={'EN'} />} />
           <Route path="/cv" element={<CV lang={'EN'} />} />
           <Route path="/works" element={<Works lang={'EN'} />} />
-          <Route path="/contacts" element={<Contacts lang={'EN'} />} />
+          <Route path="/conacts" element={<Contacts lang={'EN'} />} />
           <Route path="/certificates" element={<Certificates lang={'EN'} />} />
           
           <Route path="/works/calculator" element={<Calculator lang={'EN'}/>} />

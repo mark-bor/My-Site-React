@@ -5,10 +5,9 @@
     height: 100%;
     padding: 0;
     z-index: 3;
-    background-color: #E3D1AD;
+    background-color: #20232A;
     box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.19);
 }
-.sidebar_with_navigation_dark { background-color: #595959; }
 
 
 
@@ -20,14 +19,11 @@
     transform: rotate(90deg);
     z-index: 2;
     
-    background-color: #E3D1AD;
+    background-color: #20232A;
     background-image: url('./Images/arrow_down.png');
     background-repeat: no-repeat;
     background-size: 70% auto;
     background-position: center center;
-}
-.sidebar_with_navigation_dark .sidebar_btn {
-    background-color: #595959; 
 }
 
 
@@ -47,10 +43,7 @@
 }
 
 .list_in_sidebar > li:hover { 
-    background-color: #C9B89770;
-}
-.sidebar_with_navigation_dark .list_in_sidebar > li:hover { 
-    background-color: #8F949C70;
+    background-color: #59595970;
 }
 
 .sidebar_icon {
@@ -66,15 +59,14 @@
     display: inline-flex;
     align-items: center;
     
-    border-bottom: 1px solid #E3D1AD;
+    border-bottom: 1px solid #20232A;
     color: #F5F5F5;
     font-weight: 500;
     font-size: 20px;
     line-height: 22px;
 }
-.sidebar_with_navigation_dark .head_links { border-bottom: 1px solid #595959; }
 .head_links:hover {
-    color: #457FD6;
+    color: #61DAFB;
 }
 
 .btn_show_more {
@@ -121,7 +113,7 @@
     line-height: 19px;
 }
 .second_level_links:hover {
-    color: #457FD6;
+    color: #61DAFB;
 }
 
 
@@ -131,7 +123,7 @@
     width: 80%;
     height: 1px;
     margin:  10px auto;
-    background-color: #C9B89770;
+    background-color: #59595970;
     border: none;
 }
 

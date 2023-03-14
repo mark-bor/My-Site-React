@@ -1,10 +1,11 @@
 /*-------------------- CONTACTS --------------------*/
-.con .phone-email {
+.con .phone_email {
 	width: 300px;
 	height: 90px;
 	margin: 0 auto;
 	text-align: center;
   
+	color: #16181D;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 22px;

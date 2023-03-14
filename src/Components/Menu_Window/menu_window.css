@@ -13,8 +13,7 @@
 	display: flex;
 	flex-wrap: wrap;
 }
-.trans__menu { background: #E3D1AD; }
-.trans__menu__dark { background: #595959; }
+.trans__menu { background: #20232A; }
 
 .transMenu_S {
 	transform: translateY(-115%);
@@ -28,7 +27,7 @@
 	width: 1px;
 	height: 190px;
 	margin: auto 0;
-	background-color: #C9B897;
+	background-color: #595959;
 	border: none;
 }
 
@@ -68,20 +67,12 @@
 }
 
 .men_win:hover > .but {
-	color: #457FD6;
-	background-color: #C9B897;
-}
-.trans__menu__dark .men_win:hover > .but { 
-	color: #457FD6; 
-	background-color: #8F949C;
+	color: #61DAFB;
+	background-color: #595959;
 }
 .men_win.act > .but {
-	color: #457FD6;
-	background-color: #C9B897;
-}
-.trans__menu__dark .men_win.act > .but { 
-	color: #457FD6; 
-	background-color: #8F949C; 
+	color: #61DAFB;
+	background-color: #595959;
 }
 
 .menu_window_icon {
@@ -142,26 +133,17 @@
 	}
 	.men_win:hover {
 		border-top: none;
-		border-left: 3px solid #C9B897;
-	}
-	.trans__menu__dark .men_win:hover { 
-		border-left: 3px solid #8F949C; 
+		border-left: 3px solid #595959;
 	}
 	.men_win > .but {
 		padding: 0 0 0 15px;
 		justify-content: start;
 	}
 	.men_win.act {
-	  	border-left: 3px solid #C9B897;
-	}
-	.trans__menu__dark .men_win.act { 
-		border-left: 3px solid #8F949C; 
+	  	border-left: 3px solid #595959;
 	}
 	.men_win.act {
-	  	border-left: 3px solid #C9B897;
-	}
-	.trans__menu__dark .men_win.act { 
-		border-left: 3px solid #8F949C; 
+	  	border-left: 3px solid #595959;
 	}
 
 	.settings_in_menu_window > li {

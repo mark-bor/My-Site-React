@@ -1,2 +1,0 @@
-export const setCVGradientOne = () => window.localStorage.getItem('color')==='moon' ? 'button_in_cvs_one_dark' : ' ';
-export const setVCGradientTwo = () => window.localStorage.getItem('color')==='moon' ? 'button_in_cvs_two_dark' : ' ';

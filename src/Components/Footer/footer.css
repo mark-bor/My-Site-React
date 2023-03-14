@@ -9,7 +9,7 @@
 	min-height: 170px;
 	padding: 10px 0 0 0;
 	margin: 0;
-	background-color: #A1BEEA;
+	background-color: #16181D;
 	z-index: 3;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .footer > a:hover {
-	color: #457FD6;
+	color: #61DAFB;
 }
 
 .contacts_C {

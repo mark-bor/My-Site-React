@@ -39,11 +39,8 @@
 	font-size: 27px;
 }
 
-.button_in_cvs_one { background: linear-gradient(45deg, #C9B897 25%, #FB6D3A); }
-.button_in_cvs_two { background: linear-gradient(45deg, #C9B897 25%, #A641B5); }
-
-.button_in_cvs_one_dark { background: linear-gradient(45deg, #1E2939 25%, #FB6D3A); }
-.button_in_cvs_two_dark { background: linear-gradient(45deg, #1E2939 25%, #A641B5); }
+.button_in_cvs_one { background: linear-gradient(45deg, #16181D 25%, #FB6D3A); }
+.button_in_cvs_two { background: linear-gradient(45deg, #16181D 25%, #A641B5); }
 
 /* --------- COMMON WITH CV1 AND CV2 ---------- */
 .download {
