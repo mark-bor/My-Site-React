@@ -17,7 +17,7 @@ import MemoryGame from "./project_works/Memory_Game/index.js";
 import ExchangeRate from "./project_works/Exchange_Rate/index.js";
 import EventTimer from "./project_works/Event_Timer/index.js";
 import LocalDataBases from "./project_works/Local_Data_Bases/index.js";
-// import SendOut from "./project_works/Send_Out/index.js";
+import SendOut from "./project_works/Send_Out/index.js";
 
 import TankGame from "./project_works/Tank_Game/index.js";
 import Menu from "./project_works/Tank_Game/components/Menu/index.js";
@@ -49,7 +49,7 @@ export {
     ExchangeRate,
     EventTimer,
     LocalDataBases,
-    // SendOut,
+    SendOut,
     TankGame,
     
     Menu,

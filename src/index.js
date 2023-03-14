@@ -19,7 +19,7 @@ import {
   ExchangeRate,
   EventTimer,
   LocalDataBases,
-  // SendOut,
+  SendOut,
   
   TankGame, Menu, Main, Tank, MachineGun, Options, Explanation,
 } from "./Components/index.js";
@@ -47,7 +47,7 @@ const router = createBrowserRouter(
           <Route path="/works/exchange-rate" element={<ExchangeRate lang={'EN'}/>} />
           <Route path="/works/event-timer" element={<EventTimer lang={'EN'}/>} />
           <Route path="/works/local-data-bases" element={<LocalDataBases lang={'EN'}/>} />
-          {/* <Route path="/works/send-out" element={<SendOut lang={'EN'}/>} /> */}
+          <Route path="/works/send-out" element={<SendOut lang={'EN'}/>} />
 
           <Route path="/works/tank-game" element={<TankGame lang={'EN'}/>}>
             <Route path="/works/tank-game/menu" element={<Menu lang={'EN'}/>}>
@@ -79,7 +79,7 @@ const router = createBrowserRouter(
           <Route path="/ua/works/exchange-rate" element={<ExchangeRate lang={'UA'}/>} />
           <Route path="/ua/works/event-timer" element={<EventTimer lang={'UA'}/>} />
           <Route path="/ua/works/local-data-bases" element={<LocalDataBases lang={'UA'}/>} />
-          {/* <Route path="/ua/works/send-out" element={<SendOut lang={'UA'}/>} /> */}
+          <Route path="/ua/works/send-out" element={<SendOut lang={'UA'}/>} />
         </Route>
       </Route>
     </>
