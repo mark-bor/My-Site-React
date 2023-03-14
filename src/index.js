@@ -7,33 +7,24 @@ import {
   Route,
 } from "react-router-dom";
 
-import './global.css';
-
 import App from './App.js';
-import ErrorPage from "./Components/Error_Page/ErrorPage.js";
 
-import Home from "./Components/Home/Home.js";
-import CV from "./Components/CV/CV.js";
-import Works from "./Components/Works/Works.js";
-import Contacts from "./Components/Contacts/Contacts.js";
-import Certificates from "./Components/Certificates/Certificates.js";
+import { 
+  ErrorPage, Home, CV, Works, Contacts, Certificates,
+  
+  Calculator,
+  BirthdayTimer,
+  PasswordGenerator,
+  MemoryGame,
+  ExchangeRate,
+  EventTimer,
+  LocalDataBases,
+  // SendOut,
+  
+  TankGame, Menu, Main, Tank, MachineGun, Options, Explanation,
+} from "./Components/index.js";
 
-import Calculator from "./Components/project_works/Calculator/index.js";
-import BirthdayTimer from "./Components/project_works/Birthday_Timer/index.js";
-import PasswordGenerator from "./Components/project_works/Password_Generator/index.js";
-import MemoryGame from "./Components/project_works/Memory_Game/index.js";
-import ExchangeRate from "./Components/project_works/Exchange_Rate/index.js";
-import EventTimer from "./Components/project_works/Event_Timer/index.js";
-import LocalDataBases from "./Components/project_works/Local_Data_Bases/index.js";
-// import SendOut from "./Components/project_works/Send_Out/index.js";
-
-import TankGame from "./Components/project_works/Tank_Game/index.js";
-import Menu from "./Components/project_works/Tank_Game/components/Menu/index.js";
-import Main from "./Components/project_works/Tank_Game/components/Main/index.js";
-import Tank from "./Components/project_works/Tank_Game/components/Tank/index.js";
-import MachineGun from "./Components/project_works/Tank_Game/components/Machine_Gun/index.js";
-import Options from "./Components/project_works/Tank_Game/components/Options/index.js";
-import Explanation from "./Components/project_works/Tank_Game/components/Explanation/index.js";
+import './global.css';
 
 
 
