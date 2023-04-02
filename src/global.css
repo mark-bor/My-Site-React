@@ -88,7 +88,7 @@ main {
 	grid-area: main;
 	position: relative;
 	margin: 0;
-	padding: 0;
+	padding: 0 30px;
 }
 
 @media screen and (max-width: 768px) {
@@ -110,11 +110,14 @@ main {
 	align-items: center;
   
 	text-align: center;
-	font-family: Russo One, sans-serif;/*Secular One*/
+	font-family: 'Russo One', sans-serif;/*Secular One*/
 	color: #16181D;
 	font-weight: 400;
 	font-size: 64px;
 	line-height: 77px;
+}
+.root_dark .title {
+	color: #F5F5F5;
 }
 
 @media screen and (max-width: 481px) {
@@ -133,13 +136,15 @@ main {
 }
 main > section > h1 {
 	margin: 55px auto;
-	/* color: #D9D9D9; */
 	color: #16181D;
 	font-family: "e-Ukraine-Light", sans-serif;
 	font-weight: 700;
 	font-size: 54px;
 	line-height: 77px;
 	text-align: center;
+}
+.root_dark main > section > h1 {
+	color: #F5F5F5;
 }
 
 @media screen and (max-width: 480px){
