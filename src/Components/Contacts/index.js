@@ -2,12 +2,14 @@ import mobile from "./Images/mobile-icon.png";
 import email from "./Images/email-icon.jpg";
 import facebook from "./Images/fb-icon.png";
 import telegram from "./Images/telegram-icon.png";
-import instagram from "./Images/instagram.png";
 import linkedin from "./Images/linkedin.png";
-import twitter from "./Images/Twitter.png";
 import github from "./Images/GitHub.png";
+// import instagram from "./Images/instagram.png";
+// import twitter from "./Images/Twitter.png";
 
 import "./contacts.css";
+
+
 
 export default function Contacts({lang}) {
     if (lang==='EN') {
@@ -41,25 +43,25 @@ export default function Contacts({lang}) {
                             </a>
                         </div>
     
-                        <div className="par-icons" id="par">
-                            <a target="_blank" rel="noreferrer" href="https://www.instagram.com/uvarovjr">
-                                <img className="icon" src={instagram} alt="instagram" />
-                            </a>
-    
+                        <div className="par-icons" id="par">    
                             <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/mark-bordakov-8441bb241/">
                                 <img className="icon" src={linkedin} alt="linkedin" />
                             </a>
-                        </div>
-    
-                        <div className="par-icons" id="par">
-                            <a target="_blank" rel="noreferrer" href="https://twitter.com/uvarov_mark">
-                                <img className="icon" src={twitter} alt="twitter" />
-                            </a>
-    
+
                             <a target="_blank" rel="noreferrer" href="https://github.com/mark-bor?tab=repositories">
                                 <img className="icon" src={github} alt="github" />
                             </a>
                         </div>
+    
+                        {/* <div className="par-icons" id="par">
+                            <a target="_blank" rel="noreferrer" href="https://www.instagram.com/uvarovjr">
+                                <img className="icon" src={instagram} alt="instagram" />
+                            </a>
+                            
+                            <a target="_blank" rel="noreferrer" href="https://twitter.com/marchelloreo">
+                                <img className="icon" src={twitter} alt="twitter" />
+                            </a>
+                        </div> */}
                     </div>
                 </div>
             </section>
@@ -98,24 +100,24 @@ export default function Contacts({lang}) {
                         </div>
                         
                         <div className="par-icons" id="par">
-                            <a target="_blank" rel="noreferrer" href="https://www.instagram.com/uvarovjr">
-                                <img className="icon" src={instagram} alt="інстаграм" />
-                            </a>
-    
                             <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/mark-bordakov-8441bb241/">
                                 <img className="icon" src={linkedin} alt="лінкед ін" />
                             </a>
-                        </div>
-                        
-                        <div className="par-icons" id="par">
-                            <a target="_blank" rel="noreferrer" href="https://twitter.com/uvarov_mark">
-                                <img className="icon" src={twitter} alt="твітер" />
-                            </a>
-    
+
                             <a target="_blank" rel="noreferrer" href="https://github.com/mark-bor?tab=repositories">
                                 <img className="icon" src={github} alt="гітхаб" />
                             </a>
                         </div>
+                        
+                        {/* <div className="par-icons" id="par">
+                            <a target="_blank" rel="noreferrer" href="https://www.instagram.com/uvarovjr">
+                                <img className="icon" src={instagram} alt="інстаграм" />
+                            </a>
+                            
+                            <a target="_blank" rel="noreferrer" href="https://twitter.com/marchelloreo">
+                                <img className="icon" src={twitter} alt="твітер" />
+                            </a>
+                        </div> */}
                     </div>
                 </div>
             </section>
