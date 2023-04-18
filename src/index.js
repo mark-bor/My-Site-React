@@ -6,9 +6,7 @@ import {
   RouterProvider,
   Route,
 } from "react-router-dom";
-
 import App from './App.js';
-
 import { 
   ErrorPage, Home, CV, Works, Contacts, Certificates,
   
@@ -18,11 +16,11 @@ import {
   MemoryGame,
   ExchangeRate,
   EventTimer,
-  LocalDataBases,
+  LocalDB,
   SendOut,
   
   TankGame, Menu, Main, Tank, MachineGun, Options, Explanation,
-} from "./Components/index.js";
+} from "./Pages/index.js";
 
 import './global.css';
 
@@ -46,7 +44,7 @@ const router = createBrowserRouter(
           <Route path="/works/memory-game" element={<MemoryGame lang={'EN'}/>} />
           <Route path="/works/exchange-rate" element={<ExchangeRate lang={'EN'}/>} />
           <Route path="/works/event-timer" element={<EventTimer lang={'EN'}/>} />
-          <Route path="/works/local-data-bases" element={<LocalDataBases lang={'EN'}/>} />
+          <Route path="/works/local-data-bases" element={<LocalDB lang={'EN'}/>} />
           <Route path="/works/send-out" element={<SendOut lang={'EN'}/>} />
 
           <Route path="/works/tank-game" element={<TankGame lang={'EN'}/>}>
@@ -78,7 +76,7 @@ const router = createBrowserRouter(
           <Route path="/ua/works/memory-game" element={<MemoryGame lang={'UA'}/>} />
           <Route path="/ua/works/exchange-rate" element={<ExchangeRate lang={'UA'}/>} />
           <Route path="/ua/works/event-timer" element={<EventTimer lang={'UA'}/>} />
-          <Route path="/ua/works/local-data-bases" element={<LocalDataBases lang={'UA'}/>} />
+          <Route path="/ua/works/local-data-bases" element={<LocalDB lang={'UA'}/>} />
           <Route path="/ua/works/send-out" element={<SendOut lang={'UA'}/>} />
         </Route>
       </Route>

@@ -1,0 +1,267 @@
+.loc-dat-bas {
+    padding: 0 30px 100px 30px;
+}
+
+.select_data_bases {
+    max-width: 550px;
+    height: 46px;
+    margin: 0 auto;
+    background-color: #8F949C;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.select_data_bases_dark {
+    background-color: #595959;
+}
+
+.select_data_bases > li {
+    width: 150px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.select_data_base {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+
+    color: #1E2939;
+    font-size: 14px;
+}
+
+.data_base_slider {
+    max-width: 550px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.container_with_bases {
+    min-width: 100%;
+    min-height: 83px;
+    margin: 0;
+    transition: 0.7s;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+/* --------------------- SECTION ---------------------- */
+/* --------------------- SECTION ---------------------- */
+/* --------------------- SECTION ---------------------- */
+.data_bases_section {
+    display: block;
+    min-width: 100%;
+    margin: 0;
+    padding: 15px 0 15px 0;
+    background-color: #D9D9D9;
+    border: 10px solid #8F949C;
+    
+    color: #1E2939;
+}
+.data_bases_section_dark {
+    border: 10px solid #595959;
+}
+
+.base_name {
+    position: relative;
+    width: 95%;
+    height: 40px;
+    margin: 0 auto 15px auto;
+    padding: 0 0 10px 10px;
+    border-bottom: 1px solid #8F949C;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+    color: #1E2939;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.functions {
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    padding: 0;
+    top: 0;
+    right: 0;
+    
+    display: flex;
+}
+
+.functions_list {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.functions_list_active {
+    width: 100px;
+    height: auto;
+    padding: 0;
+    right: 30px;
+    z-index: 1;
+    background-color: #25364C;
+}
+
+.functions_list > li {
+    display: block;
+    width: 100%;
+}
+
+.functions_list > li > button {
+    display: block;
+    width: 100%;
+    min-height: 25px;
+    margin: 0;
+    padding: 0 0 0 23px;
+    border: 1px solid #D9D9D9;
+    
+    text-align: left;
+    color: #D9D9D9;
+}
+
+
+.btn_delete_datas {
+    background-image: url('../../../Images/waste_basket.png');
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: auto 90%;
+}
+
+.functions_list > li > button:hover {
+    background-color: #595959;
+    opacity: 0.7;
+}
+
+.btn_open_functions {
+    width: 25px;
+    height: 25px;
+    margin: auto;
+    border-radius: 50%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
+.btn_open_functions:hover {
+    background-color: #8F949C;
+}
+
+.btn_open_functions > span {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #595959;
+}
+
+.data_bases_section > thead,
+.data_bases_section > tbody {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.data_bases {
+    width: 95%;
+    margin: 0 auto;
+    padding: 0;
+    border-bottom: 1px solid #8F949C;
+    
+    display: flex;
+}
+
+.data_bases:hover {
+    opacity: 0.7;
+    background-color: #8F949C;
+}
+
+.data_bases_section > thead > .data_bases {
+    border-bottom: none;
+}
+
+.data_bases_section > thead .key,
+.data_bases_section > thead .value {
+    text-decoration: underline 1px solid #8F949C;
+    font-size: 14px;    
+}
+
+.checkbox, .key, .value, .open_funtions {
+    min-height: 37px;
+    margin: 0;
+    padding: 10px 0 7px 20px;
+    overflow-x: hidden;
+
+    display: flex;
+
+    font-weight: 300;
+    font-size: 13px;
+}
+
+.checkbox {
+    width: 5%;
+    padding: 0;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.key {
+    width: 25%;
+    color: #78A2E1;
+}
+
+.value {
+    width: 60%;
+}
+
+.open_funtions {
+    width: 10%;
+    padding: 0;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn_change_functions,
+.btn_delete_functions {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btn_change_functions {
+    background-image: url('../../../Images/pen.png');
+    background-size: 63%;
+}
+
+.btn_delete_functions {
+    background-image: url('../../../Images/waste_basket.png');
+    background-size: 90%;
+}
+
+.btn_change_functions:hover,
+.btn_delete_functions:hover {
+    opacity: 0.8;
+    background-color: #25364C;
+}

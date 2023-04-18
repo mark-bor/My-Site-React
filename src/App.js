@@ -6,7 +6,7 @@ import {
   MenuWindow,
   Sidebar,
   Footer
-} from "./Components/index.js";
+} from "./Pages/index.js";
 
 
 

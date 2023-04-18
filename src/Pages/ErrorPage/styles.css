@@ -1,0 +1,119 @@
+.error_background {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: auto;
+	
+	background-color: #D9D9D9;
+	z-index: 1;
+	transition: 0.3s;
+	/* backdrop-filter: blur(3px); */
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.window_error_dark { background-color: #595959; }
+
+.window_error {
+	position: relative;
+	width: 500px;
+	min-height: 350px;
+	margin: 100px auto;
+	padding: 1px 30px 30px 30px;
+	background-color: #F5F5F5;
+	border-radius: 15px;
+	text-align: center;
+	z-index: 8;
+	overflow-y: scroll;
+	
+	background-image: url("../../Images/OOPS.png");
+	background-repeat: no-repeat;
+	background-size: 33%;
+	background-position: top center;
+}
+.window_error_dark .window_error { background-color: #16181D; }
+.window_error::-webkit-scrollbar { display: none; }
+
+.close_error {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	right: 0;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.close_error > span {
+	position: absolute;
+	display: block;
+	width: 20px;
+	height: 2px;
+	margin: auto;
+	background-color: #1E2939;
+	border-radius: 3px;
+}
+.close_error > span:nth-child(1) {
+	transform: rotate(45deg);
+}
+.close_error > span:nth-child(2) {
+	transform: rotate(-45deg);
+}
+
+.message_error {
+	width: auto;
+	margin: 170px auto 23px auto;
+	
+	color: #FF5555;
+	font-weight: 400;
+	font-size: 29px;
+	line-height: 35px;
+}
+
+.error_status {
+	display: inline-block;
+	width: 80%;
+	margin: 0 auto;
+	
+	text-align: start;
+	color: #16181D;
+	font-weight: 400;
+	font-size: 21px;
+	line-height: 25px;
+}
+.window_error_dark .error_status { color: #F5F5F5; }
+.error_status > span {
+	height: auto;
+	margin: 0 17px 0 0;
+}
+.error_code {
+	color: #FF9900;
+}
+
+.error_message {
+	text-align: start;
+	font-size: 15px;
+}
+
+
+
+@media screen and (max-width: 480px){
+	.window_error {
+		width: 250px;
+		height: 180px;
+	}
+	.message_error {
+		margin: 85px auto 0 auto;
+		font-size: 15px;
+		line-height: 21px;
+	}
+	.error_status {
+		margin: 5px 0 0 0;
+		font-size: 11px;
+		line-height: 15px;
+	}
+	.error_status > span {
+		margin: 0 7px 0 0;
+	}
+}
