@@ -21,7 +21,7 @@ export default function Works({lang}) {
 		return (
 			<section className="div wor" id="works">
 				{/* <!------------ TITLE ----------------------> */}
-				{/* <h1 className="title light_dark">Works</h1> */}
+				<h1 className="title light_dark">Works</h1>
 
 				{/* <!------------ LEGEND ----------------------> */}
 				<ul className="legend">

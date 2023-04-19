@@ -1,6 +1,13 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
+import html from "../../Images/html_logo.png";
+import css from "../../Images/css_logo.svg.png";
+import javascript from "../../Images/javascript_logo.png";
+import react from "../../Images/react_logo.svg.png";
+import react_router from "../../Images/react-router_logo.png";
+import typescript from "../../Images/typescript_logo.png";
+
 import cv from "../../Images/cv_for_home.png";
 import certificate from "../../Images/certificate_for_home.png";
 import gear from "../../Images/gear_for_home.png";
@@ -14,7 +21,22 @@ export default function Home({lang}) {
 		return (
 			<section className="div h" id="home">
 				{/* __________ TITLE _____________________ */}
-				<h1 className="title light_dark">My Site</h1>
+				<h1 className="title light_dark">My CV-Site</h1>
+
+				{/* __________ TECHNOLOGIES _____________________ */}
+				<section className='technologies_section'>
+					<h2 className='titles_in_tech_section'>Technologies which I used in this app</h2>
+
+					<ul className='list_of_tech'>
+						<li><img className='logo_of_tech' src={html} title='HTML' width={50} /></li>
+						<li><img className='logo_of_tech' src={css} title='CSS' width={50} /></li>
+						<li><img className='logo_of_tech' src={javascript} title='JavaScript' width={50} /></li>
+						<li><img className='logo_of_tech' src={react} title='React.js' width={50} /></li>
+						<li><img className='logo_of_tech' src={react_router} title='React Router' width={50} /></li>
+						<li><img className='logo_of_tech' src={typescript} title='TypeScript' width={50} /></li>
+					</ul>
+				</section>
+
 				{/* __________ MENU _____________________ */}
 				<ul className="head_block_menu">
 					<li className="one">
@@ -54,6 +76,21 @@ export default function Home({lang}) {
 		  <section className="div h" id="home" >
 				{/* __________ TITLE _____________________ */}
 				<h1 className="title light_dark">Мій Сайт</h1>
+
+				{/* __________ TECHNOLOGIES _____________________ */}
+				<section className='technologies_section'>
+					<h2 className='titles_in_tech_section'>Технології які я використав в цьому додатку</h2>
+
+					<ul className='list_of_tech'>
+						<li><img className='logo_of_tech' src={html} title='HTML' width={50} /></li>
+						<li><img className='logo_of_tech' src={css} title='CSS' width={50} /></li>
+						<li><img className='logo_of_tech' src={javascript} title='JavaScript' width={50} /></li>
+						<li><img className='logo_of_tech' src={react} title='React.js' width={50} /></li>
+						<li><img className='logo_of_tech' src={react_router} title='React Router' width={50} /></li>
+						<li><img className='logo_of_tech' src={typescript} title='TypeScript' width={50} /></li>
+					</ul>
+				</section>
+
 				{/* __________ MENU _____________________ */}
 				<ul className="head_block_menu">
 					<li className="one">

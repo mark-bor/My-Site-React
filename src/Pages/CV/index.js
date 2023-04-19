@@ -7,7 +7,8 @@ export default function CV({lang}) {
         return (
             <section className="div h" id="resume" >
                 {/* __________ TITLE _____________________ */}
-                {/* <h1 className="title light_dark">CV</h1> */}
+                <h1 className="title light_dark">CV</h1>
+                
                 {/* __________ MENU _____________________ */}
                 <div className="cvs">
                     <ul className="div_in_cvs">

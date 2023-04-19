@@ -1,8 +1,47 @@
-/*-------------------- MENU ----------------------*/
 .h  {
 	margin: 0;
 	padding: 0 30px 100px 30px;
 }
+
+/*-------------------- TECHNOLOGIES ----------------------*/
+.technologies_section {
+	max-width: 700px;
+	margin: 0 auto 73px auto;
+}
+
+.titles_in_tech_section {
+	margin: 0 auto 30px auto;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	color: #16181D;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 28px;
+	line-height: 36px;
+}
+
+.list_of_tech {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+}
+
+.list_of_tech > li {
+	display: block;
+	width: 50px;
+	height: auto;
+}
+
+.logo_of_tech {
+	width: 100%;
+	height: auto;
+}
+
+/*-------------------- MENU ----------------------*/
 .head_block_menu {
 	max-width: 500px;
 	height: 300px;

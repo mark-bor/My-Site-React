@@ -101,14 +101,16 @@ main {
 
 /*-------------------- TITLE --------------------------------------*/
 .title {
-	max-width: 766px;
-	height: 100px;
-	margin: 53px auto;
+	width: calc(100% + 60px);
+	height: 206px;
+	margin: 0 -30px 53px -30px;
 	padding: auto;
 
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	
+	background-color: #D9D9D9;
   
 	text-align: center;
 	font-family: 'Russo One', sans-serif;/*Secular One*/
@@ -116,6 +118,12 @@ main {
 	font-weight: 400;
 	font-size: 64px;
 	line-height: 77px;
+
+	background-image: url('./Images/Circle_for_hero.png');
+	background-repeat: no-repeat;
+	background-position-x: right;
+	background-position-y: -115px;
+
 }
 .root_dark .title {
 	color: #F5F5F5;
@@ -123,10 +131,11 @@ main {
 
 @media screen and (max-width: 481px) {
 	.title {
-	  margin: 23px auto;
-	  font-weight: 400;
-	  font-size: 54px;
-	  line-height: 57px;
+		margin: 0 -30px 23px -30px;
+
+		font-weight: 400;
+		font-size: 54px;
+		line-height: 57px;
 	}
 }
 

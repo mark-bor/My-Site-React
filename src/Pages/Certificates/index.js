@@ -24,7 +24,7 @@ export default function Certificates({lang}) {
     return (
         <section className="div cer" id="certificates">
             {/* __________ TITLE _____________________ */}
-            {/* <h1 className="title light_dark">{lang==='EN'? 'Certificates': lang==='UA'? 'Сертифікати': null}</h1> */}
+            <h1 className="title light_dark">{lang==='EN'? 'Certificates': lang==='UA'? 'Сертифікати': null}</h1>
             
             {/* __________ MENU NOT TECHNICAL IT _____________________ */}
             <Section object={it} lang={lang} />
