@@ -1,3 +1,5 @@
+import AbautTechnology from "./Home/AbautTechnology/index.js";
+
 import Section from "./Certificates/Section/index.js";
 import Checkbox from "./Certificates/Checkbox/index.js";
 
@@ -13,6 +15,7 @@ import Card from "./MemoryGame/Card/index.js";
 
 
 export {
+    AbautTechnology,
     Section,
     Checkbox,
     Certificate,

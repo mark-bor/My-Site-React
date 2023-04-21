@@ -6,11 +6,11 @@ import { setLDBColor } from "../../../scripts/progectWorks/LocalDB/setLDBColor";
 import { LocalStorageSection } from "../../../Components/index.js";
 import { IndexedDBSection } from "../../../Components/index.js";
 
-import "./styles.css";
+import "./style.css";
 
 
 
-export default function LocalDB({lang}) {
+export default function LocalDataBases({lang}) {
     const [translate, setTranslate] = useState(0);
     const [slider, setSlider] = useState(0);
 
@@ -22,7 +22,7 @@ export default function LocalDB({lang}) {
     
     return (
         <section className="div loc-dat-bas" id="local-data-bases">
-            <h1 className="light_dark">{setLDBLanguage(lang)}</h1>
+            <h1 className="light_dark">{setLDBLanguage()}</h1>
 
             <ul id="select_data_bases" className={`select_data_bases ${setLDBColor()}`}>
                 <li><button 

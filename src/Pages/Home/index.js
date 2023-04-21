@@ -1,5 +1,7 @@
-import React from 'react';
+import { useState } from 'react';
 import { Link } from "react-router-dom";
+import { AbautTechnology } from "../../Components/index";
+import { showInformation } from "../../scripts/Home/showInformation";
 
 import html from "../../Images/html_logo.png";
 import css from "../../Images/css_logo.svg.png";
@@ -17,23 +19,53 @@ import './styles.css';
 
 
 export default function Home({lang}) {
+	const [window, setWindow] = useState(false);
+	const [content, setContent] = useState({});
+	
+
 	if (lang==='EN') {
 		return (
 			<section className="div h" id="home">
 				{/* __________ TITLE _____________________ */}
 				<h1 className="title light_dark">My CV-Site</h1>
 
+				{window ? <AbautTechnology lang={lang} content={content} set={setWindow}/> : null}
+
 				{/* __________ TECHNOLOGIES _____________________ */}
 				<section className='technologies_section'>
-					<h2 className='titles_in_tech_section'>Technologies which I used in this app</h2>
+					<h2 className='titles_in_tech_section light_dark'>Technologies which I used in this app</h2>
 
 					<ul className='list_of_tech'>
-						<li><img className='logo_of_tech' src={html} title='HTML' width={50} /></li>
-						<li><img className='logo_of_tech' src={css} title='CSS' width={50} /></li>
-						<li><img className='logo_of_tech' src={javascript} title='JavaScript' width={50} /></li>
-						<li><img className='logo_of_tech' src={react} title='React.js' width={50} /></li>
-						<li><img className='logo_of_tech' src={react_router} title='React Router' width={50} /></li>
-						<li><img className='logo_of_tech' src={typescript} title='TypeScript' width={50} /></li>
+						<li><img 
+							className='logo_of_tech' src={html} 
+							title='HTML' alt='html logo' width={50} 
+							onClick={() => showInformation(setContent, setWindow, 'HTML')}
+						/></li>
+						<li><img 
+							className='logo_of_tech' src={css} 
+							title='CSS' alt='css logo' width={50} 
+							onClick={() => showInformation(setContent, setWindow, 'CSS')}
+						/></li>
+						<li><img 
+							className='logo_of_tech' src={javascript} 
+							title='JavaScript' alt='javascript logo' width={50} 
+							onClick={() => showInformation(setContent, setWindow, 'JavaScript')}
+						/></li>
+						<li><img 
+							className='logo_of_tech' src={react} 
+							title='React.js' alt='react logo' width={50} 
+							onClick={() => showInformation(setContent, setWindow, 'React.js')}
+						/></li>
+						<li><img 
+							className='logo_of_tech' src={react_router} 
+							title='React Router' alt='react router logo' width={50} 
+							onClick={() => showInformation(setContent, setWindow, 'React Router')}
+						/></li>
+						<li><img 
+							className='logo_of_tech' src={typescript} 
+							title='TypeScript' alt='typescript logo' width={50} 
+							onClick={() => showInformation(setContent, setWindow, 'TypeScript')}
+						/></li>
 					</ul>
 				</section>
 
@@ -77,17 +109,43 @@ export default function Home({lang}) {
 				{/* __________ TITLE _____________________ */}
 				<h1 className="title light_dark">Мій Сайт</h1>
 
+				{window ? <AbautTechnology lang={lang} content={content} set={setWindow}/> : null}
+
 				{/* __________ TECHNOLOGIES _____________________ */}
 				<section className='technologies_section'>
-					<h2 className='titles_in_tech_section'>Технології які я використав в цьому додатку</h2>
+					<h2 className='titles_in_tech_section light_dark'>Технології які я використав в цьому додатку</h2>
 
 					<ul className='list_of_tech'>
-						<li><img className='logo_of_tech' src={html} title='HTML' width={50} /></li>
-						<li><img className='logo_of_tech' src={css} title='CSS' width={50} /></li>
-						<li><img className='logo_of_tech' src={javascript} title='JavaScript' width={50} /></li>
-						<li><img className='logo_of_tech' src={react} title='React.js' width={50} /></li>
-						<li><img className='logo_of_tech' src={react_router} title='React Router' width={50} /></li>
-						<li><img className='logo_of_tech' src={typescript} title='TypeScript' width={50} /></li>
+						<li><img 
+							className='logo_of_tech' src={html} 
+							title='HTML' alt='html логотип' width={50} 
+							onClick={() => showInformation(setContent, setWindow, 'HTML')}
+						/></li>
+						<li><img 
+							className='logo_of_tech' src={css} 
+							title='CSS' alt='css логотип' width={50} 
+							onClick={() => showInformation(setContent, setWindow, 'CSS')}
+						/></li>
+						<li><img 
+							className='logo_of_tech' src={javascript} 
+							title='JavaScript' alt='javascript логотип' width={50} 
+							onClick={() => showInformation(setContent, setWindow, 'JavaScript')}
+						/></li>
+						<li><img 
+							className='logo_of_tech' src={react} 
+							title='React.js' alt='react логотип' width={50} 
+							onClick={() => showInformation(setContent, setWindow, 'React.js')}
+						/></li>
+						<li><img 
+							className='logo_of_tech' src={react_router} 
+							title='React Router' alt='react router логотип' width={50} 
+							onClick={() => showInformation(setContent, setWindow, 'React Router')}
+						/></li>
+						<li><img 
+							className='logo_of_tech' src={typescript} 
+							title='TypeScript' alt='typescript логотип' width={50} 
+							onClick={() => showInformation(setContent, setWindow, 'TypeScript')}
+						/></li>
 					</ul>
 				</section>
 

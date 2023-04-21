@@ -27,11 +27,11 @@ export default function Works({lang}) {
 				<ul className="legend">
 					<li className="leg_el" onClick={() => sortByColor('open', setWorks)}>
 						<button id="blue" className="color"></button>
-						<p> - in developing proces.</p>
+						<p className='light_dark'> - in developing proces.</p>
 					</li>
 					<li className="leg_el" onClick={() => sortByColor('close', setWorks)}>
 						<button id="green" className="color"></button>
-						<p> - to complete.</p>
+						<p className='light_dark'> - to complete.</p>
 					</li>
 				</ul>
 				

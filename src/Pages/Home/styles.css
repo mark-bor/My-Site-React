@@ -1,6 +1,6 @@
 .h  {
 	margin: 0;
-	padding: 0 30px 100px 30px;
+	padding: 0 0 100px 0;
 }
 
 /*-------------------- TECHNOLOGIES ----------------------*/
@@ -39,6 +39,13 @@
 .logo_of_tech {
 	width: 100%;
 	height: auto;
+	opacity: 0.8;
+}
+
+.logo_of_tech:hover {
+	width: 100%;
+	height: auto;
+	opacity: 1;
 }
 
 /*-------------------- MENU ----------------------*/

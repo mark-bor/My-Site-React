@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { hiddenMenuWindow } from "../../scripts/MenuWindow/hidden";
-import { hiddenLanguage } from "../../scripts/siteLanguage/language"
+import { hiddenLanguage } from "../../scripts/Global/language"
 import {
     changeColor,
     colorInputDefCheck,
     getAndSetColor
-} from "../../scripts/siteColor/siteColor"
+} from "../../scripts/Global/siteColor"
 
 import home from "../../Images/home.png";
 import cv from "../../Images/cv.png";

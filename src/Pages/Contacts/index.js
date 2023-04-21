@@ -16,9 +16,9 @@ export default function Contacts({lang}) {
         return (
             <section className="div con" id="contacts">
                 {/* __________ TITLE _____________________ */}
-                <h1 className="title">Contacts</h1>
+                <h1 className="title light_dark">Contacts</h1>
     
-                <address className="phone_email">+38 095 762 56 69<br />mark12bor@gmail.com</address>
+                <address className="phone_email light_dark">+38 095 762 56 69<br />mark12bor@gmail.com</address>
                 
                 {/* __________ CONTACTS _____________________ */}
                 <div className="contacts">

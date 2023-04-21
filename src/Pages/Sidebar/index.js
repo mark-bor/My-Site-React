@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 import { Link } from "react-router-dom";
-import { hiddenLanguage } from "../../scripts/siteLanguage/language"
+import { hiddenLanguage } from "../../scripts/Global/language"
 import {
     changeColor,
     colorInputDefCheck,
     getAndSetColor
-} from "../../scripts/siteColor/siteColor"
+} from "../../scripts/Global/siteColor"
 import { 
     hiddenAll,
     showMore,
