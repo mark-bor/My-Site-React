@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Outlet } from "react-router-dom";
-
-import {
-  Header,
-  MenuWindow,
-  Sidebar,
-  Footer
-} from "./Pages/index.js";
+import { Header, MenuWindow, Sidebar, Footer } from "./components/index";
 
 
 

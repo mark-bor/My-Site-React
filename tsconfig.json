@@ -4,7 +4,7 @@
         "module": "system",
         "sourceMap": false,
         "removeComments": true,
-        "outDir": "src/Components/project_works/Tank_Game/scriptsTS"
+        "outDir": "src/components/project_works/Tank_Game/scriptsTS"
     },
     "include": [
         "**/*.ts"

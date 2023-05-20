@@ -2,18 +2,13 @@ import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { hiddenMenuWindow } from "../../scripts/MenuWindow/hidden";
 import { hiddenLanguage } from "../../scripts/Global/language"
-import {
-    changeColor,
-    colorInputDefCheck,
-    getAndSetColor
-} from "../../scripts/Global/siteColor"
+import { changeColor, colorInputDefCheck, getAndSetColor } from "../../scripts/Global/siteColor"
 
-import home from "../../Images/home.png";
-import cv from "../../Images/cv.png";
-import project from "../../Images/project.png";
-import certificate from "../../Images/certificate.png";
-import contact from "../../Images/contact.png";
-
+import home from "../../images/home.png";
+import cv from "../../images/cv.png";
+import project from "../../images/project.png";
+import certificate from "../../images/certificate.png";
+import contact from "../../images/contact.png";
 import "./styles.css";
 
 

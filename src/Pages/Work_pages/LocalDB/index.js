@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 import { setLDBLanguage } from "../../../scripts/progectWorks/LocalDB/setLDBLanguage";
 import { setLDBColor } from "../../../scripts/progectWorks/LocalDB/setLDBColor";
 
-import { LocalStorageSection } from "../../../Components/index.js";
-import { IndexedDBSection } from "../../../Components/index.js";
+import { LocalStorageSection } from "../../../components/index.js";
+import { IndexedDBSection } from "../../../components/index.js";
 
 import "./styles.css";
 
@@ -18,7 +18,6 @@ export default function LocalDB({lang}) {
         setSlider(document.getElementById('data_base_slider').clientWidth);
     }, []);
 
-    
     
     return (
         <section className="div loc-dat-bas" id="local-data-bases">

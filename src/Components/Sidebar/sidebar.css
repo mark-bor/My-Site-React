@@ -20,7 +20,7 @@
     z-index: 2;
     
     background-color: #20232A;
-    background-image: url('../../Images/arrow_down.png');
+    background-image: url('../../images/arrow_down.png');
     background-repeat: no-repeat;
     background-size: 70% auto;
     background-position: center center;
@@ -76,7 +76,7 @@
     transition: 0.1s;
     transform: rotate(-90deg);
 
-    background-image: url('../../Images/arrow_down.png');
+    background-image: url('../../images/arrow_down.png');
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center center;

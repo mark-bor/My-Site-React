@@ -126,7 +126,7 @@
 
 
 .btn_delete_datas {
-    background-image: url('../../../Images/waste_basket.png');
+    background-image: url('../../../images/waste_basket.png');
     background-repeat: no-repeat;
     background-position: center left;
     background-size: auto 90%;
@@ -245,12 +245,12 @@
 }
 
 .btn_change_functions {
-    background-image: url('../../../Images/pen.png');
+    background-image: url('../../../images/pen.png');
     background-size: 63%;
 }
 
 .btn_delete_functions {
-    background-image: url('../../../Images/waste_basket.png');
+    background-image: url('../../../images/waste_basket.png');
     background-size: 90%;
 }
 

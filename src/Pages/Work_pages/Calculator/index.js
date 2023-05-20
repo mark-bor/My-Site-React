@@ -1,13 +1,20 @@
+import { useState } from "react";
 import { 
     calculateOnMouseDown,
     calculateQuadraticEquation
 } from "../../../scripts/progectWorks/Calculator/calculate";
 
-import "./calculator.css";
+import "./styles.css";
 
 
 
 export default function Calculator({lang}) {
+    const [a, setA] = useState('');
+    const [b, setB] = useState('');
+    const [c, setC] = useState('');
+    const [results, setResults] = useState({xOne: '', xTwo: ''});
+
+
     if (lang==='EN') {
         return (
             <section className="div cal" id="calculator">	
@@ -19,15 +26,24 @@ export default function Calculator({lang}) {
                         <div className="a_b_c">b</div>					
                         <div className="a_b_c">c</div>
                         
-                        <input id="a" className="inp" type="number" name="a" />
-                        <input id="b" className="inp" type="number" name="b" />
-                        <input id="c" className="inp" type="number" name="c" />
+                        <input 
+                            className="inp" type="number" name="a" value={a} 
+                            onChange={text => setA(text.target.value)} 
+                        />
+                        <input 
+                            className="inp" type="number" name="b" value={b} 
+                            onChange={text => setB(text.target.value)} 
+                        />
+                        <input 
+                            className="inp" type="number" name="c" value={c} 
+                            onChange={text => setC(text.target.value)} 
+                        />
                     </form>
                                         
                     <button 
                         id="btn_for_calc" className="btn_for_calc" 
                         onMouseDown={calculateOnMouseDown}
-                        onMouseUp={calculateQuadraticEquation}
+                        onMouseUp={(btn) => calculateQuadraticEquation(btn, {a, b, c}, {setA, setB, setC}, setResults)}
                     >Calculate</button>
                 </div>
     
@@ -38,8 +54,8 @@ export default function Calculator({lang}) {
                         <p className="x1_x2">x1</p>
                         <p className="x1_x2">x2</p>
     
-                        <p id="x_1" className="x1_x2_result"></p>
-                        <p id="x_2" className="x1_x2_result"></p>
+                        <p className="x1_x2_result">{results.xOne}</p>
+                        <p className="x1_x2_result">{results.xTwo}</p>
                     </div>
                 </div>
             </section>
@@ -57,15 +73,24 @@ export default function Calculator({lang}) {
                         <div className="a_b_c">b</div>					
                         <div className="a_b_c">c</div>
                         
-                        <input id="a" className="inp" type="number" name="a" />
-                        <input id="b" className="inp" type="number" name="b" />
-                        <input id="c" className="inp" type="number" name="c" />
+                        <input 
+                            className="inp" type="number" name="a" value={a} 
+                            onChange={text => setA(text.target.value)} 
+                        />
+                        <input 
+                            className="inp" type="number" name="b" value={b} 
+                            onChange={text => setB(text.target.value)} 
+                        />
+                        <input 
+                            className="inp" type="number" name="c" value={c} 
+                            onChange={text => setC(text.target.value)} 
+                        />
                     </form>
                                         
                     <button 
                         id="btn_for_calc" className="btn_for_calc" 
                         onMouseDown={calculateOnMouseDown}
-                        onMouseUp={calculateQuadraticEquation}
+                        onMouseUp={(btn) => calculateQuadraticEquation(btn, {a, b, c}, {setA, setB, setC}, setResults)}
                     >Розрахувати</button>
                 </div>
     
@@ -76,8 +101,8 @@ export default function Calculator({lang}) {
                         <p className="x1_x2">x1</p>
                         <p className="x1_x2">x2</p>
     
-                        <p id="x_1" className="x1_x2_result"></p>
-                        <p id="x_2" className="x1_x2_result"></p>
+                        <p className="x1_x2_result">{results.xOne}</p>
+                        <p className="x1_x2_result">{results.xTwo}</p>
                     </div>
                 </div>
             </section>

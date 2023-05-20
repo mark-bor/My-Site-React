@@ -18,9 +18,8 @@ import {
   EventTimer,
   LocalDB,
   SendOut,
-  
   TankGame, Menu, Main, Tank, MachineGun, Options, Explanation,
-} from "./Pages/index.js";
+} from "./pages/index.js";
 
 import './global.css';
 

@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { onMouseDown, onMouseUp } from "../../../scripts/progectWorks/PasswordGenerator/click"
 
 import "./styles.css";
@@ -5,6 +6,10 @@ import "./styles.css";
 
 
 export default function PasswordGenerator({lang}) {
+    const [passwords, setPasswords] = useState([]);
+    const [error, setError] = useState('');
+
+
     if (lang==='EN') {
         return (
             <section className="div pas-gen" id="password-generator">
@@ -44,46 +49,41 @@ export default function PasswordGenerator({lang}) {
                             <section className="param-two">
                                 <div className="num">
                                     <label htmlFor="dov">Length</label>
-                                    <select className="dov" id="dov">
-                                        <option id="dov_4" value="4">4</option>
-                                        <option id="dov_5" value="5">5</option>
-                                        <option id="dov_6" value="6">6</option>
-                                        <option id="dov_7" value="7">7</option>
-                                        <option id="dov_8" value="8">8</option>
-                                        <option id="dov_9" value="9">9</option>
-                                        <option id="dov_10" value="10">10</option>
-                                        <option id="dov_12" value="12">12</option>
-                                        <option id="dov_14" value="14">14</option>
-                                    </select>
+                                    <input 
+                                        id="dov" className="second_options" 
+                                        type='number' 
+                                        min={4} max={15}
+                                        defaultValue={10} 
+                                    />
                                 </div>
                                 <div className="num">
                                     <label htmlFor="kil">Quantity</label>
-                                    <select className="kil" id="kil">
-                                        <option id="kil_3" value="3">3</option>
-                                        <option id="kil_6" value="6">6</option>
-                                        <option id="kil_9" value="9">9</option>
-                                    </select>
+                                    <input 
+                                        id="kil" className="second_options" 
+                                        type='number' 
+                                        min={1} max={9}
+                                        defaultValue={3} 
+                                    />
                                 </div>
                             </section>
                         </form>
+
+                        <p className="error_massage">{error}</p>
+
                         {/* __________ BUTTON _____________________ */}
-                        <button className="butto" onMouseDown={onMouseDown} onMouseUp={onMouseUp}>Generate</button>
-    
+                        <button 
+                            className="butto" 
+                            onMouseDown={onMouseDown} 
+                            onMouseUp={(btn) => onMouseUp(btn, setPasswords, setError)}
+                        >Generate</button>
                     </div>
+
                     <div className="right">
                         {/* __________ PASSWORDS _____________________ */}
                         <article className="result">
                             <h3 className="pass">Passwords</h3>
                             <ul>
-                                <li className="pswd" id="1_pass"></li>
-                                <li className="pswd" id="2_pass"></li>
-                                <li className="pswd" id="3_pass"></li>
-                                <li className="pswd" id="4_pass"></li>
-                                <li className="pswd" id="5_pass"></li>
-                                <li className="pswd" id="6_pass"></li>
-                                <li className="pswd" id="7_pass"></li>
-                                <li className="pswd" id="8_pass"></li>
-                                <li className="pswd" id="9_pass"></li>
+                                {passwords.map((password, i) => <li key={i} className="pswd">{password}</li>)}
                             </ul>
                         </article>
                     </div>
@@ -131,46 +131,41 @@ export default function PasswordGenerator({lang}) {
                             <section className="param-two">
                                 <div className="num">
                                     <label htmlFor="dov">Довжина</label>
-                                    <select className="dov" id="dov">
-                                        <option id="dov_4" value="4">4</option>
-                                        <option id="dov_5" value="5">5</option>
-                                        <option id="dov_6" value="6">6</option>
-                                        <option id="dov_7" value="7">7</option>
-                                        <option id="dov_8" value="8">8</option>
-                                        <option id="dov_9" value="9">9</option>
-                                        <option id="dov_10" value="10">10</option>
-                                        <option id="dov_12" value="12">12</option>
-                                        <option id="dov_14" value="14">14</option>
-                                    </select>
+                                    <input 
+                                        id="dov" className="second_options" 
+                                        type='number' 
+                                        min={4} max={15}
+                                        defaultValue={10} 
+                                    />
                                 </div>
                                 <div className="num">
                                     <label htmlFor="kil">Кількість</label>
-                                    <select className="kil" id="kil">
-                                        <option id="kil_3" value="3">3</option>
-                                        <option id="kil_6" value="6">6</option>
-                                        <option id="kil_9" value="9">9</option>
-                                    </select>
+                                    <input 
+                                        id="kil" className="second_options" 
+                                        type='number' 
+                                        min={1} max={9}
+                                        defaultValue={3} 
+                                    />
                                 </div>
                             </section>
                         </form>
+                        
+                        <p className="error_massage">{error}</p>
+
                         {/* __________ BUTTON _____________________ */}
-                        <button className="butto" onMouseDown={onMouseDown} onMouseUp={onMouseUp}>Генерувати</button>
-    
+                        <button 
+                            className="butto" 
+                            onMouseDown={onMouseDown} 
+                            onMouseUp={onMouseUp}
+                        >Генерувати</button>
                     </div>
+                    
                     <div className="right">
                         {/* __________ PASSWORDS _____________________ */}
                         <article className="result">
                             <h3 className="pass">Паролі</h3>
                             <ul>
-                                <li className="pswd" id="1_pass"></li>
-                                <li className="pswd" id="2_pass"></li>
-                                <li className="pswd" id="3_pass"></li>
-                                <li className="pswd" id="4_pass"></li>
-                                <li className="pswd" id="5_pass"></li>
-                                <li className="pswd" id="6_pass"></li>
-                                <li className="pswd" id="7_pass"></li>
-                                <li className="pswd" id="8_pass"></li>
-                                <li className="pswd" id="9_pass"></li>
+                                {passwords.map((password, i) => <li key={i} className="pswd">{password}</li>)}
                             </ul>
                         </article>
                     </div>

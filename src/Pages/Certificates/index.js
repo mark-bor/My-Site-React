@@ -1,5 +1,4 @@
-import { Section } from "../../Components/index.js";
-
+import { Section } from "../../components/index.js";
 import "./certificates.css";
 
 
@@ -11,7 +10,6 @@ const it = {
     en: "IT",
     ua: "IT",
 };
-
 const languages = { 
     index: 0,
     type: "lang",

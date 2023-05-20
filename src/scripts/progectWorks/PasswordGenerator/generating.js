@@ -31,8 +31,8 @@ function Colaps () {
 export function CheckedRemuv(place) {
     if (document.getElementById('remuv').checked){
         let item = Colaps(arrays);
-        if (place.innerHTML.split('').includes(item)){
-            return CheckedRemuv(place, arrays);
+        if (place.split('').includes(item)){
+            return CheckedRemuv(place);
         }
         return item;
     } else { return Colaps(arrays); }

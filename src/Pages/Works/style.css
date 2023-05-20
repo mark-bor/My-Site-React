@@ -1,6 +1,6 @@
 @font-face {
   font-family: "e-Ukraine-UltraLight";
-  src: url('../../Fonts/e-Ukraine/e-Ukraine-UltraLight.otf');
+  src: url('../../fonts/e-Ukraine/e-Ukraine-UltraLight.otf');
 }
 
 .wor {
@@ -45,10 +45,10 @@
   transform: scale(1.3);
 }
 .leg_el > #blue {
-  background-color: rgb(120, 162, 225);
+  background-color: #78A2E1;
 }
 .leg_el > #green {
-  background-color: rgb(143, 216, 85);
+  background-color: #8FD855;
 }
 
 .leg_el > p {
@@ -260,7 +260,7 @@
     height: 25px;
     margin: 0 0 0 auto;
 
-    background-image: url('../../Images/filter_sort.png');
+    background-image: url('../../images/filter_sort.png');
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: center center;

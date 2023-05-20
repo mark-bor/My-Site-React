@@ -1,12 +1,11 @@
-import mobile from "../../Images/mobile-icon.png";
-import email from "../../Images/email-icon.jpg";
-import facebook from "../../Images/fb-icon.png";
-import telegram from "../../Images/telegram-icon.png";
-import linkedin from "../../Images/linkedin.png";
-import github from "../../Images/GitHub.png";
+import mobile from "../../images/mobile-icon.png";
+import email from "../../images/email-icon.jpg";
+import facebook from "../../images/fb-icon.png";
+import telegram from "../../images/telegram-icon.png";
+import linkedin from "../../images/linkedin.png";
+import github from "../../images/GitHub.png";
 // import instagram from "../../Images/instagram.png";
 // import twitter from "../../Images/Twitter.png";
-
 import "./contacts.css";
 
 

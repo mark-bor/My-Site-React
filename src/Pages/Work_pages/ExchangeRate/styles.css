@@ -36,14 +36,14 @@
   }
   #radio1 {
     border-radius: 50%;
-    background-image: url('../../../Images/Cledara-API.jpg');
+    background-image: url('../../../images/Cledara-API.jpg');
     background-size: auto 110%;
   }
   #radio2 {
-    background-image: url('../../../Images/currency-exchange.png');
+    background-image: url('../../../images/currency-exchange.png');
   }
   #radio3 {
-    background-image: url('../../../Images/API-Ninjas.png');
+    background-image: url('../../../images/API-Ninjas.png');
   }
   
   .second_block {

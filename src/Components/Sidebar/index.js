@@ -1,27 +1,15 @@
 import { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { hiddenLanguage } from "../../scripts/Global/language"
-import {
-    changeColor,
-    colorInputDefCheck,
-    getAndSetColor
-} from "../../scripts/Global/siteColor"
-import { 
-    hiddenAll,
-    showMore,
-    showSelectedList
- } from "../../scripts/Sidebar/list"
-import { 
-    mouseDown,
-    mouseUp,
-    setSidebarSize
- } from "../../scripts/Sidebar/hiddenSidebar"
+import { changeColor, colorInputDefCheck, getAndSetColor } from "../../scripts/Global/siteColor"
+import { hiddenAll, showMore, showSelectedList } from "../../scripts/Sidebar/list"
+import { mouseDown, mouseUp, setSidebarSize } from "../../scripts/Sidebar/hiddenSidebar"
 
-import home from "../../Images/home.png";
-import cv from "../../Images/cv.png";
-import project from "../../Images/project.png";
-import certificate from "../../Images/certificate.png";
-import contact from "../../Images/contact.png";
+import home from "../../images/home.png";
+import cv from "../../images/cv.png";
+import project from "../../images/project.png";
+import certificate from "../../images/certificate.png";
+import contact from "../../images/contact.png";
 import "./sidebar.css";
 
 
@@ -33,7 +21,6 @@ export default function Sidebar({lang}) {
     }, []);
 
     
-
     if (lang==='EN') {
         return (
             <aside id="sidebar_with_navigation" className={`sidebar_with_navigation`}>

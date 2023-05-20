@@ -1,18 +1,11 @@
 import { useState } from 'react';
 import { Link } from "react-router-dom";
-import { AbautTechnology } from "../../Components/index";
-import { showInformation } from "../../scripts/Home/showInformation";
+import { AbautTechnology, Technology } from "../../components/index";
+import { TECHNOLOGIES } from "../../data/TECHNOLOGIES";
 
-import html from "../../Images/html_logo.png";
-import css from "../../Images/css_logo.svg.png";
-import javascript from "../../Images/javascript_logo.png";
-import react from "../../Images/react_logo.svg.png";
-import react_router from "../../Images/react-router_logo.png";
-import typescript from "../../Images/typescript_logo.png";
-
-import cv from "../../Images/cv_for_home.png";
-import certificate from "../../Images/certificate_for_home.png";
-import gear from "../../Images/gear_for_home.png";
+import cv from "../../images/cv_for_home.png";
+import certificate from "../../images/certificate_for_home.png";
+import gear from "../../images/gear_for_home.png";
 
 import './styles.css';
 
@@ -36,36 +29,7 @@ export default function Home({lang}) {
 					<h2 className='titles_in_tech_section light_dark'>Technologies which I used in this app</h2>
 
 					<ul className='list_of_tech'>
-						<li><img 
-							className='logo_of_tech' src={html} 
-							title='HTML' alt='html logo' width={50} 
-							onClick={() => showInformation(setContent, setWindow, 'HTML')}
-						/></li>
-						<li><img 
-							className='logo_of_tech' src={css} 
-							title='CSS' alt='css logo' width={50} 
-							onClick={() => showInformation(setContent, setWindow, 'CSS')}
-						/></li>
-						<li><img 
-							className='logo_of_tech' src={javascript} 
-							title='JavaScript' alt='javascript logo' width={50} 
-							onClick={() => showInformation(setContent, setWindow, 'JavaScript')}
-						/></li>
-						<li><img 
-							className='logo_of_tech' src={react} 
-							title='React.js' alt='react logo' width={50} 
-							onClick={() => showInformation(setContent, setWindow, 'React.js')}
-						/></li>
-						<li><img 
-							className='logo_of_tech' src={react_router} 
-							title='React Router' alt='react router logo' width={50} 
-							onClick={() => showInformation(setContent, setWindow, 'React Router')}
-						/></li>
-						<li><img 
-							className='logo_of_tech' src={typescript} 
-							title='TypeScript' alt='typescript logo' width={50} 
-							onClick={() => showInformation(setContent, setWindow, 'TypeScript')}
-						/></li>
+						{TECHNOLOGIES.map((data, i) => <Technology key={i} setContent={setContent} setWindow={setWindow} data={data} text='logo' />)}						
 					</ul>
 				</section>
 
@@ -116,36 +80,7 @@ export default function Home({lang}) {
 					<h2 className='titles_in_tech_section light_dark'>Технології які я використав в цьому додатку</h2>
 
 					<ul className='list_of_tech'>
-						<li><img 
-							className='logo_of_tech' src={html} 
-							title='HTML' alt='html логотип' width={50} 
-							onClick={() => showInformation(setContent, setWindow, 'HTML')}
-						/></li>
-						<li><img 
-							className='logo_of_tech' src={css} 
-							title='CSS' alt='css логотип' width={50} 
-							onClick={() => showInformation(setContent, setWindow, 'CSS')}
-						/></li>
-						<li><img 
-							className='logo_of_tech' src={javascript} 
-							title='JavaScript' alt='javascript логотип' width={50} 
-							onClick={() => showInformation(setContent, setWindow, 'JavaScript')}
-						/></li>
-						<li><img 
-							className='logo_of_tech' src={react} 
-							title='React.js' alt='react логотип' width={50} 
-							onClick={() => showInformation(setContent, setWindow, 'React.js')}
-						/></li>
-						<li><img 
-							className='logo_of_tech' src={react_router} 
-							title='React Router' alt='react router логотип' width={50} 
-							onClick={() => showInformation(setContent, setWindow, 'React Router')}
-						/></li>
-						<li><img 
-							className='logo_of_tech' src={typescript} 
-							title='TypeScript' alt='typescript логотип' width={50} 
-							onClick={() => showInformation(setContent, setWindow, 'TypeScript')}
-						/></li>
+						{TECHNOLOGIES.map((data, i) => <Technology key={i} setContent={setContent} setWindow={setWindow} data={data} text='логотип' />)}
 					</ul>
 				</section>
 

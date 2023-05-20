@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
-
-import { ConfirmCard } from "../../../Components/index.js";
-import { InputForAccessCard } from "../../../Components/index.js";
+import { ConfirmCard } from "../../../components/index.js";
+import { InputForAccessCard } from "../../../components/index.js";
 
 import "./styles.css";
 
@@ -56,6 +55,7 @@ export default function SendOut({lang}) {
         datas.numberOfMessages.style.border = 'none';
     }
 
+    
     if (lang==='EN') {
         return (
             <section className="div sen-out" id="send-out">

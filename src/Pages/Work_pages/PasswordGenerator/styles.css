@@ -109,9 +109,11 @@
 	width: 100px;
 	height: 48px;
 }
-.pas-gen select {
+.second_options {
 	width: 100%;
 	height: 24px;
+
+	background-color: #FFF;
 	border: none;
 	border-radius: 7px;
 	outline: none;
@@ -128,6 +130,12 @@
 .pas-gen .num label {
 	margin-left: 1px;
 }
+
+.error_massage {
+	color: #FF5555;
+	font-size: 19px;
+}
+
 .pas-gen .butto {
 	display: block;
 	width: 306px;

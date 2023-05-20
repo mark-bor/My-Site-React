@@ -1,12 +1,10 @@
 import { Component } from "react";
-
 import { buttonStyle } from "../../../scripts/Certificates/service.js";
 import Certificate from "../Certificate/index.js";
 import Checkbox from "../Checkbox/index.js";
 
-import left from "../../../Images/Left.png";
-import right from "../../../Images/Right.png";
-
+import left from "../../../images/Left.png";
+import right from "../../../images/Right.png";
 import "./styles.css";
 
 

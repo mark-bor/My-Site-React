@@ -1,14 +1,18 @@
 import { useState, useEffect } from "react";
+import { TimerCircle } from "../../../components/index"
 import { startEventTimer } from "../../../scripts/progectWorks/EventTimer/startEventTimer";
 
-import "./event_timer.css";
+import "./styles.css";
 
 
 
 export default function EventTimer({lang}) {
+    const [time, setTime] = useState({months: 0, days: 0, hours: 0, minutes: 0, seconds: 0});
+    const [progress, setProgress] = useState({months: 0, days: 0, hours: 0, minutes: 0, seconds: 0});
+    const [date, setDate] = useState('');
     const [message, setMessage] = useState(false);
-    useEffect(() => {}, [setMessage]);
 
+    useEffect(() => {}, [setMessage]);
 
 
     if (lang==='EN') {
@@ -20,7 +24,7 @@ export default function EventTimer({lang}) {
                 <form className="date" method="get">
                     <label className="date_time" htmlFor="date_time">
                         <span>Input date and time here</span>
-                        <input id="date_time" type="datetime-local" required />
+                        <input id="date_time" type="datetime-local" required onChange={(elem) => setDate(elem.target.value)} />
                     </label>
                 </form>
                 <div className="buttons">
@@ -30,8 +34,8 @@ export default function EventTimer({lang}) {
                         onClick={() => window.location.reload()} 
                     >Reset</button>
                     <button 
-                        id="getDateButton" className="getDateButton" 
-                        onClick={() => startEventTimer(setMessage)} name="GO"
+                        id="getDateButton" className="getDateButton" name="go"
+                        onClick={() => startEventTimer(setMessage, setTime, setProgress, date)}
                     >GO</button>
                 </div>
     
@@ -42,49 +46,17 @@ export default function EventTimer({lang}) {
                 <section className="timer">
                     <article className="string">
                         <div className="par">
-                            <div className="circle">
-                                <svg><circle className="meter one_bt_tim" cx="65" cy="65" r="63" /></svg>
-                                <div className="text-in-circle">
-                                    <h6>mounts</h6>
-                                    <h5 id="mount_tim">00</h5>
-                                </div>
-                            </div>
-    
-                            <div className="circle">
-                                <svg><circle className="meter two_bt_tim" cx="65" cy="65" r="63" /></svg>
-                                <div className="text-in-circle">
-                                    <h6>days</h6>
-                                    <h5 id="day_tim">00</h5>
-                                </div>
-                            </div>
+                            <TimerCircle name='mounts' progress={progress.months} numeric={time.months} />
+                            <TimerCircle name='days' progress={progress.days} numeric={time.days} />
                         </div>
     
                         <div className="par p">
-                            <div className="circle">
-                                <svg><circle className="meter three_bt_tim" cx="65" cy="65" r="63" /></svg>
-                                <div className="text-in-circle">
-                                    <h6>hours</h6>
-                                    <h5 id="hour_tim">00</h5>
-                                </div>
-                            </div>
-    
-                            <div className="circle">
-                                <svg><circle className="meter four_bt_tim" cx="65" cy="65" r="63" /></svg>
-                                <div className="text-in-circle">
-                                    <h6>minutes</h6>
-                                    <h5 id="minute_tim">00</h5>
-                                </div>
-                            </div>
+                            <TimerCircle name='hours' progress={progress.hours} numeric={time.hours} />    
+                            <TimerCircle name='minutes' progress={progress.minutes} numeric={time.minutes} />
                         </div>
     
                         <div className="one-bir">
-                            <div className="circle" id="s">
-                                <svg><circle id="five_5" className="meter five_bt_tim" cx="65" cy="65" r="62.8" /></svg>
-                                <div className="text-in-circle">
-                                    <h6>seconds</h6>
-                                    <h5 id="second_tim">00</h5>
-                                </div>
-                            </div>
+                            <TimerCircle name='seconds' progress={progress.seconds} numeric={time.seconds} /> 
                         </div>
                     </article>
                 </section>
@@ -124,49 +96,17 @@ export default function EventTimer({lang}) {
                 <section className="timer">
                     <article className="string">
                         <div className="par">
-                            <div className="circle">
-                                <svg><circle className="meter one_bt_tim" cx="65" cy="65" r="63" /></svg>
-                                <div className="text-in-circle">
-                                    <h6>міcяців</h6>
-                                    <h5 id="mount_tim">00</h5>
-                                </div>
-                            </div>
-    
-                            <div className="circle">
-                                <svg><circle className="meter two_bt_tim" cx="65" cy="65" r="63" /></svg>
-                                <div className="text-in-circle">
-                                    <h6>дней</h6>
-                                    <h5 id="day_tim">00</h5>
-                                </div>
-                            </div>
+                            <TimerCircle name='міcяців' progress={progress.months} numeric={time.months} />
+                            <TimerCircle name='дней' progress={progress.days} numeric={time.days} /> 
                         </div>
     
                         <div className="par p">
-                            <div className="circle">
-                                <svg><circle className="meter three_bt_tim" cx="65" cy="65" r="63" /></svg>
-                                <div className="text-in-circle">
-                                    <h6>годин</h6>
-                                    <h5 id="hour_tim">00</h5>
-                                </div>
-                            </div>
-    
-                            <div className="circle">
-                                <svg><circle className="meter four_bt_tim" cx="65" cy="65" r="63" /></svg>
-                                <div className="text-in-circle">
-                                    <h6>хвилин</h6>
-                                    <h5 id="minute_tim">00</h5>
-                                </div>
-                            </div>
+                            <TimerCircle name='годин' progress={progress.hours} numeric={time.hours} />    
+                            <TimerCircle name='хвилин' progress={progress.minutes} numeric={time.minutes} />
                         </div>
     
                         <div className="one-bir">
-                            <div className="circle" id="s">
-                                <svg><circle id="five_5" className="meter five_bt_tim" cx="65" cy="65" r="62.8" /></svg>
-                                <div className="text-in-circle">
-                                    <h6>секунд</h6>
-                                    <h5 id="second_tim">00</h5>
-                                </div>
-                            </div>
+                            <TimerCircle name='секунд' progress={progress.seconds} numeric={time.seconds} />
                         </div>
                     </article>
                 </section>

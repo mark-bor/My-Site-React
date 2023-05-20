@@ -1,4 +1,4 @@
-import { widthCert } from "../../Components/Certificates/Section/index.js";
+import { widthCert } from "../../components/Certificates/Section/index.js";
 
 
 

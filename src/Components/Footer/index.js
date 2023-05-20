@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 
-import phone from "../../Images/phone.jpg";
-import mail from "../../Images/email.jpg";
-import facebook from "../../Images/facebook.png";
-import telegram from "../../Images/telegram.png";
-
+import phone from "../../images/phone.jpg";
+import mail from "../../images/email.jpg";
+import facebook from "../../images/facebook.png";
+import telegram from "../../images/telegram.png";
 import './footer.css';
+
+
 
 export default function Footer({lang}) {
 	if (lang==='EN') {

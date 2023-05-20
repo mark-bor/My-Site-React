@@ -1,7 +1,7 @@
 /*-------------------- BODY ------------------------------------------------------*/
 @font-face {
 	font-family: "e-Ukraine-Light";
-	src: url('./Fonts/e-Ukraine/e-Ukraine-Light.otf');
+	src: url('./fonts/e-Ukraine/e-Ukraine-Light.otf');
 }
 
 html {
@@ -123,7 +123,7 @@ main {
 	font-size: 64px;
 	line-height: 77px;
 	
-	background-image: url('./Images/Circle_for_hero.png');
+	background-image: url('./images/Circle_for_hero.png');
 	background-repeat: no-repeat;
 	background-position-x: right;
 	background-position-y: -115px;
@@ -132,7 +132,7 @@ main {
 .root_dark .title {
 	background-color: #6D6D6D;
 	
-	background-image: url('./Images/Circle_for_hero_dark.png');
+	background-image: url('./images/Circle_for_hero_dark.png');
 }
 
 @media screen and (max-width: 481px) {
@@ -148,7 +148,7 @@ main {
 /*-------------------- WORKS TITLE --------------------------*/
 @font-face {
 	font-family: "e-Ukraine-Light";
-	src: url('./Fonts/e-Ukraine/e-Ukraine-Light.otf');
+	src: url('./fonts/e-Ukraine/e-Ukraine-Light.otf');
 }
 main > section > h1 {
 	margin: 55px auto;

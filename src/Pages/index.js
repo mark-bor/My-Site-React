@@ -1,9 +1,4 @@
-import Header from "./Header/index";
-import MenuWindow from "./MenuWindow/index";
-import Sidebar from "./Sidebar/index";
-import Footer from "./Footer/index";
 import ErrorPage from "./ErrorPage/index";
-
 import Home from "./Home/index";
 import CV from "./CV/index";
 import Works from "./Works/index";
@@ -30,12 +25,7 @@ import Explanation from "./Work_pages/Tank_Game/components/Explanation/index";
 
 
 export {
-    Header,
-    MenuWindow,
-    Sidebar,
-    Footer,
     ErrorPage,
-
     Home,
     CV,
     Works,

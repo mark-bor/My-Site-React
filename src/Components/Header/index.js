@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { showMenuWindow } from "../../scripts/Header/burgerMenu";
 
-import logo from '../../Images/logo.png';
+import logo from '../../images/logo.png';
 import './styles.css';
 
 

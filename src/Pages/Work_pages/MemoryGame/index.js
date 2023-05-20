@@ -1,23 +1,14 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { addEvent } from "../../../scripts/progectWorks/MemoryGame/MemoryGameClass";
-import { Card } from "../../../Components/index.js";
+import { MemoryGameCard } from "../../../components/index.js";
+import { MEMORYGAMECARDS } from "../../../data/MEMORYGAMECARDS";
 
 import "./styles.css";
 
 
 
 export default function MemoryGame({lang}) {
-    const [cards, setCards] = useState([]);
-    
-    useEffect(() => {
-        fetch(`${window.location.origin}/JSON/memory_game_cards.json`)
-        .then(res => res.json())
-        .then(res => setCards([...res]))
-        .catch(err => console.log(err));
-    }, [setCards]);
-
-    useEffect(() => addEvent(), [cards, setCards]);
-
+    useEffect(() => addEvent());
 
 
     if (lang==='EN') {
@@ -27,7 +18,7 @@ export default function MemoryGame({lang}) {
                 <h1>Memory game</h1>
                 {/* __________ BODY _____________________ */}
                 <ul className="game__cards js-cards">
-                    {cards.map((card, i) => <Card key={i} object={card} altName={card.subjectEN} />)}
+                    {MEMORYGAMECARDS.map((data, i) => <MemoryGameCard key={i} data={data} altName={data.subjectEN} />)}
                 </ul>
             </section>
         );
@@ -40,7 +31,7 @@ export default function MemoryGame({lang}) {
                 <h1>Гра для пам'яті</h1>
                 {/* __________ BODY _____________________ */}
                 <ul className="game__cards js-cards">
-                    {cards.map((card, i) => <Card key={i} object={card} altName={card.subjectUA} />)}
+                    {MEMORYGAMECARDS.map((data, i) => <MemoryGameCard key={i} data={data} altName={data.subjectUA} />)}
                 </ul>
             </section>
         );
