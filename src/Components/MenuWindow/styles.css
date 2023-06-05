@@ -102,6 +102,19 @@
 	z-index: 3;
 }
 
+.setting_name {
+    margin: 0 0 0 10px;
+    
+    display: inline-flex;
+    align-items: center;
+    
+	text-align: start;
+    color: #F5F5F5;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+}
+
 #paw {
 	width: 160px;
 	height: 71px;

@@ -73,7 +73,19 @@ a {
 /*-------------------- POSITION --------------------------------------*/
 .root {
 	min-height: 100vh;
+	display: grid;
+	grid-template-columns: 25% 75%;
+	grid-template-rows: 70px auto min(170px);
+	grid-template-areas: 
+		"header header" 
+		"sidebar main"
+		"footer footer"
+	;
+
 	transition: 0.3s;
+}
+.root_without_sidebar {
+	grid-template-columns: 45px calc(100% - 45px);
 }
 
 main {
@@ -94,7 +106,7 @@ main {
 /*-------------------- TITLE --------------------------------------*/
 .title {
 	width: calc(100% + 60px);
-	height: 170px;
+	height: 206px;
 	margin: 0 -30px 30px -30px;
 	padding: auto;
 

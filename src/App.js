@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Outlet } from "react-router-dom";
-import { Header, MenuWindow, Footer } from "./components/index";
+import { Header, MenuWindow, Sidebar, Footer } from "./components/index";
 import { AppWrap } from "./scripts/index";
 
 
@@ -19,7 +19,8 @@ export default function App() {
     <AppWrap>
       <Header />
 
-      {windowSize>=769 ? null : <MenuWindow />}
+      {windowSize>=769 ? <Sidebar /> : <MenuWindow />}
+      {/* {windowSize>=769 ? null : <MenuWindow />} */}
 
       <main>
         <Outlet />

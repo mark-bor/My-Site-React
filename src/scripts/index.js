@@ -7,6 +7,9 @@ import {setErrorPageColor} from "./ErrorPage/setErrorPageColor";
 import {showMenuWindow} from "./Header/burgerMenu";
 import {hiddenMenuWindow} from "./MenuWindow/hidden";
 
+import {hiddenAll, showMore, showSelectedList} from "./Sidebar/list";
+import {mouseDown, mouseUp, setSidebarSize} from "./Sidebar/hiddenSidebar";
+
 import {closeWindow} from "./Home/closeWindow";
 import {showInformation} from "./Home/showInformation";
 
@@ -37,6 +40,8 @@ export {
     setErrorPageColor,
     showMenuWindow,
     hiddenMenuWindow,
+    hiddenAll, showMore, showSelectedList,
+    mouseDown, mouseUp, setSidebarSize,
     closeWindow, showInformation,
     sortByColor, sortWorks,
     calculateOnMouseDown, calculateQuadraticEquation,

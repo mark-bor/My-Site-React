@@ -1,4 +1,5 @@
 .sidebar_with_navigation {
+    grid-area: sidebar;
     position: relative;
     width: 100%;
     height: 100%;
