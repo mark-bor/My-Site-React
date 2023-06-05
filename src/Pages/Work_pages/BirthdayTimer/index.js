@@ -1,19 +1,23 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { TimerCircle } from "../../../components/index"
-import { startTimer } from "../../../scripts/progectWorks/BirthdayTimer/startTimer"
+import { 
+	OptionContext,
+	startTimer
+} from "../../../scripts/index";
 
 import "./styles.css";
 
 
 
-export default function BirthdayTimer({lang}) {
+export default function BirthdayTimer() {
+    const {options} = useContext(OptionContext);
     const [time, setTime] = useState({months: 0, days: 0, hours: 0, minutes: 0, seconds: 0});
     const [progress, setProgress] = useState({months: 0, days: 0, hours: 0, minutes: 0, seconds: 0});
 
     useEffect(() => startTimer(setTime, setProgress));
 
     
-    if (lang==='EN') {
+    if (options.language==='EN') {
         return (
             <section className="div bir-tim" id="birthday-timer">
                 {/* __________- BODY _____________________ */}    
@@ -42,7 +46,7 @@ export default function BirthdayTimer({lang}) {
         );
     }
 
-    if (lang==='UA') {
+    if (options.language==='UA') {
         return (
             <section className="div bir-tim" id="birthday-timer">
                 {/* __________- BODY _____________________ */}    

@@ -481,7 +481,7 @@ export default class Tank {
             this.degId=1;
             setTimeout(() => this.degId=0, 200);
 
-            if (this.tankR%360===0) {this.tankDeg = this.tankR;}
+            if (this.tankR%360===0) this.tankDeg = this.tankR;
 
             this.tankShadow();
         }
@@ -500,7 +500,7 @@ export default class Tank {
             this.degId=1;
             setTimeout(() => this.degId=0, 199);
 
-            if (this.tankR%360===0) {this.tankDeg = this.tankR;}
+            if (this.tankR%360===0) this.tankDeg = this.tankR;
 
             this.tankShadow();
             

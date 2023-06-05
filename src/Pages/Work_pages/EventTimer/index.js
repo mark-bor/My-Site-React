@@ -1,12 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { TimerCircle } from "../../../components/index"
-import { startEventTimer } from "../../../scripts/progectWorks/EventTimer/startEventTimer";
+import { 
+	OptionContext,
+	startEventTimer
+} from "../../../scripts/index";
 
 import "./styles.css";
 
 
 
-export default function EventTimer({lang}) {
+export default function EventTimer() {
+    const {options} = useContext(OptionContext);
     const [time, setTime] = useState({months: 0, days: 0, hours: 0, minutes: 0, seconds: 0});
     const [progress, setProgress] = useState({months: 0, days: 0, hours: 0, minutes: 0, seconds: 0});
     const [date, setDate] = useState('');
@@ -15,7 +19,7 @@ export default function EventTimer({lang}) {
     useEffect(() => {}, [setMessage]);
 
 
-    if (lang==='EN') {
+    if (options.language==='EN') {
         return (
             <section className="div tim" id="timer">
                 {/* __________ BODY _____________________ */}
@@ -64,7 +68,7 @@ export default function EventTimer({lang}) {
         );
     }
 
-    if (lang==='UA') {
+    if (options.language==='UA') {
         return (
             <section className="div tim" id="timer">
                 {/* __________ BODY _____________________ */}

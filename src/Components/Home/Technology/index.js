@@ -1,4 +1,4 @@
-import { showInformation } from "../../../scripts/Home/showInformation";
+import { showInformation } from "../../../scripts/index";
 
 import './styles.css';
 

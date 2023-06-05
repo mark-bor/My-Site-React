@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Link } from "react-router-dom";
 import { AbautTechnology, Technology } from "../../components/index";
 import { TECHNOLOGIES } from "../../data/TECHNOLOGIES";
+import { OptionContext } from "../../scripts/index";
 
 import cv from "../../images/cv_for_home.png";
 import certificate from "../../images/certificate_for_home.png";
@@ -11,18 +12,19 @@ import './styles.css';
 
 
 
-export default function Home({lang}) {
+export default function Home() {
 	const [window, setWindow] = useState(false);
 	const [content, setContent] = useState({});
+	const {options} = useContext(OptionContext);
 	
 
-	if (lang==='EN') {
+	if (options.language==='EN') {
 		return (
 			<section className="div h" id="home">
 				{/* __________ TITLE _____________________ */}
 				<h1 className="title light_dark">My CV-Site</h1>
 
-				{window ? <AbautTechnology lang={lang} content={content} set={setWindow}/> : null}
+				{window ? <AbautTechnology content={content} set={setWindow}/> : null}
 
 				{/* __________ TECHNOLOGIES _____________________ */}
 				<section className='technologies_section'>
@@ -67,13 +69,13 @@ export default function Home({lang}) {
 		);
 	}
 
-	if (lang==='UA') {
+	if (options.language==='UA') {
 		return (
 		  <section className="div h" id="home" >
 				{/* __________ TITLE _____________________ */}
 				<h1 className="title light_dark">Мій Сайт</h1>
 
-				{window ? <AbautTechnology lang={lang} content={content} set={setWindow}/> : null}
+				{window ? <AbautTechnology content={content} set={setWindow}/> : null}
 
 				{/* __________ TECHNOLOGIES _____________________ */}
 				<section className='technologies_section'>

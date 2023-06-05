@@ -1,11 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { Link } from "react-router-dom";
-import { hiddenMenuWindow } from "../../scripts/MenuWindow/hidden";
-import { hiddenLanguage } from "../../scripts/Global/language"
-import { changeColor, colorInputDefCheck, getAndSetColor } from "../../scripts/Global/siteColor"
+import { 
+	OptionContext,
+    hiddenMenuWindow,
+	changeColor, colorInputDefCheck, getAndSetColor
+} from "../../scripts/index";
 
 import home from "../../images/home.png";
-import cv from "../../images/cv.png";
 import project from "../../images/project.png";
 import certificate from "../../images/certificate.png";
 import contact from "../../images/contact.png";
@@ -13,14 +14,15 @@ import "./styles.css";
 
 
 
-export default function MenuWindow({lang}) {
+export default function MenuWindow() {
+    const {options, setOptions} = useContext(OptionContext);
+
 	useEffect(() => {
         getAndSetColor();
     }, []);
 
 
-
-	if (lang==='EN') {
+	if (options.language==='EN') {
 		return (
 			<nav id="menu_window" className={`trans__menu transMenu_S`}>
 				<ul className='link_list_in_menu_window'>
@@ -28,12 +30,6 @@ export default function MenuWindow({lang}) {
                         <Link className="but" to={'/'} onMouseUp={hiddenMenuWindow}>
                             <img className="menu_window_icon" src={home} alt="home" width={20} />
                             <p className='link_name_in_menu_window'>Home</p>
-                        </Link>
-                    </li>
-                    <li className="men_win">
-                        <Link className="but" to={'/cv'} onMouseUp={hiddenMenuWindow}>
-                            <img className="menu_window_icon" src={cv} alt="cv" width={20} />
-                            <p className='link_name_in_menu_window'>CV</p>
                         </Link>
                     </li>
                     <li className="men_win">
@@ -49,9 +45,9 @@ export default function MenuWindow({lang}) {
                         </Link>
                     </li>
                     <li className="men_win">
-                        <Link className="but" to={'/contacts'} onMouseUp={hiddenMenuWindow}>
+                        <Link className="but" to={'/aboutme'} onMouseUp={hiddenMenuWindow}>
                             <img className="menu_window_icon" src={contact} alt="contacts" width={20} />
-                            <p className='link_name_in_menu_window'>Contacts</p>
+                            <p className='link_name_in_menu_window'>About me</p>
                         </Link>
                     </li>
                 </ul>
@@ -64,8 +60,8 @@ export default function MenuWindow({lang}) {
                         <label className="select_language" htmlFor='select_language_input'>
                             <span className="language english">EN</span>
                             <ul id='select_lang' className='select_lang'>
-                                <li className="puncts"><Link onClick={hiddenLanguage} to={`/`}>EN</Link></li>
-                                <li className="puncts"><Link onClick={hiddenLanguage} to={`/ua`}>UA</Link></li>
+                                <li className="puncts" onClick={() => setOptions({...options, language: 'EN'})}>EN</li>
+                                <li className="puncts" onClick={() => setOptions({...options, language: 'UA'})}>UA</li>
                             </ul>
                         </label>
                         <p className="setting_name">Language</p>
@@ -85,7 +81,7 @@ export default function MenuWindow({lang}) {
 		);
 	}
 
-	if (lang==='UA') {
+	if (options.language==='UA') {
 		return (
 			<nav id="menu_window" className={`trans__menu transMenu_S`}>
 				<ul className='link_list_in_menu_window'>
@@ -93,12 +89,6 @@ export default function MenuWindow({lang}) {
                         <Link className="but" to={'/'} onMouseUp={hiddenMenuWindow}>
                             <img className="menu_window_icon" src={home} alt="дім" width={20} />
                             <p className='link_name_in_menu_window'>Головна</p>
-                        </Link>
-                    </li>
-                    <li className="men_win">
-                        <Link className="but" to={'/cv'} onMouseUp={hiddenMenuWindow}>
-                            <img className="menu_window_icon" src={cv} alt="резюме" width={20} />
-                            <p className='link_name_in_menu_window'>Резюме</p>
                         </Link>
                     </li>
                     <li className="men_win">
@@ -114,9 +104,9 @@ export default function MenuWindow({lang}) {
                         </Link>
                     </li>
                     <li className="men_win">
-                        <Link className="but" to={'/contacts'} onMouseUp={hiddenMenuWindow}>
+                        <Link className="but" to={'/aboutme'} onMouseUp={hiddenMenuWindow}>
                             <img className="menu_window_icon" src={contact} alt="контакти" width={20} />
-                            <p className='link_name_in_menu_window'>Контакти</p>
+                            <p className='link_name_in_menu_window'>Про мене</p>
                         </Link>
                     </li>
                 </ul>
@@ -129,8 +119,8 @@ export default function MenuWindow({lang}) {
                         <label className="select_language" htmlFor='select_language_input'>
                             <span className="language ukrainian">UA</span>
                             <ul id='select_lang' className='select_lang'>
-                                <li className="puncts"><Link onClick={hiddenLanguage} to={`/`}>EN</Link></li>
-                                <li className="puncts"><Link onClick={hiddenLanguage} to={`/ua`}>UA</Link></li>
+                                <li className="puncts" onClick={() => setOptions({...options, language: 'EN'})}>EN</li>
+                                <li className="puncts" onClick={() => setOptions({...options, language: 'UA'})}>UA</li>
                             </ul>
                         </label>
                         <p className="setting_name">Мова</p>

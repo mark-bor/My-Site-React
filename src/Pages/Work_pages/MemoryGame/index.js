@@ -1,17 +1,22 @@
-import { useEffect } from "react";
-import { addEvent } from "../../../scripts/progectWorks/MemoryGame/MemoryGameClass";
+import { useEffect, useContext } from "react";
 import { MemoryGameCard } from "../../../components/index.js";
 import { MEMORYGAMECARDS } from "../../../data/MEMORYGAMECARDS";
+import { 
+	OptionContext,
+	addEvent
+} from "../../../scripts/index";
 
 import "./styles.css";
 
 
 
-export default function MemoryGame({lang}) {
+export default function MemoryGame() {
+    const {options} = useContext(OptionContext);
+
     useEffect(() => addEvent());
 
 
-    if (lang==='EN') {
+    if (options.language==='EN') {
         return (
             <section className="div mem-gam" id="memory-game">
                 {/* __________ TITLE _____________________ */}
@@ -24,7 +29,7 @@ export default function MemoryGame({lang}) {
         );
     }
 
-    if (lang==='UA') {
+    if (options.language==='UA') {
         return (
             <section className="div mem-gam" id="memory-game">
                 {/* __________ TITLE _____________________ */}

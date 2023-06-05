@@ -1,12 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import { sortByColor, sortWorks } from "../../scripts/Works/sort";
+import { 
+	OptionContext,
+	sortByColor, sortWorks
+} from "../../scripts/index";
 
 import "./style.css";
 
 
-export default function Works({lang}) {
+export default function Works() {
 	const [works, setWorks] = useState([]);
+	const {options} = useContext(OptionContext);
 
 	useEffect(() => {
 		fetch(`${window.location.origin}/JSON/works.json`)
@@ -17,7 +21,7 @@ export default function Works({lang}) {
 
 	
 
-	if (lang==='EN') {
+	if (options.language==='EN') {
 		return (
 			<section className="div wor" id="works">
 				{/* <!------------ TITLE ----------------------> */}
@@ -53,17 +57,17 @@ export default function Works({lang}) {
 
 				{/* <!------------ MENU ----------------------> */}
 				<ul className="block_menu_p">
-					{works.map((work, i) => <Work key={i} work={work} title={work.nameEN} lang={''} />)}
+					{works.map((work, i) => <Work key={i} work={work} title={work.nameEN} />)}
 				</ul>
 			</section>
 		)
 	}
 	
-	if (lang==='UA') {
+	if (options.language==='UA') {
 		return (
 			<section className="div wor" id="works">
 				{/* <!------------ TITLE ----------------------> */}
-				{/* <h1 className="title light_dark">Роботи</h1> */}
+				<h1 className="title light_dark">Роботи</h1>
 
 				{/* <!------------ LEGEND ----------------------> */}
 				<ul className="legend">
@@ -89,7 +93,7 @@ export default function Works({lang}) {
 	
 				{/* <!------------ MENU ----------------------> */}
 				<ul className="block_menu_p">
-					{works.map((work, i) => <Work key={i} work={work} title={work.nameUA} lang={'/ua'} />)}
+					{works.map((work, i) => <Work key={i} work={work} title={work.nameUA} />)}
 				</ul>
 			</section>
 		);
@@ -98,10 +102,10 @@ export default function Works({lang}) {
 
 
 
-function Work({work, title, lang}) {
+function Work({work, title}) {
 	return (
 		<li>
-			<Link className={`but ${work.className} ${work.status}`} to={`${lang}/works/${work.link}`}>
+			<Link className={`but ${work.className} ${work.status}`} to={`/works/${work.link}`}>
 				<img className='project_background' src={window.location.origin+work.image} alt={work.alt} />
 				<span className="light_dark">{title}</span>
 			</Link>	

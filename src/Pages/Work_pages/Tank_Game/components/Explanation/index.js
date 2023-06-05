@@ -1,13 +1,14 @@
-import { useState } from "react";
-
+import { useState, useContext } from "react";
 import Driving from "../Driving/index";
 import TowerAndFire from "../TowerAndFire/index";
+import { OptionContext } from "../../../../../scripts/index";
 
 import "./styles.css";
 
 
-export default function Eplanation({lang}) {
+export default function Eplanation() {
     const [number, setNumber] = useState(0);
+    const {options} = useContext(OptionContext);
 
     function slideExplanation(elem, number) {
         elem.preventDefault();
@@ -15,8 +16,7 @@ export default function Eplanation({lang}) {
     }
 
 
-
-    if (lang==='EN') {
+    if (options.language==='EN') {
         return (
             <section id="explanation" className="section_in_menu_tank_game">
 
@@ -37,8 +37,8 @@ export default function Eplanation({lang}) {
                     className="block_with_sections" 
                     style={{transform: `translate(${number}px)`}}
                 >
-                    <Driving lang={lang} />
-                    <TowerAndFire lang={lang} />
+                    <Driving lang={options.language} />
+                    <TowerAndFire lang={options.language} />
                 </div>
             </section>
         );

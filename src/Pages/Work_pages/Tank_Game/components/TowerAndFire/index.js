@@ -1,5 +1,7 @@
 import right_control from "../../Images/right_control.png";
 
+
+
 export default function TowerAndFire({lang}) {
     if (lang==='EN') {
         return (

@@ -1,8 +1,7 @@
 import ErrorPage from "./ErrorPage/index";
 import Home from "./Home/index";
-import CV from "./CV/index";
 import Works from "./Works/index";
-import Contacts from "./Contacts/index";
+import AboutMe from "./AboutMe/index";
 import Certificates from "./Certificates/index";
 
 import Calculator from "./Work_pages/Calculator/index";
@@ -27,9 +26,8 @@ import Explanation from "./Work_pages/Tank_Game/components/Explanation/index";
 export {
     ErrorPage,
     Home,
-    CV,
     Works,
-    Contacts,
+    AboutMe,
     Certificates,
 
     Calculator,

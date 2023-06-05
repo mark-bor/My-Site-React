@@ -1,16 +1,16 @@
-import { useState, useEffect } from "react";
-
-import { setLDBLanguage } from "../../../scripts/progectWorks/LocalDB/setLDBLanguage";
-import { setLDBColor } from "../../../scripts/progectWorks/LocalDB/setLDBColor";
-
-import { LocalStorageSection } from "../../../components/index.js";
-import { IndexedDBSection } from "../../../components/index.js";
+import { useState, useEffect, useContext } from "react";
+import { LocalStorageSection, IndexedDBSection } from "../../../components/index.js";
+import { 
+	OptionContext,
+	setLDBLanguage, setLDBColor
+} from "../../../scripts/index";
 
 import "./styles.css";
 
 
 
-export default function LocalDB({lang}) {
+export default function LocalDB() {
+    const {options} = useContext(OptionContext);
     const [translate, setTranslate] = useState(0);
     const [slider, setSlider] = useState(0);
 
@@ -21,7 +21,7 @@ export default function LocalDB({lang}) {
     
     return (
         <section className="div loc-dat-bas" id="local-data-bases">
-            <h1 className="light_dark">{setLDBLanguage(lang)}</h1>
+            <h1 className="light_dark">{setLDBLanguage(options.language)}</h1>
 
             <ul id="select_data_bases" className={`select_data_bases ${setLDBColor()}`}>
                 <li><button 
@@ -45,8 +45,8 @@ export default function LocalDB({lang}) {
             <div id="data_base_slider" className="data_base_slider">
                 <div className="container_with_bases" style={{"transform": `translateX(${translate}px)`}}>
 
-                    <LocalStorageSection lang={lang} />
-                    <IndexedDBSection lang={lang} />
+                    <LocalStorageSection lang={options.language} />
+                    <IndexedDBSection lang={options.language} />
                     
                 </div>
             </div>

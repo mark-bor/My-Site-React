@@ -1,7 +1,15 @@
+import { useContext } from "react";
+import { OptionContext } from "../../../../../scripts/index";
+
 import browning from "../../Images/browning.png";
 
-export default function MachineGun({lang}) {
-    if (lang==='EN') {
+
+
+export default function MachineGun() {
+    const {options} = useContext(OptionContext);
+
+
+    if (options.language==='EN') {
         return (
             <section id="machine_gun_in_main_menu_section" className="section_in_main_menu">
                 

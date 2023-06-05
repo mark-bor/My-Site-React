@@ -1,12 +1,17 @@
+import { useContext } from "react";
 import { Outlet } from "react-router-dom";
 import Controlers from "./components/Controlers/index.js";
+import { OptionContext } from "../../../scripts/index";
 
 import "./styles.css";
 
 
 
-export default function TankGame({lang}) {
-    if (lang==='EN') {
+export default function TankGame() {
+    const {options} = useContext(OptionContext);
+
+
+    if (options.language==='EN') {
         return (
             <section className="div gam" id="game">
                 {/* __________ TITLE _____________________ */}
@@ -21,7 +26,7 @@ export default function TankGame({lang}) {
     
                     <div id="game_field" className="game_field"></div>
 
-                    <Controlers lang={lang}/>
+                    <Controlers lang={options.language}/>
                     
                     <Outlet />
                 </div>
@@ -29,7 +34,7 @@ export default function TankGame({lang}) {
         );
     }
     
-    if (lang==='UA') {
+    if (options.language==='UA') {
         return (
             <section className="div gam" id="game">
                 {/* __________ TITLE _____________________ */}
@@ -44,7 +49,7 @@ export default function TankGame({lang}) {
     
                     <div id="game_field" className="game_field"></div>
                     
-                    <Controlers lang={"UA"}/>
+                    <Controlers lang={options.language}/>
 
                     <Outlet />    
                 </div>

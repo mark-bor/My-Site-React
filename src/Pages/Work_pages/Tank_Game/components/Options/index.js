@@ -1,9 +1,16 @@
+import { useContext } from "react";
+import { OptionContext } from "../../../../../scripts/index";
+
 import "./styles.css";
 
-export default function Options({lang}) {
-    const setVolume = () => localStorage.getItem('volume') ? localStorage.getItem('volume') : '0%';
 
-    if (lang==='EN') {
+
+export default function Options() {
+    const setVolume = () => localStorage.getItem('volume') ? localStorage.getItem('volume') : '0%';
+    const {options} = useContext(OptionContext);
+
+
+    if (options.language==='EN') {
         return (
             <section id="options" className="section_in_menu_tank_game">
 

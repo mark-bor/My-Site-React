@@ -1,11 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { OptionContext } from "../../../../../scripts/index";
 import * as managementFile from "../../scripts/management_file.js"
 
 import "./styles.css"
 
 
 
-export default function Tank({lang}) {
+export default function Tank() {
+    const {options} = useContext(OptionContext);
     const [select, setSelect] = useState(true);
     const [taknsBTN, setTaknsBTN] = useState([]);
     if (!window.localStorage.getItem("tankName")) window.localStorage.setItem("tankName", "M1 Abrams");
@@ -19,7 +21,7 @@ export default function Tank({lang}) {
 
     
 
-    if (lang==='EN') {
+    if (options.language==='EN') {
         return (
             <section id="tank_in_main_menu_section" className="section_in_main_menu">
 

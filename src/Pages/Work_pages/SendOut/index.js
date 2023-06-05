@@ -1,13 +1,14 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Form } from "react-router-dom";
-import { ConfirmCard } from "../../../components/index.js";
-import { InputForAccessCard } from "../../../components/index.js";
+import { ConfirmCard, InputForAccessCard } from "../../../components/index.js";
+import { OptionContext } from "../../../scripts/index";
 
 import "./styles.css";
 
 
 
-export default function SendOut({lang}) {
+export default function SendOut() {
+    const {options} = useContext(OptionContext);
     const [data, setData] = useState(false);
     const [confirmCard, setConfirmCard] = useState(false);
     const [accessCard, setAccessCard] = useState(false);
@@ -56,13 +57,13 @@ export default function SendOut({lang}) {
     }
 
     
-    if (lang==='EN') {
+    if (options.language==='EN') {
         return (
             <section className="div sen-out" id="send-out">
                 <h1 className="light_dark">Send out</h1>
 
-                {confirmCard ? <ConfirmCard lang={lang} set={setConfirmCard} data={data} /> : null}
-                {!accessCard ? <InputForAccessCard lang={lang} set={setAccessCard} /> : null}
+                {confirmCard ? <ConfirmCard lang={options.language} set={setConfirmCard} data={data} /> : null}
+                {!accessCard ? <InputForAccessCard lang={options.language} set={setAccessCard} /> : null}
 
                 <Form className="form_for_send_out">
                     <h2>Form for send out</h2>
@@ -99,13 +100,13 @@ export default function SendOut({lang}) {
         );
     }
     
-    if (lang==='UA') {
+    if (options.language==='UA') {
         return (
             <section className="div sen-out" id="send-out">
                 <h1>Розсилка</h1>
 
-                {confirmCard ? <ConfirmCard lang={lang} set={setConfirmCard} data={data} /> : null}
-                {!accessCard ? <InputForAccessCard lang={lang} set={setAccessCard} /> : null}
+                {confirmCard ? <ConfirmCard lang={options.language} set={setConfirmCard} data={data} /> : null}
+                {!accessCard ? <InputForAccessCard lang={options.language} set={setAccessCard} /> : null}
 
                 <Form className="form_for_send_out">
                     <h2 className="light_dark">Форма для розсилки</h2>

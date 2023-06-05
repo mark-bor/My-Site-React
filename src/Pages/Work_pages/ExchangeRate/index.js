@@ -1,6 +1,8 @@
-import { useState, useEffect } from "react";
-import { getExchange } from "../../../scripts/progectWorks/ExchangeRate/loading";
-import { getValues } from "../../../scripts/progectWorks/ExchangeRate/validation";
+import { useState, useEffect, useContext } from "react";
+import { 
+	OptionContext,
+	getExchange, getValues
+} from "../../../scripts/index";
 
 import "./styles.css";
 
@@ -9,8 +11,9 @@ import "./styles.css";
 let fromFirsToSecond = {};
 let fromSecondToFirst = {};
 
-export default function ExchangeRate({lang}) {
+export default function ExchangeRate() {
     const [exchange, setExchange] = useState({});
+    const {options} = useContext(OptionContext);
 
     useEffect(() => {
         setExchange({...getExchange()});
@@ -35,7 +38,7 @@ export default function ExchangeRate({lang}) {
 
 
 
-    if (lang==='EN') {
+    if (options.language==='EN') {
         return (
             <section className="div exc-rat" id="exchange-rate">
                 {/* __________ TITLE _____________________ */}
@@ -115,7 +118,7 @@ export default function ExchangeRate({lang}) {
         );
     }
 
-    if (lang==='UA') {
+    if (options.language==='UA') {
         return (
             <section className="div exc-rat" id="exchange-rate">
                 {/* __________ TITLE _____________________ */}

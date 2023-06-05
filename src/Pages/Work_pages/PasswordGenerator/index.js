@@ -1,16 +1,20 @@
-import { useState } from "react"
-import { onMouseDown, onMouseUp } from "../../../scripts/progectWorks/PasswordGenerator/click"
+import { useState, useContext } from "react"
+import { 
+	OptionContext,
+	onMouseDown, onMouseUp
+} from "../../../scripts/index";
 
 import "./styles.css";
 
 
 
-export default function PasswordGenerator({lang}) {
+export default function PasswordGenerator() {
+    const {options} = useContext(OptionContext);
     const [passwords, setPasswords] = useState([]);
     const [error, setError] = useState('');
 
 
-    if (lang==='EN') {
+    if (options.language==='EN') {
         return (
             <section className="div pas-gen" id="password-generator">
                 {/* __________ BODY _____________________ */}
@@ -92,7 +96,7 @@ export default function PasswordGenerator({lang}) {
         );
     }
 
-    if (lang==='UA') {
+    if (options.language==='UA') {
         return (
             <section className="div pas-gen" id="password-generator">
                 {/* __________ BODY _____________________ */}

@@ -1,17 +1,18 @@
+import { useContext } from "react";
 import { useRouteError } from "react-router-dom";
-import { setErrorPageColor } from "../../scripts/ErrorPage/setErrorPageColor";
+import { OptionContext, setErrorPageColor } from "../../scripts/index";
 
 import "./styles.css";
 
 
 
-export default function ErrorPage({lang, position}) {
+export default function ErrorPage({position}) {
+	const {options} = useContext(OptionContext);
 	const error = useRouteError();
   	console.error(error);
 
 
-
-	if (lang==='EN') {
+	if (options.language==='EN') {
 		return (
 			<article id="window_error" className={`error_background ${setErrorPageColor()}`} style={{"position": position}}>
 				<section className="window_error">
@@ -32,7 +33,7 @@ export default function ErrorPage({lang, position}) {
 		);
 	}
 
-	if (lang==='UA') {
+	if (options.language==='UA') {
 		return (
 			<article id="error_background" className="error_background" style={{"position": position}}>
 				<section id="window_error" className={`window_error ${setErrorPageColor()}`}>

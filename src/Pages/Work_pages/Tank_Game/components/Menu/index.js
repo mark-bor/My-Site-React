@@ -1,9 +1,16 @@
+import { useContext } from "react";
 import { Link, Outlet } from "react-router-dom";
+import { OptionContext } from "../../../../../scripts/index";
 
 import "./styles.css";
 
-export default function Menu({lang}) {
-    if (lang==='EN') {
+
+
+export default function Menu() {
+    const {options} = useContext(OptionContext);
+
+
+    if (options.language==='EN') {
         return (
             <div id="menu_in_tank_game" className="menu_in_tank_game">
                 <Link id="close_menu" className="close_menu" to={'/works/tank-game'}>

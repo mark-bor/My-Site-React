@@ -1,5 +1,7 @@
 import left_control from "../../Images/left_control.png";
 
+
+
 export default function Driving({lang}) {
     if (lang==='EN') {
         return (

@@ -1,9 +1,16 @@
+import { useContext } from "react";
 import { Link, Outlet } from "react-router-dom";
+import { OptionContext } from "../../../../../scripts/index";
 
 import "./styles.css";
 
-export default function Main({lang}) {
-    if (lang==='EN') {
+
+
+export default function Main() {
+    const {options} = useContext(OptionContext);
+
+
+    if (options.language==='EN') {
         return (
             <section id="main" className="section_in_menu_tank_game">
 

@@ -1,21 +1,22 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { 
-    calculateOnMouseDown,
-    calculateQuadraticEquation
-} from "../../../scripts/progectWorks/Calculator/calculate";
+    OptionContext,
+    calculateOnMouseDown, calculateQuadraticEquation 
+} from "../../../scripts/index";
 
 import "./styles.css";
 
 
 
-export default function Calculator({lang}) {
+export default function Calculator() {
+    const {options} = useContext(OptionContext);
     const [a, setA] = useState('');
     const [b, setB] = useState('');
     const [c, setC] = useState('');
     const [results, setResults] = useState({xOne: '', xTwo: ''});
 
 
-    if (lang==='EN') {
+    if (options.language==='EN') {
         return (
             <section className="div cal" id="calculator">	
                 <h1>Quadratic equation calculator</h1>
@@ -62,7 +63,7 @@ export default function Calculator({lang}) {
         );
     }
     
-    if (lang==='UA') {
+    if (options.language==='UA') {
         return (
             <section className="div cal" id="calculator">	
                 <h1 className="h1_calc">Калькулятор квадратних рівнянь</h1>

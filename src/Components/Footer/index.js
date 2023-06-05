@@ -1,4 +1,8 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { 
+	OptionContext,
+} from "../../scripts/index";
 
 import phone from "../../images/phone.jpg";
 import mail from "../../images/email.jpg";
@@ -8,11 +12,14 @@ import './footer.css';
 
 
 
-export default function Footer({lang}) {
-	if (lang==='EN') {
+export default function Footer() {
+	const {options} = useContext(OptionContext);
+
+
+	if (options.language==='EN') {
 		return (
 			<footer id="footer" className="footer">
-				<Link className="but" to={'/contacts'}>Contacts</Link>
+				<Link className="but" to={'/aboutme'}>Contacts</Link>
 				<nav className="contacts_C">
 					<div className="string_footer">
 						<figure className="phone_email">
@@ -48,10 +55,10 @@ export default function Footer({lang}) {
 		);
 	}
 
-	if (lang==='UA') {
+	if (options.language==='UA') {
 		return (
 			<footer id="footer" className="footer">
-				<Link className="but" to={'/contacts'} name="Контакти">Контакти</Link>
+				<Link className="but" to={'/aboutme'} name="Контакти">Контакти</Link>
 				<nav className="contacts_C">
 					<div className="string_footer">
 						<figure className="phone_email">

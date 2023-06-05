@@ -1,0 +1,132 @@
+.div.con {
+ text-align: center;
+}
+
+
+/*-------------------- RESUMES --------------------*/
+/*-------------------- RESUMES --------------------*/
+/*-------------------- RESUMES --------------------*/
+.second_title {
+	width: 80%;
+	margin: 20px auto;
+
+	color: #16181D;
+	font-weight: 100;
+	font-size: 19px;
+}
+
+.div_in_cvs {
+	width: 80%;
+	margin: 0 auto 50px auto;
+
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.div_in_cvs > li {
+	display: block;
+	height: auto;
+	text-align: start;
+}
+
+.button_in_cvs {
+	display: block;
+	width: 180px;
+	height: 34px;
+	padding: 0 10px;
+
+	border-radius: 9px;
+	box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.19);
+
+	display: flex;
+	align-items: center;
+
+	color: #FFF;
+	font-weight: 100;
+	font-size: 19px;
+}
+
+.button_in_cvs_one { background: linear-gradient(45deg, #16181D 25%, #FB6D3A); }
+.button_in_cvs_two { background: linear-gradient(45deg, #16181D 25%, #A641B5); }
+
+
+/*-------------------- CONTACT --------------------*/
+/*-------------------- CONTACT --------------------*/
+/*-------------------- CONTACT --------------------*/
+.contacts {
+	width: auto;
+
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 70px;
+}
+
+/*-------------------- PHONE AND EMAIL --------------------*/
+.phone_and_email {
+	margin: 0;
+	
+	text-align: start;
+	color: #16181D;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 36px;
+}
+
+/*-------------------- CONTACT BUTTONS --------------------*/
+.contact_buttons {
+	max-width: 270px;
+	min-width: 210px;
+	margin: 0;
+
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 30px;
+}
+
+.con .par-icons > a {
+	height: 50px;
+	text-decoration: none;
+}
+
+.con .icon {
+	height: 50px;
+	border-radius: 50%;
+	box-shadow: 5px 7px 13px rgba(0, 0, 0, 0.19);
+}
+.con .icon:hover {
+	transform: scale(1.1);
+	transition: 0.05s;
+}
+.con #par {
+	border-radius: 22%;
+	box-shadow: 5px 7px 13px rgba(0, 0, 0, 0.19);
+}
+
+
+
+@media screen and (max-width: 768px) {
+	.contacts {
+		display: inline-block;
+	}
+	
+	.phone_and_email {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+
+	.contact_buttons {
+		max-width: none;
+		width: auto;
+	}
+}
+
+
+
+@media screen and (max-width:  480px){
+	.div_in_cvs {
+		width: 100%;
+	}
+}

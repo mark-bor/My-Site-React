@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Outlet } from "react-router-dom";
-import { Header, MenuWindow, Sidebar, Footer } from "./components/index";
+import { Header, MenuWindow, Footer } from "./components/index";
+import { AppWrap } from "./scripts/index";
 
 
 
-export default function App({lang, setLang}) {
+export default function App() {
   const [windowSize, setWindowSize] = useState(0);
 
   useEffect(() => {
@@ -14,20 +15,18 @@ export default function App({lang, setLang}) {
   window.onresize = () => setWindowSize(window.innerWidth);
 
 
-
   return (
-    <>
-      <Header lang={lang} setLang={setLang} />
+    <AppWrap>
+      <Header />
 
-      {windowSize>=769 ? <Sidebar lang={lang} /> : <MenuWindow lang={lang} />}
+      {windowSize>=769 ? null : <MenuWindow />}
 
       <main>
         <Outlet />
       </main>
 
-      <Footer lang={lang} />
-    </>
+      <Footer />
+    </AppWrap>
   );
-
 }
 
