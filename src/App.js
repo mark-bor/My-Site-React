@@ -20,13 +20,12 @@ export default function App() {
       <Header />
 
       {windowSize>=769 ? <Sidebar /> : <MenuWindow />}
-      {/* {windowSize>=769 ? null : <MenuWindow />} */}
 
       <main>
         <Outlet />
-      </main>
 
-      <Footer />
+        <Footer />
+      </main>
     </AppWrap>
   );
 }

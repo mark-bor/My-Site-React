@@ -26,7 +26,7 @@
     line-height: 33px;
 }
 
-.project_background {
+.work_background_image {
     position: absolute;
     width: 110%;
     z-index: -1;
@@ -58,16 +58,23 @@
 
 @media screen and (max-width: 480px) {
     .works_list > li {
-        width: 130px;
-        height: 90px;
+        width: 100%;
+        height: auto;
     }
-    .work_card {
-        border-radius: 23px;
     
-        text-align: center;
-        color: #1E2939;
-        font-weight: 400;
-        font-size: 19px;
+    .work_card {
+        padding: 6px 0;
+        border-radius: 13px;
+
+        justify-content: flex-start;
+    
+        font-weight: 200;
+        font-size: 17px;
         line-height: 21px;
+    }
+    
+    .work_name {
+        width: auto;
+        margin: 0 0 0 10px;
     }
 }
