@@ -8,71 +8,48 @@
   text-align: center;
 }
 
-/*-------------------- LEGEND --------------------*/
-/*-------------------- LEGEND --------------------*/
-/*-------------------- LEGEND --------------------*/
+/*---------------------------------------- LEGEND --------------------*/
 .legend {
   max-width: 780px;
-  margin: 50px auto 33px auto;
+  margin: 33px auto;
   padding: 0 0 0 5px;
 
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
-  align-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
 }
-.legend > .leg_el {
-  display: block;
-  width: 100%;
-  height: 25px;
+
+.legend_element {
+  display: inline-block;
+  width: auto;
   margin: 0;
-  padding: 0;
-
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.leg_el > .color {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  margin-right: 5px;
-  border-radius: 30%;
-}
-.leg_el:hover > .color {
-  transform: scale(1.3);
-}
-.leg_el > #blue {
-  background-color: #78A2E1;
-}
-.leg_el > #green {
-  background-color: #8FD855;
-}
-
-.leg_el > p {
-  display: inline-block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+  padding: 1px 5px;
+  
+  border-radius: 8px;
+  border: 2px solid #78A2E1;
   
   color: #16181D;
   font-family: "e-Ukraine-UltraLight", sans-serif;
-  font-size: 17.5px;
+  font-size: 16px;
+}
+#blue.legend_element {
+  border: 2px solid #78A2E1;
+}
+#green.legend_element {
+  border: 2px solid #8FD855;
 }
 
-/*-------------------- SORTIGN --------------------*/
-/*-------------------- SORTIGN --------------------*/
-/*-------------------- SORTIGN --------------------*/
+.legend_element:hover {
+  transform: scale(1.05);
+}
+
+/*---------------------------------------- FILTER --------------------*/
 .open_filters {
   display: none;
 }
 
-/*-------------------- SORTIGN --------------------*/
-/*-------------------- SORTIGN --------------------*/
-/*-------------------- SORTIGN --------------------*/
+/*---------------------------------------- SORTIGN --------------------*/
 .sorting {
   max-width: 780px;
   margin: 0 auto 33px auto;
@@ -118,141 +95,28 @@
   background-color: #8F949C;
 }
 
-/*-------------------- MENU --------------------*/
-/*-------------------- MENU --------------------*/
-/*-------------------- MENU --------------------*/
-.block_menu_p {
+/*---------------------------------------- MENU --------------------*/
+.works_list {
   max-width: 780px;
   margin: 0 auto 50px auto;
   padding: 0;
-  list-style-type: none;
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  /* justify-content: center; */
   gap: 20px;
-}
-.block_menu_p > li {
-  display: block;
-  width: 180px;
-  height: 130px;
-  margin: 0 auto;
-  padding: 0;
-}
-.block_menu_p .but {
-  position: relative;
-  width: 100%;
-  height: 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  border-radius: 39px;
-  border-image: initial;
-  transition: all 0.2s ease 0s;
-  overflow: hidden;
-}
-.project_background {
-  position: absolute;
-  width: 110%;
-  z-index: -1;
-  opacity: 0.3;
-}
-/* .q_e_c {} */
-.q_e_c > .project_background {
-  width: 150%;
-}
-/* .b_t {} */
-/* .p_g {} */
-/* .m_g {} */
-/* .e_r {} */
-.e_t > .project_background {
-  width: 120%;
-}
-.t_g > .project_background {
-  width: auto;
-  height: 110%;
-  bottom: 0;
-}
-.l_d_b > .project_background {
-  width: auto;
-  height: 100%;
-}
-
-.wor .but {
-  opacity: 1;
-
-  text-align: center;
-  color: #1E2939;
-  font-weight: 100;
-  font-size: 23px;
-  line-height: 33px;
-}
-.wor .but > span {
-  width: 70px;
-
-  display: flex;
-  justify-content: center;
-
-  text-align: center;
-}
-
-.wor .block_menu_p .close {
-  animation-name: close;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-}
-@keyframes close {
-  0% {
-    box-shadow: 0px 0px 7px #8FD855;
-  }
-  50% {
-    box-shadow: 0px 0px 20px #8FD855;
-  }
-  100% {
-    box-shadow: 0px 0px 7px #8FD855;
-  }
-}
-.wor .block_menu_p .open {
-  animation-name: open;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-}
-@keyframes open {
-  0% {
-    box-shadow: 0px 0px 7px #78A2E1;
-  }
-  50% {
-    box-shadow: 0px 0px 20px #78A2E1;
-  }
-  100% {
-    box-shadow: 0px 0px 7px #78A2E1;
-  }
-}
-.wor .block_menu_p .but:hover {
-  animation-name: t_hover;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-}
-@keyframes t_hover {
-  from {
-    box-shadow: 5px 7px 13px rgba(0, 0, 0, 0.19);
-  }
-  to {
-    box-shadow: 5px 7px 13px rgba(0, 0, 0, 0.19);
-  }
 }
 
 
 
 @media screen and (max-width: 480px) {
-  /*-------------------- SORTIGN --------------------*/
-  /*-------------------- SORTIGN --------------------*/
-  /*-------------------- SORTIGN --------------------*/
+  /*---------------------------------------- LEGEND --------------------*/
+  .legend {
+    margin: 33px auto 10px auto;
+    gap: 10px;
+  }
+
+  /*---------------------------------------- FILTER --------------------*/
   .open_filters {
     position: relative;
     display: block;
@@ -266,16 +130,16 @@
     background-position: center center;
   }
 
-  /*-------------------- SORTIGN --------------------*/
-  /*-------------------- SORTIGN --------------------*/
-  /*-------------------- SORTIGN --------------------*/
+  /*---------------------------------------- SORTIGN --------------------*/
   .sorting {
     position: absolute;
     width: 80%;
     height: 0;
+    
     right: 0;
     left: 0;
     z-index: 1;
+
     overflow: hidden;
     flex-direction: column;
     transition: 0.5s;
@@ -302,25 +166,9 @@
     border-bottom: none;
   }
 
-  /*-------------------- MENU --------------------*/
-  /*-------------------- MENU --------------------*/
-  /*-------------------- MENU --------------------*/
-  .block_menu_p {
-    margin: 33px auto 0 auto;
+  /*---------------------------------------- MENU --------------------*/
+  .works_list {
+    margin: 13px auto 0 auto;
     gap: 15px;
-  }
-  .block_menu_p > li {
-    width: 130px;
-    height: 90px;
-  }
-  .block_menu_p .but {
-    border-radius: 23px;
-  }
-  .block_menu_p .but {
-    text-align: center;
-    color: #1E2939;
-    font-weight: 400;
-    font-size: 19px;
-    line-height: 21px;
   }
 }

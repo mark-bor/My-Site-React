@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
+import { WorkCard } from "../../components/index";
 import { 
 	OptionContext,
 	sortByColor, sortWorks
@@ -24,19 +24,16 @@ export default function Works() {
 	if (options.language==='EN') {
 		return (
 			<section className="div wor" id="works">
-				{/* <!------------ TITLE ----------------------> */}
-				<h1 className="title light_dark">Works</h1>
-
 				{/* <!------------ LEGEND ----------------------> */}
 				<ul className="legend">
-					<li className="leg_el" onClick={() => sortByColor('open', setWorks)}>
-						<button id="blue" className="color"></button>
-						<p className='light_dark'> - in developing proces.</p>
-					</li>
-					<li className="leg_el" onClick={() => sortByColor('close', setWorks)}>
-						<button id="green" className="color"></button>
-						<p className='light_dark'> - to complete.</p>
-					</li>
+					<li 
+						id="blue" className="legend_element light_dark" 
+						onClick={() => sortByColor('open', setWorks)}
+					>in developing proces</li>
+					<li 
+						id="green" className="legend_element light_dark" 
+						onClick={() => sortByColor('close', setWorks)}
+					>to complete</li>
 				</ul>
 				
 				{/* <!------------ FILTER ----------------------> */}
@@ -56,8 +53,8 @@ export default function Works() {
 				</ul>
 
 				{/* <!------------ MENU ----------------------> */}
-				<ul className="block_menu_p">
-					{works.map((work, i) => <Work key={i} work={work} title={work.nameEN} />)}
+				<ul className="works_list">
+					{works.map((work, i) => <WorkCard key={i} work={work} title={work.nameEN} />)}
 				</ul>
 			</section>
 		)
@@ -71,14 +68,14 @@ export default function Works() {
 
 				{/* <!------------ LEGEND ----------------------> */}
 				<ul className="legend">
-					<li className="leg_el" onClick={() => sortByColor('open', setWorks)}>
-						<button id="blue" className="color"></button>
-						<p> - в процесі розробкиі.</p>
-					</li>
-					<li className="leg_el" onClick={() => sortByColor('close', setWorks)}>
-						<button id="green" className="color"></button>
-						<p> - завершено.</p>
-					</li>
+					<li 
+						id="blue" className="legend_element light_dark"
+						onClick={() => sortByColor('open', setWorks)}
+					>в процесі розробкиі</li>
+					<li 
+						id="green" className="legend_element light_dark"
+						onClick={() => sortByColor('close', setWorks)}
+					>завершено</li>
 				</ul>
 
 				{/* <!------------ SORTIGN ----------------------> */}
@@ -93,22 +90,9 @@ export default function Works() {
 	
 				{/* <!------------ MENU ----------------------> */}
 				<ul className="block_menu_p">
-					{works.map((work, i) => <Work key={i} work={work} title={work.nameUA} />)}
+					{works.map((work, i) => <WorkCard key={i} work={work} title={work.nameUA} />)}
 				</ul>
 			</section>
 		);
 	}
-}
-
-
-
-function Work({work, title}) {
-	return (
-		<li>
-			<Link className={`but ${work.className} ${work.status}`} to={`/works/${work.link}`}>
-				<img className='project_background' src={window.location.origin+work.image} alt={work.alt} />
-				<span className="light_dark">{title}</span>
-			</Link>	
-		</li>		
-	);
 }

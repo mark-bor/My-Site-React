@@ -1,5 +1,7 @@
 import { useContext } from "react";
-import { OptionContext } from "../../scripts/index";import mobile from "../../images/mobile-icon.png";
+import { OptionContext } from "../../scripts/index";
+
+import mobile from "../../images/mobile-icon.png";
 import email from "../../images/email-icon.jpg";
 import facebook from "../../images/fb-icon.png";
 import telegram from "../../images/telegram-icon.png";
@@ -40,6 +42,8 @@ export default function AboutMe() {
                     </li>
                 </ul>
     
+                <h2 className="second_title">Contacts:</h2>
+
                 <div className="contacts">
                     <address className="phone_and_email light_dark">
                         +38 095 762 56 69
@@ -109,6 +113,8 @@ export default function AboutMe() {
                         >Резюме 2</a>
                     </li>
                 </ul>
+                
+                <h2 className="second_title">Контакти:</h2>
     
                 <div className="contacts">
                     <address className="phone_and_email">

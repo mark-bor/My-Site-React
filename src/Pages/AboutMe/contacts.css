@@ -7,7 +7,7 @@
 /*-------------------- RESUMES --------------------*/
 /*-------------------- RESUMES --------------------*/
 .second_title {
-	width: 80%;
+	width: 70%;
 	margin: 20px auto;
 
 	color: #16181D;
@@ -16,7 +16,7 @@
 }
 
 .div_in_cvs {
-	width: 80%;
+	width: 70%;
 	margin: 0 auto 50px auto;
 
 	display: flex;
@@ -55,11 +55,12 @@
 /*-------------------- CONTACT --------------------*/
 /*-------------------- CONTACT --------------------*/
 .contacts {
-	width: auto;
+	width: 70%;
 
 	display: inline-flex;
 	flex-wrap: wrap;
-	gap: 70px;
+	justify-content: space-between;
+	gap: 10px;
 }
 
 /*-------------------- PHONE AND EMAIL --------------------*/
@@ -107,8 +108,25 @@
 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+	.div_in_cvs {
+		width: 80%;
+	}
+
 	.contacts {
+		width: 80%;
+	}
+}
+
+
+
+@media screen and (max-width: 768px) {
+	.div_in_cvs {
+		width: 100%;
+	}
+
+	.contacts {
+		width: auto;
 		display: inline-block;
 	}
 	

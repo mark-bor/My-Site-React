@@ -6,6 +6,8 @@ import Footer from "./Footer/index";
 import AbautTechnology from "./Home/AbautTechnology/index.js";
 import Technology from "./Home/Technology/index.js";
 
+import WorkCard from "./Works/WorkCard/index.js";
+
 import Section from "./Certificates/Section/index.js";
 import Certificate from "./Certificates/Certificate/index.js";
 import Checkbox from "./Certificates/Checkbox/index.js";
@@ -29,6 +31,7 @@ export {
     Footer,
     AbautTechnology,
     Technology,
+    WorkCard,
     Section,
     Certificate,
     Checkbox,
