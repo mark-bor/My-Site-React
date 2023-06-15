@@ -89,7 +89,7 @@ export default function Works() {
 				</ul>
 	
 				{/* <!------------ MENU ----------------------> */}
-				<ul className="block_menu_p">
+				<ul className="works_list">
 					{works.map((work, i) => <WorkCard key={i} work={work} title={work.nameUA} />)}
 				</ul>
 			</section>

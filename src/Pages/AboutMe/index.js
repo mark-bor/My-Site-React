@@ -93,7 +93,7 @@ export default function AboutMe() {
         return (
             <section className="div con" id="contacts">
                 {/* __________ TITLE _____________________ */}
-                <h1 className="title">Контакти</h1>
+                <h1 className="title">Про мене</h1>
 
                 <h2 className="second_title">Резюме:</h2>
 

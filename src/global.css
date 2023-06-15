@@ -6,12 +6,15 @@
 
 html {
 	min-height: 100%;
+	visibility: hidden;
 }
 
 body {
 	min-height: 100vh;
 	margin: 0;
+
 	background: #F5F5F5;
+	visibility: hidden;
 
 	font-family: "e-Ukraine-Light", normal;
 }
@@ -83,6 +86,7 @@ a {
 	;
 
 	transition: 0.3s;
+	visibility: hidden;
 }
 .root_without_sidebar {
 	grid-template-columns: 45px calc(100% - 45px);

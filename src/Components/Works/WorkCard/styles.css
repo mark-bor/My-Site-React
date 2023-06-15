@@ -22,8 +22,8 @@
     text-align: center;
     color: #1E2939;
     font-weight: 100;
-    font-size: 23px;
-    line-height: 33px;
+    font-size: 22px;
+    line-height: 32px;
 }
 
 .work_background_image {
@@ -63,7 +63,7 @@
     }
     
     .work_card {
-        padding: 6px 0;
+        padding: 8px 0;
         border-radius: 13px;
 
         justify-content: flex-start;
